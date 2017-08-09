@@ -4,5 +4,5 @@ import logging
 logging.basicConfig(stream=sys.stderr)
 sys.path.insert(0 , "/var/www/flask/")
 
-from flask import app as application
-application.secret_key =  'vivresanslamer'
+from static-website import app as application
+application.secret_key = "vivresanslamer"
