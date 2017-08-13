@@ -1,2 +1,6 @@
 To add:
-  * Jekyll bolg on github
+  * Blog
+  * Add localization
+  * Remove search?
+
+To improve:
