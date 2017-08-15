@@ -4,3 +4,4 @@ To add:
   * Remove search?
 
 To improve:
+  * Fix errors
