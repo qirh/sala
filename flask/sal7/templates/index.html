@@ -12,6 +12,10 @@
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="static/style.css" rel="stylesheet">
+
+    <!-- Bootstrap Form Helpers -->
+    <link href="static/dist/css/bootstrap-formhelpers.min.css" rel="stylesheet" media="screen">
+
   </head>
   <!--#########-->
   <body>
@@ -38,16 +42,19 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <select class="language-picker" data-width="fit">
-            <option data-content='<span class="flag-icon en"></span> English'>English</option>
-            <option  data-content='<span class="flag-icon es"></span> Español'>Español</option>
-            <option  data-content='<span class="flag-icon ar"></span> Español'>عربي</option>
-          </select>
+          <div class="bfh-selectbox bfh-languages" data-language="en_US" data-available="en_US,fr_CA,es_MX" data-flags="true">
+            <input type="hidden" value="">
+            <a class="bfh-selectbox-toggle" role="button" data-toggle="bfh-selectbox" href="#">
+              <span class="bfh-selectbox-option input-medium" data-option=""/>
+              <b class="caret"/>
+            </a>
+            <div class="bfh-selectbox-options">
+              <div role="listbox">
+                <ul role="option"/>  
+              </div>
+            </div>
+          </div>
         </ul>
-        <!--form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form-->
       </div>
     </nav>
 
@@ -57,11 +64,6 @@
         <p class="lead">It's currently a work on progress! I'm a Computer Sceince Student at the University of Texas at Austin<br> I'm slated to graduate in Decmber of 2017</p>
       </div>
     </div>
-    <script>
-      $(function()  {
-        $('.language-picker').languagepicker();
-      });
-    </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -82,6 +84,9 @@
         }
       });
     </script>
+
+    <!-- Bootstrap Form Helpers -->
+    <script src="static/dist/js/bootstrap-formhelpers.min.js"></script>
 
   </body>
 
