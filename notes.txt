@@ -1,7 +1,7 @@
 To add:
-  * Blog
   * Add localization
-  * Copyright info. add flags
+  * Copyright info. flag icons. dropdown menu.
+  * add section for bookmarked links
 
 To improve:
   * Fix errors
