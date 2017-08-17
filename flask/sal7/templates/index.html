@@ -38,7 +38,7 @@
           </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <select class="selectpicker" data-width="fit">
+          <select class="language-picker" data-width="fit">
             <option data-content='<span class="flag-icon en"></span> English'>English</option>
             <option  data-content='<span class="flag-icon es"></span> Español'>Español</option>
             <option  data-content='<span class="flag-icon ar"></span> Español'>عربي</option>
@@ -57,6 +57,11 @@
         <p class="lead">It's currently a work on progress! I'm a Computer Sceince Student at the University of Texas at Austin<br> I'm slated to graduate in Decmber of 2017</p>
       </div>
     </div>
+    <script>
+      $(function()  {
+        $('.language-picker').languagepicker();
+      });
+    </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
