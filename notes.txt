@@ -1,7 +1,7 @@
 To add:
   * Blog
   * Add localization
-  * Remove search?
+  * Copyright info. add flags
 
 To improve:
   * Fix errors
