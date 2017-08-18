@@ -5,25 +5,3 @@ body {
 	padding: 3rem 1.5rem;
 	text-align: center;
 }
-/*
-	* src :
-	* https://stackoverflow.com/a/18567972
-*/
-.languageContainer {
-	width:auto;
-	height:auto;
-	padding:1%;
-    float:left;
-}
-h6 {
-	margin:0;
-}
-.flag {
-	float:right;
-	height:20rem;
-	width:20rem;
-}
-.language {
-	float:left;
-	width:60rem;
-}
