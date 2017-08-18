@@ -11,3 +11,4 @@ Known issues:
 
 Index.html:
 	* Change the dropdown menu design and add flags
+	* add function to detect change in dropdown menu
