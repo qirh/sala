@@ -12,3 +12,8 @@ Known issues:
 Index.html:
 	* Change the dropdown menu design and add flags
 	* add function to detect change in dropdown menu
+
+site lives here:
+	/var/www/flask
+error log here:
+	/var/log/apache2/error.log
