@@ -1,7 +1,13 @@
 To add:
-  * Add localization
-  * Copyright info. flag icons. dropdown menu.
-  * add section for bookmarked links
+	* Add localization
+	* Copyright info. flag icons. dropdown menu.
+	* add section for bookmarked links
 
 To improve:
-  * Fix errors
+	* nada
+
+Known issues:
+	* nada
+
+Index.html:
+	* Change the dropdown menu design and add flags
