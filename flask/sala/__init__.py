@@ -3,34 +3,34 @@ app = Flask(__name__)
 
 @app.route("/")
 @app.route ("/index")
-def index ():
+def index():
 	return render_template('index.html',
 						    title='saleh')
 @app.route ("/cv")
-def cv ():
+def cv():
 	return render_template('cv.html',
 						    title='cv')
 @app.route ("/projects")
-def cv ():
+def projects():
 	return render_template('projects.html',
 						    title='projects')
 @app.route ("/artnavigator")
-def cv ():
+def artnavigator():
 	return render_template('artnavigator.html',
 						    title='artnavigator')
 @app.route ("/myqueue")
-def cv ():
+def myqueue():
 	return render_template('myqueue.html',
 						    title='myqueue')
 @app.route ("/apex")
-def cv ():
+def apex():
 	return render_template('apex.html',
 						    title='apex')
 @app.route ("/stockexchange")
-def cv ():
+def stockexchange():
 	return render_template('stockexchange.html',
 						    title='stockexchange')
 @app.route ("/emailmanager")
-def cv ():
+def emailmanager():
 	return render_template('emailmanager.html',
 						    title='emailmanager')
