@@ -13,24 +13,24 @@ def cv ():
 @app.route ("/projects")
 def cv ():
 	return render_template('projects.html',
-						    title='cv')
+						    title='projects')
 @app.route ("/artnavigator")
 def cv ():
 	return render_template('artnavigator.html',
-						    title='cv')
+						    title='artnavigator')
 @app.route ("/myqueue")
 def cv ():
 	return render_template('myqueue.html',
-						    title='cv')
+						    title='myqueue')
 @app.route ("/apex")
 def cv ():
 	return render_template('apex.html',
-						    title='cv')
+						    title='apex')
 @app.route ("/stockexchange")
 def cv ():
 	return render_template('stockexchange.html',
-						    title='cv')
+						    title='stockexchange')
 @app.route ("/emailmanager")
 def cv ():
 	return render_template('emailmanager.html',
-						    title='cv')
+						    title='emailmanager')
