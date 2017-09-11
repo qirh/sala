@@ -12,18 +12,12 @@
 		* Change the dropdown menu design and add flag icons
 		* Add function to detect change in dropdown menu
 	* Projects.html:
-		* Add pics from iOS
-		* Add text
-	* CV.html:
-		* Add text
+		* Change projects from separate pages to all be implemented in the one html
 
 ## To add:
 	* Add localization
 	* Add all subdomains
 	* add section for bookmarked links
-	* Repo for CV
-			Charts
-			Language levels
 
 ## To improve:
 	* nada
