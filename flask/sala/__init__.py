@@ -5,4 +5,9 @@ app = Flask(__name__)
 @app.route ("/index")
 def index ():
 	return render_template('index.html',
-						    title='mi salon')
+						    title='saleh')
+
+@app.route ("/cv")
+def cv ():
+	return render_template('cv.html',
+						    title='cv')
