@@ -1,75 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="almrausch">
-    <meta name="author" content="sal7">
-    <link rel="icon" href="static/logo.png">
-
-    <!--link href="bootstrap.min.css" rel="stylesheet"-->
-    <!-- Bootstrap CSS CDN -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <!-- style.css -->
-    <link href="static/style.css" rel="stylesheet">
-  </head>
-  <!--#########-->
-  <body>
-    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="index">Saleh Alghusson</a>
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://qirh.github.io">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cv">CV</a>
-          </li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Language</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">English</a>
-            <a class="dropdown-item disabled" href="#">Español</a>
-            <a class="dropdown-item disabled" href="#">Português</a>
-            <a class="dropdown-item disabled" href="#">الْعَرَبِيَّةُ</a>
-            <a class="dropdown-item disabled" href="#">עִבְרִית</a>
-          </div>
-      </li>
-        </ul>
-      </div>
-    </nav>
+{% extends "layout.html" %}
+{% block body %}
     <div class="container">
       <div class="main">
         <h1>ًWelcome!</h1>
         <p class="lead">Hey, this website is, as its creator, going through somewhat of an existential, I wouldn't call it a crisis, but perhaps a hiccup. So this website is the culmination of me not liking to share private information on the internet. But still wanting to have a presence even if it is minimal. For questions or anything else please email me salehg@live.com</p>
       </div>
     </div>
-    <!-- jQuery -->
-    <script src="static/jquery-3.2.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="static/bootstrap.min.js"></script>
-    <script src="static/ie10-viewport-bug-workaround.js"></script>
-    <!--fallback in case cdn doesn't provide-->
-    <!--src: https://stackoverflow.com/a/26198380 -->
-    <div id="bootstrapCssTest" class="hidden"></div>
-    <script>
-      $(function() {
-        if ($('#bootstrapCssTest').is(':visible')) {
-          $("head").prepend('<link rel="stylesheet" href="static/bootstrap.min.css">');
-        }
-      });
-    </script>
-  </body>
-</html>
+{% endblock %}
