@@ -13,21 +13,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <!-- style.css -->
     <link href="static/style.css" rel="stylesheet">
-    <!-- jQuery -->
-    <script src="static/jquery-3.2.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="static/bootstrap.min.js"></script>
-    <script src="static/ie10-viewport-bug-workaround.js"></script>
-    <!--fallback in case cdn doesn't provide-->
-    <!--src: https://stackoverflow.com/a/26198380 -->
-    <div id="bootstrapCssTest" class="hidden"></div>
-    <script>
-      $(function() {
-        if ($('#bootstrapCssTest').is(':visible')) {
-          $("head").prepend('<link rel="stylesheet" href="static/bootstrap.min.css">');
-        }
-      });
-    </script>
+    <!-- Custom styles for this template -->
+    <link href="static/sticky-footer-navbar.css" rel="stylesheet">
   </head>
   <!--#########-->
   <body>
@@ -47,10 +34,10 @@
             <a class="nav-link" href="projects">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://qirh.github.io">Blog</a>
+            <a class="nav-link" href="cv">CV</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cv">CV</a>
+            <a class="nav-link" href="https://qirh.github.io">Blog</a>
           </li>
         </ul>
       </div>
@@ -59,5 +46,28 @@
     <!-- PAGE CONTENT -->
     {% block body %}{% endblock %}
     <!-- END PAGE CONTENT-->
+
+    <!-- FOOTER-->
+    <footer class="footer">
+      <div class="container">
+        <span class="text-muted">Place sticky footer content here.</span>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="static/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="static/bootstrap.min.js"></script>
+    <script src="static/ie10-viewport-bug-workaround.js"></script>
+    <!--fallback in case cdn doesn't provide-->
+    <!--src: https://stackoverflow.com/a/26198380 -->
+    <div id="bootstrapCssTest" class="hidden"></div>
+    <script>
+      $(function() {
+        if ($('#bootstrapCssTest').is(':visible')) {
+          $("head").prepend('<link rel="stylesheet" href="static/bootstrap.min.css">');
+        }
+      });
+    </script>
   </body>
 </html>
