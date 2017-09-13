@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="almrausch">
+    <meta name="author" content="sal7">
+    <link rel="icon" href="static/logo.png">
+
+    <!--link href="bootstrap.min.css" rel="stylesheet"-->
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!-- style.css -->
+    <link href="static/style.css" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="static/jquery-3.2.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="static/bootstrap.min.js"></script>
+    <script src="static/ie10-viewport-bug-workaround.js"></script>
+    <!--fallback in case cdn doesn't provide-->
+    <!--src: https://stackoverflow.com/a/26198380 -->
+    <div id="bootstrapCssTest" class="hidden"></div>
+    <script>
+      $(function() {
+        if ($('#bootstrapCssTest').is(':visible')) {
+          $("head").prepend('<link rel="stylesheet" href="static/bootstrap.min.css">');
+        }
+      });
+    </script>
+  </head>
+  <!--#########-->
+  <body>
+    <!-- NAVBAR-->
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- NAME-->
+      <a class="navbar-brand" href="index">Saleh Alghusson</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://qirh.github.io">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="cv">CV</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- END NAVBAR -->
+    <!-- PAGE CONTENT -->
+    {% block body %}{% endblock %}
+    <!-- END PAGE CONTENT-->
+  </body>
+</html>
