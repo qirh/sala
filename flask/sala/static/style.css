@@ -9,3 +9,9 @@ body {
     border-style: solid;
     border: darkblue 2px solid;
 }
+.grayLink {
+	color: rgb(49, 79, 79);
+}
+.blueLink {
+	color: rgb(0, 20, 255);
+}
