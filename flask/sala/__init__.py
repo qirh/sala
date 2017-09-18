@@ -26,6 +26,14 @@ def artnavigator():
 def myqueue():
 	return render_template('proj-myqueue.html',
 						    title='myqueue')
+@app.route ("/gameoflife")
+def gameoflife():
+	return render_template('proj-gameoflife.html',
+						    title='gameoflife')
+@app.route ("/site")
+def site():
+	return render_template('proj-site.html',
+						    title='site')
 @app.route ("/apex")
 def apex():
 	return render_template('apex.html',
