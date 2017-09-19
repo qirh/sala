@@ -30,10 +30,14 @@ def myqueue():
 def gameoflife():
 	return render_template('proj-gameoflife.html',
 						    title='gameoflife')
-@app.route ("/site")
-def site():
-	return render_template('proj-site.html',
-						    title='site')
+@app.route ("/sala")
+def sala():
+	return render_template('proj-sala.html',
+						    title='sala')
+@app.route ("/downing")
+def downing():
+	return render_template('proj-downing.html',
+						    title='downing')
 @app.route ("/apex")
 def apex():
 	return render_template('apex.html',
