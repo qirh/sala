@@ -1,8 +1,10 @@
 # Site
 	Hey, this is repo for my apache server, currently, I'm serving two http sites from this repo
+	saladesaleh.com
+	salehjones.com
 
 ## Copyright Information
-	* This project is released under the MIT license and uses technologies developed under the same license as well
+	This project is released under the MIT license and uses technologies developed under the same license as well
 
 ## Author's notes
 ## saladesaleh.com
