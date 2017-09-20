@@ -82,17 +82,14 @@ def market (id):
     return render_template('stockmarket.html',
                             title=market.name,
                             market=market)
-@app.route ( '/d3' )
-def d3 ():
-  return render_template('d3.html',
-                title='Downing Jones')
+
 
 @app.route ( '/api/run_tests')
 def tests ():
     try:
         process = subprocess.Popen(['python3', '/var/www/FlaskApp/DowningJones/tests.py'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         out, err = process.communicate()
-        
+
         return str(out) + str(err)
     except Exception as exc:
         return str(exc)
@@ -101,7 +98,7 @@ def tests ():
 def get_exchange(id):
     market = Exchange.query.get(id)
     return jsonify(id = id,
-                   name = market.name, 
+                   name = market.name,
                    name_code = market.exchange,
                    market_cap = market.market_cap_exchange,
                    location = market.location,
@@ -111,7 +108,7 @@ def get_exchange(id):
 def get_location(id):
     location = Location.query.get(id)
     return jsonify(id = id,
-                   name = location.name, 
+                   name = location.name,
                    iso = location.iso,
                    capital = location.capital,
                    GDP = location.gdp,
@@ -122,7 +119,7 @@ def get_location(id):
 def get_currency(id):
     currency = Currency.query.get(id)
     return jsonify(id = id,
-                   name = currency.name, 
+                   name = currency.name,
                    exchange_rate = currency.exchange_rate,
                    exchanges = currency.exchanges,
                    locations = currency.locations,
@@ -132,7 +129,7 @@ def get_currency(id):
 def get_company(id):
     company = Company.query.get(id)
     return jsonify(id = id,
-                   name = company.name, 
+                   name = company.name,
                    symbol = company.symbol,
                    exchange = company.exchange,
                    location = company.location,
@@ -197,4 +194,3 @@ def search ():
       index2 = index2 + 1
 
     return render_template('search.html', queries = queries, queriesand1 = search_queryand1, queriesand2 = search_queryand2, queriesand3 = search_queryand3, queriesand4 = search_queryand4, queriesor1 = search_queryor1, queriesor2= search_queryor2, queriesor3 =search_queryor3, queriesor4 = search_queryor4 ,title="Search")
-      
