@@ -1,21 +1,31 @@
-## Copyright Information:
-	* This project is released under the MIT license
-	* Flag icons downloaded from flaticon.com
-    <div>Icons made by <a href="https://www.flaticon.com/authors/alfredo-hernandez" title="Alfredo Hernandez">Alfredo Hernandez</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+# Site
+	Hey, this is repo for my apache server, currently, I'm serving two http sites from this repo
 
-## Author's notes:
-## Known issues:
+## Copyright Information
+	* This project is released under the MIT license and uses technologies developed under the same license as well
+
+## Author's notes
+## saladesaleh.com
+### Known issues
 	* SSL certificate isn't signed
 	* DNS sometimes gives problems
-	
-## Still hasn't been implemented:
+### Still hasn't been implemented
 	* Languages
 	* Downing Jones link
-
-## To add:
+### To add
 	* Add localization
 	* Add all subdomains
 	* add section for bookmarked links
-
-## To improve:
+### To improve
 	* nada
+
+## salehjones.com
+### Known issues
+	* SSL certificate isn't signed
+	* d3 doesn't work, since the api it was using is down
+### Still hasn't been implemented
+	* nada
+### To add
+	* perfect as is
+### To improve
+	* perfect as is
