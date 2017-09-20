@@ -7,12 +7,10 @@
 ## Known issues:
 	* SSL certificate isn't signed
 	* DNS sometimes gives problems
-
-	* Index.html:
-		* Change the dropdown menu design and add flag icons
-		* Add function to detect change in dropdown menu
-	* Projects.html:
-		* Change projects from separate pages to all be implemented in the one html
+	
+## Still hasn't been implemented:
+	* Languages
+	* Downing Jones link
 
 ## To add:
 	* Add localization
