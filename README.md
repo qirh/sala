@@ -7,27 +7,36 @@
 	This project is released under the MIT license and uses technologies developed under the same license as well
 
 ## Author's notes
-## saladesaleh.com
-### Known issues
+### Server Wide
+#### Known issues
+	* static folder can be accessed from the internet
+#### Still hasn't been implemented
+	* nada
+#### To add
+	* nada
+#### To improve
+	* nada
+### saladesaleh.com
+#### Known issues
 	* SSL certificate isn't signed
 	* DNS sometimes gives problems
-### Still hasn't been implemented
+#### Still hasn't been implemented
 	* Languages
 	* Downing Jones link
-### To add
+#### To add
 	* Add localization
 	* Add all subdomains
 	* add section for bookmarked links
-### To improve
+#### To improve
 	* nada
 
-## salehjones.com
-### Known issues
+### salehjones.com
+#### Known issues
 	* SSL certificate isn't signed
 	* d3 doesn't work, since the api it was using is down
-### Still hasn't been implemented
+#### Still hasn't been implemented
 	* nada
-### To add
+#### To add
 	* perfect as is
-### To improve
+#### To improve
 	* perfect as is
