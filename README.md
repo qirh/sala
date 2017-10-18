@@ -10,6 +10,8 @@
 ### Server Wide
 #### Known issues
 	* static folder can be accessed from the internet
+	* serve over https
+	* subdomains don't work
 #### Still hasn't been implemented
 	* nada
 #### To add
@@ -18,22 +20,23 @@
 	* nada
 ### saladesaleh.com
 #### Known issues
-	* SSL certificate isn't signed
-	* DNS sometimes gives problems
+	* nada
 #### Still hasn't been implemented
-	* Languages
-	* Downing Jones link
+	* languages
 #### To add
-	* Add localization
-	* Add all subdomains
+	* add carousels with extensions
+	* size of pics with carousel
+	* space under footer
+	* add localization
+	* add all subdomains
 	* add section for bookmarked links
+	* add alt and descriptions for all images
 #### To improve
 	* nada
 
 ### salehjones.com
 #### Known issues
-	* SSL certificate isn't signed
-	* d3 doesn't work, since the api it was using is down
+	* nada
 #### Still hasn't been implemented
 	* nada
 #### To add
