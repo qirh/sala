@@ -53,10 +53,10 @@ function change_links(str, classn, k, href, id){
 	for (var elems = [], i = document.getElementsByClassName(classn + k).length - 1; i > -1; --i){
 		elems[i] = document.getElementsByClassName(classn + k)[i];
 	}
-	var tmp = new Array();
+	var tmp = [];
 	for(var i = 0; i < elems.length; i++)
 		if(trim(str) == trim(elems[i].innerHTML))
-			tmp.push(elems[i])
+			tmp.push(elems[i]);
 
 	for (var i = 1; i<tmp.length; i++){
 		//console.log(tmp[i])
