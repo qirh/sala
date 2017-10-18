@@ -3160,7 +3160,7 @@ var   tau$1 = 2 * pi$1;
       this._y0 = this._y1, this._y1 = y;
       this._t0 = t1;
     }
-  }
+  };
 
   function MonotoneY(context) {
     this._context = new ReflectContext(context);
@@ -5066,7 +5066,7 @@ var   t1$1 = new Date;
       start = interval.ceil(start);
       step = step == null ? 1 : Math.floor(step);
       if (!(start < stop) || !(step > 0)) return range; // also handles Invalid Date
-      do range.push(new Date(+start)); while (offseti(start, step), floori(start), start < stop)
+      do range.push(new Date(+start)); while (offseti(start, step), floori(start), start < stop);
       return range;
     };
 
@@ -9454,7 +9454,7 @@ var   epsilon$2 = 1e-6;
         // rotate the front chain to try the next position.
         if (intersects(j._, c._)) {
           a = b, b = j, --i;
-          continue pack;
+          continue;
         }
       }
 
@@ -11914,7 +11914,7 @@ var   keyPrefix$1 = "$";
         };
       });
     }
-  }
+  };
 
   function voronoi() {
     var x = x$4,
