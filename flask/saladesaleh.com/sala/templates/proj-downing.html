@@ -1,70 +1,68 @@
-style="padding: 10px 15px 0"{% extends "projects.html" %}
+{% extends "projects.html" %}
 {% block project %}
     <div class="container" style="padding: 10px 15px 0">
         <h2>DowningJones</h2>
         <p>This project was done by a team of six people during the summer of 2016, as a project for the course of Software Engineering at UT. The website lives here: <a href="salehjones.com">salehjones.com</a> or it can be accessed by the button in the navbar.
             Furthermore, this project shares a repo with this website, avaliable here: <a href="https://github.com/qirh/site">https://github.com/qirh/site</a> This project has also been throughly documented, which can be viewed here: <a href="https://github.com/kelvinhe273/IDB-Group7/wiki">https://github.com/kelvinhe273/IDB-Group7/wiki</a>
         </p>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="static/projects/downingjones/main.png" target="_blank">
-                        <img class="imgBorder" src="static/projects/downingjones/main.png"
-                             alt="Main page with a Carousel"
-                             style="width:100%">
-                        <div class="caption">
-                            <p>Main page with a Carousel</p>
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+                <li data-target="#carousel" data-slide-to="3"></li>
+                <li data-target="#carousel" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="slider-size">
+                        <img class="d-block img-fluid" src="static/projects/downingjones/main.png" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p style="color:midnightblue;">Main page with a Carousel</p>
                         </div>
-                    </a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slider-size">
+                        <img class="d-block img-fluid" src="static/projects/downingjones/stocks.png" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p style="color:midnightblue;">Available stock exchanges</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slider-size">
+                        <img class="d-block img-fluid" src="static/projects/downingjones/comapnies.png" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p style="color:midnightblue;">Available companies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slider-size">
+                        <img class="d-block img-fluid" src="static/projects/downingjones/location.png" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p style="color:midnightblue;">Location example</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slider-size">
+                        <img class="d-block img-fluid" src="static/projects/downingjones/about.png" alt="First slide">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p style="color:midnightblue;">About page</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="static/projects/downingjones/stocks.png" target="_blank">
-                        <img class="imgBorder" src="static/projects/downingjones/stocks.png"
-                             alt="Available stock exchanges"
-                             style="width:100%">
-                        <div class="caption">
-                            <p>Available stock exchanges</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="static/projects/downingjones/comapnies.png" target="_blank">
-                        <img class="imgBorder" src="static/projects/downingjones/comapnies.png"
-                             alt="Available companies"
-                             style="width:100%">
-                        <div class="caption">
-                            <p>Available companies</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="static/projects/downingjones/location.png" target="_blank">
-                        <img class="imgBorder" src="static/projects/downingjones/location.png"
-                             alt="Location example"
-                             style="width:100%">
-                        <div class="caption">
-                            <p>Location example</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="static/projects/downingjones/about.png" target="_blank">
-                        <img class="imgBorder" src="static/projects/downingjones/about.png" alt="About page"
-                             style="width:100%">
-                        <div class="caption">
-                            <p>About page</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a >
         </div>
     </div>
 {% endblock %}
