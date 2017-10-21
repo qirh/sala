@@ -4,47 +4,55 @@
         <h2>Art Navigator</h2>
         <p>This was a really fun project to work on! I developed an interactive map of public art installations in Cambridge, MA for
             iOS. I'm in the process of putting it in the app store, but for now, the repo can be found here: <a href="https://github.com/qirh/ArtNavigator">https://github.com/qirh/ArtNavigator</a></p>
-        <div class="row">got to develop
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="static/projects/artnavigator/map.png" target="_blank">
-                        <img class="imgBorder" src="static/projects/artnavigator/map.png" alt="Map of Cambridge, MA" style="width:100%">
-                        <div class="caption">
-                            <p>Map of art installations in Cambridge, MA</p>
-                        </div>
-                    </a>
+        <div id="carousel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
+                <li data-target="#carousel" data-slide-to="2"></li>
+                <li data-target="#carousel" data-slide-to="3"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                    <div class="slider-size-mob">
+                        <img class="d-block img-fluid" src="static/projects/artnavigator/map.png" alt="Map of Cambridge, MA">
+                        <!--div class="carousel-caption d-none d-md-block">
+                            <p style="color:midnightblue;">Map of art installations in Cambridge, MA</p>
+                        </div-->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slider-size-mob">
+                        <img class="d-block img-fluid" src="static/projects/artnavigator/list.png" alt="List of art installations">
+                        <!--div class="carousel-caption d-none d-md-block">
+                            <p style="color:midnightblue;">List of art installations</p>
+                        </div-->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slider-size-mob">
+                        <img class="d-block img-fluid" src="static/projects/artnavigator/settings.png" alt="Settings view">
+                        <!--div class="carousel-caption d-none d-md-block">
+                            <p style="color:midnightblue;">Settings view, with the language picker visible. Currently, 5 languages are supported</p>
+                        </div-->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slider-size-mob">
+                        <img class="d-block img-fluid" src="static/projects/artnavigator/list.png" alt="About view in Hebrew">
+                        <!--div class="carousel-caption d-none d-md-block">
+                            <p style="color:midnightblue;">About me view, while the language is set to Hebrew</p>
+                        </div-->
+                    </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="static/projects/artnavigator/list.png" target="_blank">
-                        <img class="imgBorder" src="static/projects/artnavigator/list.png" alt="List of art" style="width:100%">
-                        <div class="caption">
-                            <p>List of art installtions</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="static/projects/artnavigator/settings.png" target="_blank">
-                        <img class="imgBorder" src="static/projects/artnavigator/settings.png" alt="Settings view" style="width:100%">
-                        <div class="caption">
-                            <p>Settings view, with the language picker visible. Currently, 5 languages are fully supported</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="thumbnail">
-                    <a href="static/projects/artnavigator/about.png" target="_blank">
-                        <img class="imgBorder" src="static/projects/artnavigator/about.png" alt="About in Spanish" style="width:100%">
-                        <div class="caption">
-                            <p>About me view, in Spanish mode</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a >
         </div>
     </div>
 {% endblock %}

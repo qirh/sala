@@ -5,16 +5,51 @@ body {
 	padding: 3rem 1.5rem;
 	text-align: center;
 }
-.imgBorder {
-    border-style: solid;
-    border: darkblue 2px solid;
-}
 .grayLink {
 	color: rgb(49, 79, 79);
 }
 .blueLink {
 	color: rgb(0, 20, 255);
 }
+
+.carousel-indicators li {
+  background-color: #000000;
+  background-color: rgba(70,70,70,.25);
+}
+.carousel-indicators .active {
+  background-color: red;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid black;
+  background-image: none;
+}
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: red;
+}
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: red;
+}
+.carousel-inner > img {
+    margin: 0 auto;
+}
+.carousel-inner > .carousel-item > .slider-size > img {
+    margin: 0 auto;
+}
+.carousel-inner > .carousel-item > .slider-size-mob > img {
+    margin: 0 auto;
+}
+
 /*  source: https://stackoverflow.com/a/25561642    */
 /* Mobile */
 @media (max-width: 767px) {
@@ -34,23 +69,39 @@ body {
         width: 80%;
     }
 }
-
 /* laptops */
 @media (max-width: 1023px) and (min-width: 992px) {
     .slider-size {
-         height: 200px;
+         height: 500px;
     }
     .slider-size > img {
         width: 80%;
     }
 }
-
 /* desktops */
 @media (min-width: 1024px) {
     .slider-size {
-        height: 300px;
+        height: 500px;
     }
     .slider-size > img {
+        width: 80%;
+    }
+}
+/* laptops */
+@media (max-width: 1023px) and (min-width: 992px) {
+    .slider-size-mob {
+         height: 600px;
+    }
+    .slider-size-mob > img {
         width: 60%;
+    }
+}
+/* desktops */
+@media (min-width: 1024px) {
+    .slider-size-mob {
+        height: 900px;
+    }
+    .slider-size-mob > img {
+        width: 50%;
     }
 }
