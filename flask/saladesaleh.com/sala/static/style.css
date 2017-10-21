@@ -5,13 +5,16 @@ body {
 	padding: 3rem 1.5rem;
 	text-align: center;
 }
+footer {
+  position: absolute;
+  bottom: 0;
+}
 .grayLink {
 	color: rgb(49, 79, 79);
 }
 .blueLink {
 	color: rgb(0, 20, 255);
 }
-
 .carousel-indicators li {
   background-color: #000000;
   background-color: rgba(70,70,70,.25);
@@ -29,8 +32,7 @@ body {
   border: 1px solid black;
   background-image: none;
 }
-.carousel-control-next-icon:after
-{
+.carousel-control-next-icon:after {
   content: '>';
   font-size: 55px;
   color: red;
@@ -40,14 +42,41 @@ body {
   font-size: 55px;
   color: red;
 }
-.carousel-inner > img {
-    margin: 0 auto;
+.carousel-inner > .carousel-item > .slider-size-ios > img,  .carousel-inner > .carousel-item > .slider-size > img, .carousel-inner > .carousel-item > .slider-size-and > img{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 .carousel-inner > .carousel-item > .slider-size > img {
-    margin: 0 auto;
+    border-top: 2px;
+    border-left: 2px;
+    border-right: 2px;
+    border-bottom: 2px;
+    border-color: red;
+    border-style: solid;
 }
-.carousel-inner > .carousel-item > .slider-size-mob > img {
-    margin: 0 auto;
+.carousel-inner > .carousel-item > .slider-size-ios > img {
+    border-top: 2px;
+    border-left: 2px;
+    border-right: 2px;
+    border-bottom: 2px;
+    border-color: red;
+    border-style: solid;
+}
+.carousel-inner > .carousel-item > .slider-size-and > img {
+    border-top: 2px;
+    border-left: 2px;
+    border-right: 2px;
+    border-bottom: 2px;
+    border-color: red;
+    border-style: solid;
+}
+.vertical-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*  source: https://stackoverflow.com/a/25561642    */
@@ -78,15 +107,6 @@ body {
         width: 80%;
     }
 }
-/* desktops */
-@media (min-width: 1024px) {
-    .slider-size {
-        height: 500px;
-    }
-    .slider-size > img {
-        width: 80%;
-    }
-}
 /* laptops */
 @media (max-width: 1023px) and (min-width: 992px) {
     .slider-size-mob {
@@ -98,10 +118,28 @@ body {
 }
 /* desktops */
 @media (min-width: 1024px) {
-    .slider-size-mob {
+    .slider-size {
+        height: 700px;
+    }
+    .slider-size > img {
+        width: 80%;
+    }
+}
+/* desktops */
+@media (min-width: 1024px) {
+    .slider-size-and {
         height: 900px;
     }
-    .slider-size-mob > img {
+    .slider-size-and > img {
+        width: 50%;
+    }
+}
+/* desktops */
+@media (min-width: 1024px) {
+    .slider-size-ios {
+        /*height: 700px;*/
+    }
+    .slider-size-ios > img {
         width: 50%;
     }
 }
