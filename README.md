@@ -6,6 +6,11 @@
 ## Copyright Information
 	This project is released under the MIT license and uses technologies developed under the same license as well
 
+	Libraries used include:
+		Bootstrap:
+		Font Awesome:
+		JS Cookie: https://github.com/js-cookie/js-cookie
+
 ## Author's notes
 ### Server Wide
 #### Known issues
