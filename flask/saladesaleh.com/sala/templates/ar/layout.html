@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html dir="rtl" lang="ar">
 <head>
     <title>{{ title }}</title>
     <meta charset="utf-8">
@@ -37,40 +37,40 @@
 
 <body onload="loadPage()">
 <!-- NAVBAR-->
-<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse pull-right fixed-top">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
             data-target=".navbar-collapse" aria-expanded="false"
             aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
     <!-- NAME-->
-    <a class="navbar-brand" href="index">Saleh Alghusson</a>
+    <a class="navbar-brand" href="index">صالح الغصون</a>
     <div class="collapse navbar-collapse">
-        <ul class="navbar-nav mr-auto">
+        <ul class="nav navbar-nav navbar-right">
             <li class="nav-item active">
-                <a class="nav-link" href="index">Inicio<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index">الرئيسية<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="projects">Proyectos</a>
+                <a class="nav-link" href="projects">المشاريع</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="cv">Sobre mí</a>
+                <a class="nav-link" href="cv">السيرة</a>
             </li>
             <!--li class="nav-item">
                 <a class="nav-link" href="graph">Graph</a>
             </li-->
             <li class="nav-item">
-                <a class="nav-link" href="https://qirh.github.io">Blog</a>
+                <a class="nav-link" href="https://qirh.github.io">مدونتي</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="http://salehjones.com">Downing Jones</a>
+                <a class="nav-link" href="http://salehjones.com">موقعي الثاني</a>
             </li>
         </ul>
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="navbar-nav mr-auto" style="float: right">
             <a style="margin-right: 15px;" href="https://github.com/qirh" target="_blank">
                 <i class="fa fa-github fa-2x" aria-hidden="true"></i>
             </a>
-            <a href="mailto:salehg@live.com">
+            <a style="margin-right: 15px;" href="mailto:salehg@live.com">
                 <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
             </a>
         </ul>
@@ -85,13 +85,13 @@
 <footer class="footer fixed-bottom">
     <div class="container text-center">
         <p style="margin-bottom: 0rem;">
-            <a href="" onclick="checkLanguage('es', 'en');return false;" class="grayLink">English</a>
-            | <a href="" onclick="checkLanguage('es', 'es');return false;" class="blueLink">Español</a>
-            | <a href="" onclick="checkLanguage('es', 'pt');return false;" class="grayLink">Português</a>
-            | <a href="" onclick="checkLanguage('es', 'fr');return false;" class="grayLink">Français</a>
-            | <a href="" onclick="checkLanguage('es', 'de');return false;" class="grayLink">Deutsch</a>
-            | <a href="" onclick="checkLanguage('es', 'ar');return false;" class="grayLink">العربية</a>
-            | <a href="" onclick="checkLanguage('es', 'he');return false;" class="grayLink">עברית</a>
+            <a href="" onclick="checkLanguage('ar', 'en');return false;" class="grayLink">English</a>
+            | <a href="" onclick="checkLanguage('ar', 'es');return false;" class="grayLink">Español</a>
+            | <a onclick="checkLanguage('ar', 'pt');return false;" class="inactiveLink">Português</a>
+            | <a onclick="checkLanguage('ar', 'fr');return false;" class="inactiveLink">Français</a>
+            | <a onclick="checkLanguage('ar', 'de');return false;" class="inactiveLink">Deutsch</a>
+            | <a href="" onclick="checkLanguage('ar', 'ar');return false;" class="blueLink">العربية</a>
+            | <a onclick="checkLanguage('ar', 'he');return false;" class="inactiveLink">עברית</a>
         </p>
     </div>
 </footer>
