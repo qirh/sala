@@ -40,7 +40,7 @@ def downing():
 def texas():
 	return render_template('proj-texas.html', title='Saleh')
 
-###	Español
+###	Espangol
 @app.route("/es")
 @app.route("/es/")
 @app.route ("/es/index")
