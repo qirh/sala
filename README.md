@@ -14,9 +14,7 @@
 ## Author's notes
 ### Server Wide
 #### Known issues
-	* static folder can be accessed from the internet
 	* serve over https
-	* subdomains don't work
 #### Still hasn't been implemented
 	* nada
 #### To add
@@ -31,9 +29,6 @@
 #### To add
 	* add carousels with extensions
 	* size of pics with carousel
-	* space under footer
-	* add localization
-	* add all subdomains
 	* add section for bookmarked links
 	* add alt and descriptions for all images
 #### To improve
