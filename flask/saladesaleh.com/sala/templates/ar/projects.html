@@ -1,0 +1,19 @@
+{% extends "es/layout.html" %}
+{% block body %}
+    <div class="container">
+      <div class="main">
+        <p class="lead">Me encanta trabajar con proyectos de la informática, abajo encontrará algunos de los míos</p>
+
+        <div class="list-group">
+          <a href="artnavigator" class="list-group-item list-group-item-action">Cambridge Art Navigator</a>
+          <a href="gameoflife" class="list-group-item list-group-item-action">Game Of Life Simulation</a>
+          <a href="myqueue" class="list-group-item list-group-item-action">MyQueue</a>
+          <a href="downing" class="list-group-item list-group-item-action">Downing Jones</a>
+          <a href="texas" class="list-group-item list-group-item-action">¡Texas First!</a>
+          <a class="list-group-item list-group-item-action disabled">AES Encryption</a>
+            <a class="list-group-item list-group-item-action disabled">APEX</a>
+        </div>
+      </div>
+    </div>
+    {% block project %}{% endblock %}
+{% endblock %}

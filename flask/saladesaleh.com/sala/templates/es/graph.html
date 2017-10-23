@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "es/layout.html" %}
 {% block body %}
 
     <!--src: https://www.sitepoint.com/creating-simple-line-bar-charts-using-d3-js/ -->
@@ -73,7 +73,7 @@
                 .attr("text-anchor", "end")
                 .attr("x", WIDTH / 2)
                 .attr("y", HEIGHT - 10)
-                .text("Semester");
+                .text("Semestre");
 
             vis.append("text")
                 .attr("class", "y label")
@@ -81,19 +81,19 @@
                 .attr("y", 20)
                 .attr("x", -250)
                 .attr("transform", "rotate(-90)")
-                .text("Grade");
+                .text("Notas");
 
 
             vis.append("svg:g")
                 .attr("class", "x axis")
                 .attr("transform", "translate(0," + (HEIGHT - MARGINS.bottom) + ")")
-                .text("Semester")
+                .text("Semestre")
                 .call(xAxis);
 
             vis.append("svg:g")
                 .attr("class", "y axis")
                 .attr("transform", "translate(" + (MARGINS.left) + ",0)")
-                .text("Grade")
+                .text("Notas")
                 .call(yAxis);
 
 
