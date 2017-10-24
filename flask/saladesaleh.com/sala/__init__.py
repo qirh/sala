@@ -101,3 +101,7 @@ def ar_downing():
 @app.route ("/ar/texas")
 def ar_texas():
 	return render_template('/ar/proj-texas.html', title='Saleh')
+
+@app.errorhandler(404)
+def own_404_page(error):
+	return render_template('/ar/proj-texas.html', title='Saleh')
