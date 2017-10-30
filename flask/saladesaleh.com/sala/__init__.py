@@ -19,10 +19,10 @@ def graph():
 @app.route ("/projects")
 def projects():
 	return render_template('projects.html', title='Saleh')
-@app.route("/en/artnavigator")
-@app.route ("/artnavigator")
-def artnavigator():
-	return render_template('proj-artnavigator.html', title='Saleh')
+@app.route("/en/cambridgeart")
+@app.route ("/cambridgeart")
+def cambridgeart():
+	return render_template('proj-cambridgeart.html', title='Saleh')
 @app.route("/en/myqueue")
 @app.route ("/myqueue")
 def myqueue():
@@ -55,9 +55,9 @@ def es_graph():
 @app.route ("/es/projects")
 def es_projects():
 	return render_template('/es/projects.html', title='Saleh')
-@app.route ("/es/artnavigator")
-def es_artnavigator():
-	return render_template('/es/proj-artnavigator.html', title='Saleh')
+@app.route ("/es/cambridgeart")
+def es_cambridgeart():
+	return render_template('/es/proj-cambridgeart.html', title='Saleh')
 @app.route ("/es/myqueue")
 def es_myqueue():
 	return render_template('/es/proj-myqueue.html', title='Saleh')
@@ -86,9 +86,9 @@ def ar_graph():
 @app.route ("/ar/projects")
 def ar_projects():
 	return render_template('/ar/projects.html', title='Saleh')
-@app.route ("/ar/artnavigator")
-def ar_artnavigator():
-	return render_template('/ar/proj-artnavigator.html', title='Saleh')
+@app.route ("/ar/cambridgeart")
+def ar_cambridgeart():
+	return render_template('/ar/proj-cambridgeart.html', title='Saleh')
 @app.route ("/ar/myqueue")
 def ar_myqueue():
 	return render_template('/ar/proj-myqueue.html', title='Saleh')
