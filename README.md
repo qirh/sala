@@ -1,11 +1,13 @@
 # Site
-	Hey, this is repo for my apache server, currently, I'm serving two http sites from this repo
+	This is repo for my apache server, currently, I'm serving two http sites from this repo
 	saladesaleh.com
 	salehjones.com
 
 ## Copyright Information
 	This project is released under the MIT license and uses technologies developed under the same license as well
 
+	Icon made here: https://favicon.io/
+	Icon resized here: http://picresize.com/
 	Libraries used include:
 		Bootstrap
 		Font Awesome
@@ -37,6 +39,7 @@
 	* Arabic
 	* Fix the google audit (see screenshot)
 	* Set up PWA: http://blog.ionic.io/what-is-a-progressive-web-app/
+	* Comply with this: https://github.com/qirh/Front-End-Checklist
 
 ### salehjones.com
 #### Known issues
