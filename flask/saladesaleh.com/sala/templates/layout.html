@@ -1,38 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <title>{{ title }}</title>
     <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="almrausch">
     <meta name="author" content="sal7">
-    <link rel="icon" href="/static/logo.png">
+    <title>{{ title }}</title>
+    <link rel="icon" href="/static/salaicon.png">
+    <link rel="apple-touch-icon" href="/salaicon200.png">
+    <link rel="alternate" href="http://saladesaleh.com/es" hreflang="es">
+    <link rel="alternate" href="http://saladesaleh.com/ar" hreflang="ar">
 
     <!--link href="bootstrap.min.css" rel="stylesheet"-->
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
     <!-- Font Awesome CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <!-- Custom styles for this template -->
     <link href="/static/sticky-footer-navbar.css" rel="stylesheet">
-
+    <!-- style.css -->
+    <link href="/static/style.css" type="text/css" rel="stylesheet">
     <!-- jQuery -->
     <script src="/static/jquery-3.2.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="/static/bootstrap.min.js"></script>
-    <script src="/static/ie10-viewport-bug-workaround.js"></script>
-
+    <script src="/static/ie10_viewport_bug_workaround.js"></script>
     <!-- jQuery Cookie -->
     <script src="/static/js.cookie.js"></script>
-
     <!-- Language Switcher -->
     <script src="/static/language.js"></script>
-
-    <!-- style.css -->
-    <link href="/static/style.css" type="text/css" rel="stylesheet">
 </head>
 
 <body onload="loadPage()">
@@ -48,7 +46,7 @@
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-                <a class="nav-link" href="index">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index">Home<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="projects">Projects</a>
@@ -56,9 +54,6 @@
             <li class="nav-item">
                 <a class="nav-link" href="cv">CV</a>
             </li>
-            <!--li class="nav-item">
-                <a class="nav-link" href="graph">Graph</a>
-            </li-->
             <li class="nav-item">
                 <a class="nav-link" href="https://qirh.github.io">Blog</a>
             </li>
@@ -67,12 +62,16 @@
             </li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-            <a style="margin-right: 15px;" href="https://github.com/qirh" target="_blank">
+            <li class="nav-item">
+            <a style="margin-right: 15px;" href="https://github.com/qirh" target="_blank" rel="noopener noreferrer">
                 <i class="fa fa-github fa-2x" aria-hidden="true"></i>
             </a>
+            </li>
+            <li class="nav-item">
             <a href="mailto:salehg@live.com">
                 <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>
             </a>
+            </li>
         </ul>
     </div>
 </nav>
@@ -87,11 +86,11 @@
         <p style="margin-bottom: 0rem;">
 
             <a href="" onclick="checkLanguage('en', 'en');return false;" class="blueLink">English</a>
-            | <a href="" onclick="checkLanguage('en', 'es');return false;" class="grayLink">Español</a>
+            | <a href="" onclick="checkLanguage('en', 'es');return false;" class="redLink">Español</a>
             | <a onclick="checkLanguage('en', 'pt');return false;" class="inactiveLink">Português</a>
             | <a onclick="checkLanguage('en', 'fr');return false;" class="inactiveLink">Français</a>
             | <a onclick="checkLanguage('en', 'de');return false;" class="inactiveLink">Deutsch</a>
-            | <a href="" onclick="checkLanguage('en', 'ar');return false;" class="grayLink">العربية</a>
+            | <a href="" onclick="checkLanguage('en', 'ar');return false;" class="redLink">العربية</a>
             | <a onclick="checkLanguage('en', 'he');return false;" class="inactiveLink">עברית</a>
         </p>
     </div>
