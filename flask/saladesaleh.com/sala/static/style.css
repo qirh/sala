@@ -9,13 +9,14 @@ footer {
   position: absolute;
   bottom: 0;
 }
-.grayLink {
-	color: rgb(49, 79, 79);
+.redLink {
+	color: rgb(178,34,34);
 }
 .blueLink {
 	color: rgb(0, 20, 255);
 }
 .inactiveLink {
+
    pointer-events: none;
    cursor: default;
 }
