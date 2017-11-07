@@ -15,6 +15,10 @@ def cv():
 @app.route ("/graph")
 def graph():
 	return render_template('graph.html', title='Saleh')
+@app.route("/en/test")
+@app.route ("/test")
+def test():
+	return render_template('test.html', title='Saleh')
 @app.route("/en/projects")
 @app.route ("/projects")
 def projects():
@@ -104,4 +108,4 @@ def ar_texas():
 
 @app.errorhandler(404)
 def own_404_page(error):
-	return render_template('/ar/proj-texas.html', title='Saleh')
+	return render_template('/404.html', title='Saleh')
