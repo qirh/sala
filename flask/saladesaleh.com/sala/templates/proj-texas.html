@@ -1,18 +1,30 @@
-{% extends "projects.html" %}
-{% block project %}
+{% extends "layout.html" %}
+{% block body %}
 
     <div class="container" style="padding: 10px 15px 0">
         <h2>¡Texas First!</h2>
         <p>This is a simple Chrome extension, loops over all the option tags in an html page and if it detects any mention of "TX" or "Texas" it will append it to the top of the options. Nice for proud Texans and those of us ehm who are applying for jobs and hate scrolling down so much. <a href="https://chrome.google.com/webstore/detail/texas-first/cflpfjhdephkbknjgidjkcfhohbddlnh">Chrome Store link.</a> <a href="https://github.com/qirh/TexasFirst">Git repo.</a></p>
 
-        <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div id="carousel" class="carousel slide" data-ride="carousel" data-interval="false">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel" data-slide-to="1"></li>
 
+            </ol>
             <div class="carousel-inner" role="listbox">
                 <div class="carousel-item active">
                     <div class="slider-size">
-                        <img class="d-block img-fluid" src="/static/projects/texas/tx.png" alt="TX is pushed to the top">
+                        <img class="d-block img-fluid" src="/static/projects/texas/tx_flag.png" alt="TX is pushed to the top">
                         <div class="carousel-caption d-none d-md-block">
                             <p style="color:midnightblue;">TX is pushed to the top</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="slider-size">
+                        <img class="d-block img-fluid" src="/static/projects/texas/tx2.png" alt="howdy :)">
+                        <div class="carousel-caption d-none d-md-block">
+                            <p style="color:midnightblue;">howdy :)</p>
                         </div>
                     </div>
                 </div>

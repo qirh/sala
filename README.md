@@ -35,6 +35,7 @@
 	* add section for bookmarked links
 #### To improve
 	* 404 redirection to proper language
+	* Should all css files be local?
 	* Fix sizes of pics with carousel
 	* Change projects table to images with caption + source code button
 	* Spanish
