@@ -1,5 +1,5 @@
-{% extends "projects.html" %}
-{% block project %}
+{% extends "layout.html" %}
+{% block body %}
     <div class="container" style="padding: 10px 15px 0">
         <h2>DowningJones</h2>
         <p>This project was done by a team of six people during the summer of 2016, as a project for the course of Software Engineering at UT. The website lives here: <a href="salehjones.com">salehjones.com</a> or it can be accessed by the button in the navbar.
@@ -17,7 +17,9 @@
                 <div class="carousel-item active">
                     <div class="slider-size">
                         <img class="d-block img-fluid" src="/static/projects/downingjones/main.png" alt="Main page of the site">
-
+                        <div class="carousel-caption d-none d-md-block">
+                            <p style="color:whitesmoke;">Main page</p>
+                        </div>
                     </div>
                 </div>
                 <div class="carousel-item">
