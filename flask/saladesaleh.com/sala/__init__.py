@@ -16,10 +16,6 @@ def cv():
 @app.route ("/graph")
 def graph():
 	return render_template('graph.html', title='Saleh')
-@app.route("/en/test")
-@app.route ("/test")
-def test():
-	return render_template('test.html', title='Saleh')
 @app.route("/en/projects")
 @app.route ("/projects")
 def projects():

@@ -20,9 +20,11 @@
 .mobile, .square {
 	text-align: justify;
 	margin-left: 15px;
+    /*
     -moz-transition: all 0.3s;
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
+    */
 }
 .mobile > img, .square > img {
 	float: left;
@@ -37,11 +39,11 @@
 	width: 200px;
 	height: 170px;
 }
+
 .mobile:hover > img, .square:hover > img{
-    -moz-transform: scale(1.4);
-    -webkit-transform: scale(1.4);
-    transform: scale(1.4);
+    opacity: 0.7;
 }
+
 .buttonsWrapper {
 	margin: 0px auto 0px auto;
 	text-align: center;
