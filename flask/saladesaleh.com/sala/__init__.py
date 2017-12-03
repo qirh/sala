@@ -49,31 +49,31 @@ def texas():
 @app.route("/es/")
 @app.route ("/es/index")
 def es_index():
-	return render_template('/es/index.html', title=u'Saléh')
+	return render_template('/es/index.html', title=u'Sáleh')
 @app.route ("/es/cv")
 def es_cv():
-	return render_template('/es/cv.html', title=u'Saléh')
+	return render_template('/es/cv.html', title=u'Sáleh')
 @app.route ("/es/graph")
 def es_graph():
-	return render_template('/es/graph.html', title=u'Saléh')
+	return render_template('/es/graph.html', title=u'Sáleh')
 @app.route ("/es/projects")
 def es_projects():
-	return render_template('/es/projects.html', title=u'Saléh')
+	return render_template('/es/projects.html', title=u'Sáleh')
 @app.route ("/es/cambridgeart")
 def es_cambridgeart():
-	return render_template('/es/proj-cambridgeart.html', title=u'Saléh')
+	return render_template('/es/proj-cambridgeart.html', title=u'Sáleh')
 @app.route ("/es/myqueue")
 def es_myqueue():
-	return render_template('/es/proj-myqueue.html', title=u'Saléh')
+	return render_template('/es/proj-myqueue.html', title=u'Sáleh')
 @app.route ("/es/gameoflife")
 def es_gameoflife():
-	return render_template('/es/proj-gameoflife.html', title=u'Saléh')
+	return render_template('/es/proj-gameoflife.html', title=u'Sáleh')
 @app.route ("/es/downing")
 def es_downing():
-	return render_template('/es/proj-downing.html', title=u'Saléh')
+	return render_template('/es/proj-downing.html', title=u'Sáleh')
 @app.route ("/es/texas")
 def es_texas():
-	return render_template('/es/proj-texas.html', title=u'Saléh')
+	return render_template('/es/proj-texas.html', title=u'Sáleh')
 
 ###	Arabic
 @app.route("/ar")
