@@ -1,10 +1,6 @@
 body {
 	padding-top: 5rem;
 }
-
-h2, p, .title, .mobile, .square {
-    font-family: 'Bitter', serif;
-}
 .main {
 	padding: 3rem 1.5rem;
 	text-align: center;
@@ -12,6 +8,7 @@ h2, p, .title, .mobile, .square {
 footer {
   position: absolute;
   bottom: 0;
+  background-color: #F4F3F3!important;
 }
 .availableLink {
 	color: rgb(60,200,80);
@@ -23,6 +20,6 @@ footer {
    pointer-events: none;
    cursor: default;
 }
-.bar {
-    font-family: 'Ubuntu', sans-serif;
+.bg-inverse {
+    background-color: #363737!important;
 }
