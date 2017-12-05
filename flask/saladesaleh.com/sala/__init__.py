@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
-
-from flask import Flask, render_template
+from flask import Flask, render_template, send_file
 app = Flask(__name__)
 
 @app.route("/")
@@ -43,6 +42,11 @@ def downing():
 @app.route ("/texas")
 def texas():
 	return render_template('proj-texas.html', title='Saleh')
+
+@app.route('/docs/cv')
+def get_pdf():
+	return send_file('static/docs/CV_SalehAlghusson.pdf', as_attachment=True)
+
 
 ###	Espangol
 @app.route("/es")
