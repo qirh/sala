@@ -24,6 +24,7 @@
 	* nada
 #### To improve
 	* nada
+	
 ### saladesaleh.com
 #### Known issues
 	* nada
@@ -32,12 +33,9 @@
 #### To add
 	* detect navigator language
 	* add carousels to all with proper alt
-	* add section for bookmarked links
 #### To improve
 	* 404 redirection to proper language
 	* Should all css files be local?
-	* Fix sizes of pics with carousel
-	* Change projects table to images with caption + source code button
 	* Spanish
 	* Arabic
 	* Fix the google audit (see screenshot)
