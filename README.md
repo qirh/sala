@@ -24,7 +24,7 @@
 	* nada
 #### To improve
 	* nada
-	
+
 ### saladesaleh.com
 #### Known issues
 	* nada
@@ -34,6 +34,10 @@
 	* detect navigator language
 	* add carousels to all with proper alt
 #### To improve
+	* Remove navbar and condense everything in one page
+	* Add photo
+	* Navigate to all docs
+		* Check if dox exists: return (doc then index) or 404
 	* 404 redirection to proper language
 	* Should all css files be local?
 	* Spanish
