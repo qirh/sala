@@ -1,20 +1,45 @@
 # -*- coding: utf-8 -*-
 
 import os
-from flask import Flask, render_template, send_file, send_from_directory
+from flask import Flask, render_template, send_file, send_from_directory, request
 app = Flask(__name__)
 
 @app.errorhandler(404)
-def own_404_page(num1=None, num2=None, num3=None, error1=None, error2=None):
-    if num1 is None or num2 is None or num3 is None:
+def own_404_page(num1=None, num2=None, num3=None, error1=None, error2=None, error3=None, back = None, home = None):
+
+    if (num1 is None or num2 is None or num3 is None) and request.path.startswith("/ar"):
+        num1 = '٤'
+        num2 = '٠'
+        num3 = '٤'
+    elif (num1 is None or num2 is None or num3 is None) and not request.path.startswith("/ar"):
         num1 = '4'
         num2 = '0'
         num3 = '4'
-    if error1 is None or error2 is None:
-        error1 = 'PAGE NOT FOUND'
-        error2 = 'The requested page could not be found'
 
-    return render_template('/404.html', title='Saleh', num1 = num1, num2 = num2, num3 = num3, error1 = error1, error2 = error2)
+    if (error1 is None or back is None or home is None) and request.path.startswith("/ar"):
+        error1 = 'خطأ !'
+        back = 'إلى الخلف'
+        home = 'إلى الرئيسية'
+    elif (error1 is None or back is None or home is None) and request.path.startswith("/es"):
+        error1 = '¡Error!'
+        back = 'Retroceda'
+        home = 'Al Inicio'
+    elif (error1 is None or back is None or home is None) and not request.path.startswith("/ar") and not request.path.startswith("/es"):
+        error1 = 'Error !'
+        back = 'Go Back'
+        home = 'Go Home'
+
+    if (error2 is None or error3 is None) and request.path.startswith("/ar"):
+        error2 = 'الصفحة غير موجودة'
+        error3 = ''
+    elif (error2 is None or error3 is None) and request.path.startswith("/es"):
+        error2 = 'NO SE ENCONTRÓ LA PÁGINA'
+        error3 = ''
+    elif (error2 is None or error3 is None) and not request.path.startswith("/ar") and not request.path.startswith("/es"):
+        error2 = 'PAGE NOT FOUND'
+        error3 = 'The requested page could not be found'
+
+    return render_template('/404.html', title='Saleh', num1 = num1, num2 = num2, num3 = num3, error1 = error1, error2 = error2, error3 = error3, back = back, home = home)
 
 @app.route("/")
 @app.route("/en")
@@ -55,24 +80,18 @@ def downing():
 @app.route ("/texas")
 def texas():
     return render_template('proj-texas.html', title='Saleh')
-
 @app.route('/en/docs/cv')
 @app.route('/docs/cv')
 def get_cv():
-    return send_from_directory('static/docs/', 'CV_Saleh_Alghusson.pdf', )
-
+    return send_from_directory(os.path.join(app.static_folder), 'CV_Saleh_Alghusson.pdf', )
 @app.route('/en/docs/<path:filename>')
 @app.route('/docs/<path:filename>')
 def get_pdf(filename=None):
-    print("0")
     if filename is not None:
-        print("1")
         arr = os.listdir(os.path.join(app.static_folder, 'docs'))
         if filename in arr:
-            print("2")
-            return send_from_directory('static/docs/', filename)
-    print("3")
-    return own_404_page(error1='FILE NOT FOUND', error2='The requested file could not be found')
+            return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
+    return own_404_page(error2 = 'FILE NOT FOUND', error3 = 'The requested file could not be found')
 
 
 ###	Espangol
@@ -105,6 +124,13 @@ def es_downing():
 @app.route ("/es/texas")
 def es_texas():
     return render_template('/es/proj-texas.html', title=u'Sáleh')
+@app.route('/es/docs/<path:filename>')
+def es_get_pdf(filename=None):
+    if filename is not None:
+        arr = os.listdir(os.path.join(app.static_folder, 'docs'))
+        if filename in arr:
+            return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
+    return own_404_page(error2 = 'NO SE ENCONTRÓ EL ARCHVO', error3 = '')
 
 ###	Arabic
 @app.route("/ar")
@@ -136,4 +162,11 @@ def ar_downing():
 @app.route ("/ar/texas")
 def ar_texas():
     return render_template('/ar/proj-texas.html', title=u'صالح')
+@app.route('/ar/docs/<path:filename>')
+def ar_get_pdf(filename=None):
+    if filename is not None:
+        arr = os.listdir(os.path.join(app.static_folder, 'docs'))
+        if filename in arr:
+            return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
+    return own_404_page(error2 = 'الملف غير موجود', error3 = '')
 
