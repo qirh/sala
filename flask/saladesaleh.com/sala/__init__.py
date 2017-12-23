@@ -8,9 +8,9 @@ app = Flask(__name__)
 def own_404_page(num1=None, num2=None, num3=None, error1=None, error2=None, error3=None, back = None, home = None):
 
     if (num1 is None or num2 is None or num3 is None) and request.path.startswith("/ar"):
-        num1 = '٤'
-        num2 = '٠'
-        num3 = '٤'
+        num1 = u'٤'
+        num2 = u'٠'
+        num3 = u'٤'
     elif (num1 is None or num2 is None or num3 is None) and not request.path.startswith("/ar"):
         num1 = '4'
         num2 = '0'
@@ -21,20 +21,20 @@ def own_404_page(num1=None, num2=None, num3=None, error1=None, error2=None, erro
         back = u'إلى الخلف'
         home = u'إلى الرئيسية'
     elif (error1 is None or back is None or home is None) and request.path.startswith("/es"):
-        error1 = '¡Error!'
-        back = 'Retroceda'
-        home = 'Al Inicio'
+        error1 = u'¡Error!'
+        back = u'Retroceda'
+        home = u'Al Inicio'
     elif (error1 is None or back is None or home is None) and not request.path.startswith("/ar") and not request.path.startswith("/es"):
-        error1 = 'Error !'
+        error1 = u'Error !'
         back = 'Go Back'
         home = 'Go Home'
 
     if (error2 is None or error3 is None) and request.path.startswith("/ar"):
         error2 = u'الصفحة غير موجودة'
-        error3 = ''
+        error3 = u''
     elif (error2 is None or error3 is None) and request.path.startswith("/es"):
         error2 = u'NO SE ENCONTRÓ LA PÁGINA'
-        error3 = ''
+        error3 = u''
     elif (error2 is None or error3 is None) and not request.path.startswith("/ar") and not request.path.startswith("/es"):
         error2 = 'PAGE NOT FOUND'
         error3 = 'The requested page could not be found'
@@ -130,7 +130,7 @@ def es_get_pdf(filename=None):
         arr = os.listdir(os.path.join(app.static_folder, 'docs'))
         if filename in arr:
             return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
-    return own_404_page(error2 = u'NO SE ENCONTRÓ EL ARCHVO', error3 = '')
+    return own_404_page(error2 = u'NO SE ENCONTRÓ EL ARCHVO', error3 = u'')
 
 ###	Arabic
 @app.route("/ar")
