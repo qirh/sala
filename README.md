@@ -38,9 +38,6 @@
 			http://aaron.kumavis.me/
 			https://thomasbroadley.com/
 	* Add photo
-	* Navigate to all docs
-		* Check if dox exists: return (doc then index) or 404
-	* 404 redirection to proper language
 	* Should all css files be local?
 	* Spanish
 	* Arabic
