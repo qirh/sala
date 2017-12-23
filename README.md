@@ -34,7 +34,9 @@
 	* detect navigator language
 	* add carousels to all with proper alt
 #### To improve
-	* Remove navbar and condense everything in one page
+	* Remove navbar and condense everything in one page, look here for inspiration:
+			http://aaron.kumavis.me/
+			https://thomasbroadley.com/
 	* Add photo
 	* Navigate to all docs
 		* Check if dox exists: return (doc then index) or 404
