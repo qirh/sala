@@ -38,6 +38,7 @@
 			http://aaron.kumavis.me/
 			https://thomasbroadley.com/
 	* Add "Technologies used" section to each project
+	* Change git buttons colors based on language
 	* Add photo
 	* Should all css files be local?
 	* Spanish
