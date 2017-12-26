@@ -1,4 +1,10 @@
 {% extends "ar/layout.html" %}
+
+{% block css %}
+    <!-- projects.css -->
+    <link href="/static/projects.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
     <table class="projects">
         <tr class="emptyRow">
@@ -91,7 +97,4 @@
         <img class="modalContent" id="modalImg">
         <div id="modalCaption"></div>
     </div>
-
-
-    {% block project %}{% endblock %}
 {% endblock %}

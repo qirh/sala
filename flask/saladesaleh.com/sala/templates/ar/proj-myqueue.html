@@ -1,6 +1,18 @@
 {% extends "ar/layout.html" %}
-{% block body %}
 
+{% block css %}
+    <!-- project_page.css -->
+    <link href="/static/project_page.css" type="text/css" rel="stylesheet">
+    <!-- modal.css -->
+    <link href="/static/modal.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block js %}
+    <!-- modal.js -->
+    <script src="/static/modal.js"></script>
+{% endblock %}
+
+{% block body %}
     <div class="container" style="padding: 10px 15px 0">
         <h2>My Queue</h2>
         <p>MyQueue was also a super fun Android project that I worked on in the beginning of 2017. MyQueue gives users a chance to display movies and TV shows from a handful of streaming services at the same time. Users are also be able to add movies and TV shows to their queue, which will be synchornized in the cloud using Google's firebase. Git repo here <a style="margin-left: 15px;" href="https://github.com/qirh/MyQueue"><i class="fa fa-github fa-2x" aria-hidden="true"></i></a></p>

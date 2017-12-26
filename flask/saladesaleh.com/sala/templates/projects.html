@@ -1,4 +1,10 @@
 {% extends "layout.html" %}
+
+{% block css %}
+    <!-- projects.css -->
+    <link href="/static/projects.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
     <table class="projects">
         <tr class="emptyRow">
@@ -93,5 +99,4 @@
     </div>
 
 
-    {% block project %}{% endblock %}
 {% endblock %}

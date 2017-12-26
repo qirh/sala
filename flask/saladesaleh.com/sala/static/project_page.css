@@ -2,11 +2,9 @@
     background-color: #000000;
     background-color: rgba(70, 70, 70, .25);
 }
-
 .carousel-indicators .active {
     background-color: red;
 }
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
     height: 75px;
@@ -17,19 +15,16 @@
     border: 1px solid black;
     background-image: none;
 }
-
 .carousel-control-next-icon:after {
     content: '>';
     font-size: 35px;
     color: indianred;
 }
-
 .carousel-control-prev-icon:after {
     content: '<';
     font-size: 35px;
     color: indianred;
 }
-
 .carousel-inner > .carousel-item > .slider-size-ios > img, .carousel-inner > .carousel-item > .slider-size > img, .carousel-inner > .carousel-item > .slider-size-and > img {
     top: 0;
     bottom: 0;
@@ -37,7 +32,6 @@
     right: 0;
     margin: auto;
 }
-
 .carousel-inner > .carousel-item > .slider-size > img {
     border-top: 1px;
     border-left: 1px;
@@ -46,7 +40,6 @@
     border-color: red;
     border-style: solid;
 }
-
 .carousel-inner > .carousel-item > .slider-size-ios > img {
     border-top: 2px;
     border-left: 2px;
@@ -55,7 +48,6 @@
     border-color: red;
     border-style: solid;
 }
-
 .carousel-inner > .carousel-item > .slider-size-and > img {
     border-top: 2px;
     border-left: 2px;
@@ -64,7 +56,6 @@
     border-color: red;
     border-style: solid;
 }
-
 .vertical-center {
     position: relative;
     top: 50%;

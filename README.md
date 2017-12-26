@@ -37,6 +37,7 @@
 	* Remove navbar and condense everything in one page, look here for inspiration:
 			http://aaron.kumavis.me/
 			https://thomasbroadley.com/
+	* Add "Technologies used" section to each project
 	* Add photo
 	* Should all css files be local?
 	* Spanish
