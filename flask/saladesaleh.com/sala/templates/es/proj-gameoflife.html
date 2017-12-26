@@ -1,4 +1,17 @@
 {% extends "es/layout.html" %}
+
+{% block css %}
+    <!-- project_page.css -->
+    <link href="/static/project_page.css" type="text/css" rel="stylesheet">
+    <!-- modal.css -->
+    <link href="/static/modal.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block js %}
+    <!-- modal.js -->
+    <script src="/static/modal.js"></script>
+{% endblock %}
+
 {% block body %}
     <div class="container" style="padding: 10px 15px 0">
         <h2>Game of Life</h2>

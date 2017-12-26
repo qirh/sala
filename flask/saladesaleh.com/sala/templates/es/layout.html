@@ -22,14 +22,11 @@
     <link href="/static/sticky-footer-navbar.css" rel="stylesheet">
     <!-- style.css -->
     <link href="/static/style.css" type="text/css" rel="stylesheet">
-    <!-- project_page.css -->
-    <link href="/static/project_page.css" type="text/css" rel="stylesheet">
-    <!-- projects.css -->
-    <link href="/static/projects.css" type="text/css" rel="stylesheet">
-    <!-- modal.css -->
-    <link href="/static/modal.css" type="text/css" rel="stylesheet">
-    <!-- 404.css -->
-    <link href="/static/404.css" type="text/css" rel="stylesheet">
+   <!-- font_latin.css -->
+    <link href="/static/font_latin.css" type="text/css" rel="stylesheet">
+
+    {% block css %}{% endblock %}
+
     <!-- jQuery -->
     <script src="/static/jquery-3.2.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
@@ -39,8 +36,9 @@
     <script src="/static/js.cookie.js"></script>
     <!-- Language Switcher -->
     <script src="/static/language.js"></script>
-    <!-- modal.js -->
-    <script src="/static/modal.js"></script>
+
+    {% block js %}{% endblock %}
+
 </head>
 
 <body onload="loadPage()">
