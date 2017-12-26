@@ -48,10 +48,6 @@ def own_404_page(num1=None, num2=None, num3=None, error1=None, error2=None, erro
 @app.route ("/index")
 def index():
     return render_template('index.html', title = 'Saleh')
-@app.route("/en/cv")
-@app.route ("/cv")
-def cv():
-    return render_template('cv.html', title = 'Saleh')
 @app.route("/en/graph")
 @app.route ("/graph")
 def graph():
@@ -60,6 +56,10 @@ def graph():
 @app.route ("/projects")
 def projects():
     return render_template('projects.html', title = 'Saleh')
+@app.route("/en/test")
+@app.route ("/test")
+def test():
+    return render_template('test.html', title = 'Saleh')
 @app.route("/en/cambridgeart")
 @app.route ("/cambridgeart")
 def cambridgeart():
@@ -100,9 +100,6 @@ def get_pdf(filename=None):
 @app.route ("/es/index")
 def es_index():
     return render_template('/es/index.html', title = u'Sáleh')
-@app.route ("/es/cv")
-def es_cv():
-    return render_template('/es/cv.html', title = u'Sáleh')
 @app.route ("/es/graph")
 def es_graph():
     return render_template('/es/graph.html', title = u'Sáleh')
@@ -138,9 +135,6 @@ def es_get_pdf(filename=None):
 @app.route ("/ar/index")
 def ar_index():
     return render_template('/ar/index.html', title = u'صالح')
-@app.route ("/ar/cv")
-def ar_cv():
-    return render_template('/ar/cv.html', title = u'صالح')
 @app.route ("/ar/graph")
 def ar_graph():
     return render_template('/ar/graph.html', title = u'صالح')
