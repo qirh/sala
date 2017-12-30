@@ -40,6 +40,7 @@
 	* Add "Technologies used" section to each project
 	* Change git buttons colors based on language
 	* Add photo
+	* Floating menu like here: https://html5up.net/stellar
 	* Should all css files be local?
 	* Spanish
 	* Arabic
