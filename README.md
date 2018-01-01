@@ -1,18 +1,22 @@
 # Site
-	This is repo for my apache server, currently, I'm serving two http sites from this repo
-	saladesaleh.com
-	salehjones.com
+&nbsp;&nbsp;&nbsp;&nbsp;This is repo for an apache server, currently, two http sites are deployed from this repo [saladesaleh.com](http://saladesaleh.com) && [salehjones.com](http://salehjones.com)
+	
+	
 
 ## Copyright Information
-	This project is released under the MIT license and uses technologies developed under the same license as well
+	[![MIT license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/qirh/site/master/LICENSE.txt)
 
 	Icon made here: https://favicon.io/
 	Icon resized here: http://picresize.com/
 	404 page from OS templates: http://www.os-templates.com/template-terms
 	Libraries used include:
-		Bootstrap
-		Font Awesome
-		JS Cookie: https://github.com/js-cookie/js-cookie
+        [Bootstrap](https://getbootstrap.com/)
+        [Font Awesome](http://fontawesome.io/)
+        [JS Cookie](https://github.com/js-cookie/js-cookie)
+        [jQuery](https://jquery.com/)
+        [HTML5UP](https://html5up.net/)
+        
+		
 
 ## Author's notes
 ### Server Wide
