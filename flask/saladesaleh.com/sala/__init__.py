@@ -60,6 +60,10 @@ def projects():
 @app.route ("/test")
 def test():
     return render_template('test.html', title = 'Saleh')
+@app.route("/en/test2")
+@app.route ("/test2")
+def test2():
+    return render_template('test2.html', title = 'Saleh')
 @app.route("/en/cambridgeart")
 @app.route ("/cambridgeart")
 def cambridgeart():

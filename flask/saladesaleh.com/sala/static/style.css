@@ -1,24 +1,29 @@
 body {
-	padding-top: 5rem;
+    padding-top: 5rem;
 }
 .main {
-	padding: 3rem 1.5rem;
-	text-align: center;
+    padding: 3rem 1.5rem;
+    text-align: center;
 }
 footer {
-  position: relative;
-  bottom: 0;
-  background-color: #F4F3F3!important;
+    position: relative;
+    bottom: 0;
+    background-color: #F4F3F3!important;
+}
+a {
+    font-family: 'Roboto Condensed', sans-serif !important;
+    border-bottom: none !important;
 }
 .availableLink {
-	color: rgb(60,200,80);
+    color: rgb(60,200,80) !important;
 }
 .currLink {
-	color: rgb(0, 20, 255);
+    color: rgb(0, 20, 255) !important;
 }
 .unAvailableLink {
-   pointer-events: none;
-   cursor: default;
+    pointer-events: none;
+    cursor: default;
+    color: rgb(119, 119, 119) !important;
 }
 .bg-inverse {
     background-color: #363737!important;
