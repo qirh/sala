@@ -4,7 +4,7 @@
 	
 
 ## Copyright Information
-	[![MIT license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/qirh/site/master/LICENSE.txt)
+	[![MIT license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/qirh/site/master/LICENSE)
 
 	Icon made here: https://favicon.io/
 	Icon resized here: http://picresize.com/
