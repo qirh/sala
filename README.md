@@ -4,17 +4,17 @@
 
 
 ## Copyright Information
-	[![MIT license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/qirh/site/master/LICENSE)
+[![MIT license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/qirh/site/master/LICENSE)
 
-	Icon made here: https://favicon.io/
-	Icon resized here: http://picresize.com/
-	404 page from OS templates: http://www.os-templates.com/template-terms
-	Libraries used include:
-        [Bootstrap](https://getbootstrap.com/)
-        [Font Awesome](http://fontawesome.io/)
-        [JS Cookie](https://github.com/js-cookie/js-cookie)
-        [jQuery](https://jquery.com/)
-        [HTML5UP](https://html5up.net/)
+* Icon made here: https://favicon.io/
+* Icon resized here: http://picresize.com/
+* 404 page from OS templates: http://www.os-templates.com/template-terms
+* Libraries used include:
+    * [Bootstrap](https://getbootstrap.com/)
+    * [Font Awesome](http://fontawesome.io/)
+    * [JS Cookie](https://github.com/js-cookie/js-cookie)
+    * [jQuery](https://jquery.com/)
+    * [HTML5UP](https://html5up.net/)
 
 
 
