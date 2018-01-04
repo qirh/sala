@@ -1,4 +1,4 @@
-#!/var/www/flask/venv/bin/python
+#!/var/www/site/flask/saladesaleh.com/sala/venv/bin/python
 
 import sys
 import getopt
