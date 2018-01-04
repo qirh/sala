@@ -1,7 +1,7 @@
 # Site
-&nbsp;&nbsp;&nbsp;&nbsp;This is repo for an apache server, currently, two http sites are deployed from this repo [saladesaleh.com](http://saladesaleh.com) && [salehjones.com](http://salehjones.com)
-	
-	
+&nbsp;&nbsp;&nbsp;&nbsp;This is a repo for an apache server, currently, two http sites are deployed from this repo [saladesaleh.com](http://saladesaleh.com) && [salehjones.com](http://salehjones.com)
+
+
 
 ## Copyright Information
 	[![MIT license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/qirh/site/master/LICENSE)
@@ -15,8 +15,8 @@
         [JS Cookie](https://github.com/js-cookie/js-cookie)
         [jQuery](https://jquery.com/)
         [HTML5UP](https://html5up.net/)
-        
-		
+
+
 
 ## Author's notes
 ### Server Wide
