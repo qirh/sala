@@ -84,10 +84,12 @@ def downing():
 @app.route ("/texas")
 def texas():
     return render_template('proj-texas.html', title = 'Saleh')
+
 @app.route('/en/docs/cv')
 @app.route('/docs/cv')
 def get_cv():
     return send_from_directory(os.path.join(app.static_folder), 'CV_Saleh_Alghusson.pdf', )
+
 @app.route('/en/docs/<path:filename>')
 @app.route('/docs/<path:filename>')
 def get_pdf(filename=None):
@@ -96,12 +98,19 @@ def get_pdf(filename=None):
         if filename in arr:
             return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
     return own_404_page(error2 = 'FILE NOT FOUND', error3 = 'The requested file could not be found')
+
+@app.route ("/blog")
 @app.route("/en/blog")
 @app.route("/es/blog")
 @app.route("/ar/blog")
-@app.route ("/blog")
 def blog():
-    return redirect("https://qirh.github.io/")
+    return redirect("https://qirh.github.io")
+@app.route ("/jones")
+@app.route("/en/jones")
+@app.route("/es/jones")
+@app.route("/ar/jones")
+def jones():
+    return redirect("http://salehjones.com")
 
 
 
