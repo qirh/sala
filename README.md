@@ -17,6 +17,7 @@ Repo for an apache server, currently, two http sites are deployed from this repo
 #### Known issues
 #### Still hasn't been implemented
 #### To add
+* Make dev branch
 * Host the Jekyll blog on this server!
 #### To improve
 
