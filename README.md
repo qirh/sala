@@ -25,7 +25,7 @@ This is a repo for an apache server, currently, two http sites are deployed from
 #### Still hasn't been implemented
 * nada
 #### To add
-* nada
+* Host the Jekyll blog!
 #### To improve
 * nada
 
