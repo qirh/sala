@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 import os
-from flask import Flask, render_template, send_file, send_from_directory, request
+from flask import Flask, render_template, send_file, send_from_directory, request, redirect
 app = Flask(__name__)
 
 @app.errorhandler(404)
