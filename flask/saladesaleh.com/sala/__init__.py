@@ -96,6 +96,13 @@ def get_pdf(filename=None):
         if filename in arr:
             return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
     return own_404_page(error2 = 'FILE NOT FOUND', error3 = 'The requested file could not be found')
+@app.route("/en/blog")
+@app.route("/es/blog")
+@app.route("/ar/blog")
+@app.route ("/blog")
+def blog():
+    return redirect("https://qirh.github.io/")
+
 
 
 ###	Espangol
@@ -167,4 +174,3 @@ def ar_get_pdf(filename=None):
         if filename in arr:
             return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
     return own_404_page(error2 = u'الملف غير موجود', error3 = '')
-
