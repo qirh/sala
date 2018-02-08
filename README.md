@@ -1,6 +1,8 @@
 # Site [![MIT license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/qirh/site/master/LICENSE)
 Repo for an apache server, currently, two http sites are deployed from this repo [saladesaleh.com](http://saladesaleh.com) && [salehjones.com](http://salehjones.com)
 
+TO DO: THIS REPO WILL SOON BE SPLIT IN TWO, ONE FOR EACH SITE
+
 ## Copyright Information
 * Icon made here: https://favicon.io/
 * Icon resized here: http://picresize.com/
