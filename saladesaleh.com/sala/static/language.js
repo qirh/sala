@@ -27,7 +27,7 @@ function loadPage() {
 
     //check if link has a language in it
     if(index >= 0){
-        return;
+
     } else {    //else add language to link
         var indexOfSlash = nthIndex(url, "/", 3);
         //console.log(url.substring(0, indexOfSlash) + "/" + getLanguage() + url.substring(indexOfSlash));
