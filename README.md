@@ -1,7 +1,5 @@
 # Site [![MIT license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/qirh/site/master/LICENSE)
-Repo for an apache server, currently, two http sites are deployed from this repo [saladesaleh.com](http://saladesaleh.com) && [salehjones.com](http://salehjones.com)
-
-TO DO: THIS REPO WILL SOON BE SPLIT IN TWO, ONE FOR EACH SITE
+Repo for an http site [saladesaleh.com](http://saladesaleh.com)
 
 ## Copyright Information
 * Icon made here: https://favicon.io/
@@ -44,9 +42,3 @@ TO DO: THIS REPO WILL SOON BE SPLIT IN TWO, ONE FOR EACH SITE
     * Adhere to the google audit (see screenshot)
     * Set up PWA: http://blog.ionic.io/what-is-a-progressive-web-app/
     * Comply with this: https://github.com/qirh/Front-End-Checklist
-
-### salehjones.com
-#### Known issues
-#### Still hasn't been implemented nada
-#### To add
-#### To improve
