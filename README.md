@@ -13,21 +13,13 @@ Repo for an http site [saladesaleh.com](http://saladesaleh.com)
     * [HTML5UP](https://html5up.net/)
 
 ## Author's notes
-### Server Wide
-#### Known issues
-#### Still hasn't been implemented
-#### To add
-* Make dev branch
-* Host the Jekyll blog on this server!
-#### To improve
-
-### saladesaleh.com
 #### Known issues
 #### Still hasn't been implemented
 #### To add
 * detect navigator language and switch automatically
 * Add carousels & proper alt to all pictures
 #### To improve
+* Host the Jekyll blog on this server!
 * Remove navbar and condense everything in one page, look here for inspiration:
     * http://aaron.kumavis.me/
     * https://thomasbroadley.com/

@@ -11,7 +11,7 @@ function modal(id) {
     span.onclick = function() {
         console.log("modal3");
         modal.style.display = "none";
-    }
+    };
     modal.style.display = "block";
     modalImg.src = img.src;
     captionText.innerHTML = img.alt;
