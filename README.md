@@ -1,4 +1,4 @@
-# Site [![MIT license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/qirh/site/master/LICENSE)
+# Sala [![MIT license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/qirh/sala/master/LICENSE)
 Repo for an http site [saladesaleh.com](http://saladesaleh.com)
 
 ## Copyright Information
@@ -16,16 +16,21 @@ Repo for an http site [saladesaleh.com](http://saladesaleh.com)
 #### Known issues
 #### Still hasn't been implemented
 #### To add
-* detect navigator language and switch automatically
+* Detect navigator language and switch automatically
 * Add carousels & proper alt to all pictures
+* Word of the DAY!!!!
 #### To improve
+* Only two html versions (RTL & LTR)  --> Flask read JSON
 * Host the Jekyll blog on this server!
 * Remove navbar and condense everything in one page, look here for inspiration:
     * http://aaron.kumavis.me/
+    * https://github.com/aliceriot/site
     * https://thomasbroadley.com/
+    * http://adrienneyao.com
+    * https://www.hackreactor.com/student-projects
+    * https://www.nobledesktop.com/student-showcase
     * Floating menu like here: https://html5up.net/stellar
 * Add "Technologies used" section to each project
-* Change git buttons colors based on language (what does that even mean?)
 * Add personal photo
 * Should all css files be local?
 * Add more Spanish
