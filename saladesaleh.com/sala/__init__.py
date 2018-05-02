@@ -94,6 +94,7 @@ def get_cv():
 @app.route('/docs/<path:filename>')
 def get_pdf(filename=None):
     if filename is not None:
+        print("static_folder = " + app.static_folder)
         arr = os.listdir(os.path.join(app.static_folder, 'docs'))
         if filename in arr:
             return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
