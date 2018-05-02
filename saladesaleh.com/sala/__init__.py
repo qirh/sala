@@ -98,6 +98,7 @@ def get_pdf(filename=None):
         arr = os.listdir(os.path.join(app.static_folder, 'docs'))
         if filename in arr:
             return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
+        print("filename")
     return own_404_page(error2 = 'FILE NOT FOUND', error3 = 'The requested file could not be found')
 
 @app.route ("/blog")
