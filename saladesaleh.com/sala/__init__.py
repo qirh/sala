@@ -64,6 +64,10 @@ def test():
 @app.route ("/test2")
 def test2():
     return render_template('test2.html', title = 'Saleh')
+@app.route("/en/test3")
+@app.route ("/test3")
+def test3():
+    return render_template('test3.html', title = 'Saleh')
 @app.route("/en/cambridgeart")
 @app.route ("/cambridgeart")
 def cambridgeart():
