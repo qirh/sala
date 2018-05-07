@@ -21,7 +21,6 @@ Repo for an http site [saladesaleh.com](http://saladesaleh.com)
 * Word of the DAY!!!!
 #### To improve
 * Only two html versions (RTL & LTR)  --> Flask read JSON
-* Add CV shortcut!
 * Host the Jekyll blog on this server!
 * Remove navbar and condense everything in one page, look here for inspiration:
     * http://aaron.kumavis.me/
