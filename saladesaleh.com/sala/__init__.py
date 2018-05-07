@@ -87,6 +87,8 @@ def texas():
 
 @app.route('/en/docs/cv')
 @app.route('/docs/cv')
+@app.route('/en/cv')
+@app.route('/cv')
 def get_cv():
     return send_from_directory(os.path.join(app.static_folder), 'CV_Saleh_Alghusson.pdf', )
 
