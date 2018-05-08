@@ -1,55 +1,40 @@
-{% extends "layout-test.html" %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Saleh Alghusson's website, gamer, pro grammar, programmer">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--meta name="description" content="almrausch"-->
+        <meta name="author" content="saleh">
+        <meta name="theme-color" content="#ffffff">
 
-<!-- source:    https://keithclark.co.uk/articles/pure-css-parallax-websites/
-                https://www.w3schools.com/howto/howto_css_parallax.asp
--->
+        <title>{{ title }}</title>
 
-{% block css %}
-    <!-- parallax.css -->
-    <link href="/static/parallax.css" type="text/css" rel="stylesheet">
-{% endblock %}
+        <link rel="icon" href="/static/salaicon.png">
+        <link rel="apple-touch-icon" href="/salaicon-200x200.png">
+        <link rel="manifest" href="/static/manifest.json">
+        <link rel="alternate" href="http://saladesaleh.com/es" hreflang="es">
+        <link rel="alternate" href="http://saladesaleh.com/ar" hreflang="ar">
 
-{% block body %}
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    <div class="bgimg-1">
-        <div class="caption">
-                <span class="border">Saleh</span>
-        </div>
-    </div>
+            ga('create', 'UA-118771568-1', 'auto');
+            ga('send', 'pageview');
+        </script>
 
-    <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
-        <h3 style="text-align:center;">Parallax Demo</h3>
-        <p>Parallax scrolling is a web site trend where the background content is moved at a different speed than the foreground content while scrolling. Nascetur per nec posuere turpis, lectus nec libero turpis nunc at, sed posuere mollis ullamcorper libero ante lectus, blandit pellentesque a, magna turpis est sapien duis blandit dignissim. Viverra interdum mi magna mi, morbi sociis. Condimentum dui ipsum consequat morbi, curabitur aliquam pede, nullam vitae eu placerat eget et vehicula. Varius quisque non molestie dolor, nunc nisl dapibus vestibulum at, sodales tincidunt mauris ullamcorper, dapibus pulvinar, in in neque risus odio. Accumsan fringilla vulputate at quibusdam sociis eleifend, aenean maecenas vulputate, non id vehicula lorem mattis, ratione interdum sociis ornare. Suscipit proin magna cras vel, non sit platea sit, maecenas ante augue etiam maecenas, porta porttitor placerat leo.</p>
-    </div>
+        <link rel="stylesheet" href="/static/reset.css">
+        <link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Muli|Raleway|Roboto|Roboto+Slab" rel="stylesheet">
 
-    <div class="bgimg-2">
-        <div class="caption">
-            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">LESS HEIGHT</span>
-        </div>
-    </div>
 
-    <div style="position:relative;">
-        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-            <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
-        </div>
-    </div>
 
-    <div class="bgimg-3">
-        <div class="caption">
-            <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;">SCROLL UP</span>
-        </div>
-    </div>
+    </head>
 
-    <div style="position:relative;">
-        <div style="color:#ddd;background-color:#282E34;text-align:center;padding:50px 80px;text-align: justify;">
-            <p>Scroll up and down to really get the feeling of how Parallax Scrolling works.</p>
-        </div>
-    </div>
+    <body>
 
-    <div class="bgimg-1">
-        <div class="caption">
-            <span class="border">COOL!</span>
-        </div>
-    </div>
+    </body>
 
-{% endblock %}
+</html>
