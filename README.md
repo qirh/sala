@@ -18,7 +18,7 @@ Repo for an http site [saladesaleh.com](http://saladesaleh.com)
 #### To add
 * Detect navigator language and switch automatically
 * Add carousels & proper alt to all pictures
-* Word of the DAY!!!!
+* Word of the DAY!!!! (theysaidso.com/api)
 #### To improve
 * Only two html versions (RTL & LTR)  --> Flask read JSON
 * Host the Jekyll blog on this server!
@@ -27,12 +27,8 @@ Repo for an http site [saladesaleh.com](http://saladesaleh.com)
     * https://github.com/aliceriot/site
     * https://thomasbroadley.com/
     * http://adrienneyao.com
-    * https://www.hackreactor.com/student-projects
-    * https://www.nobledesktop.com/student-showcase
-    * Floating menu like here: https://html5up.net/stellar
 * Add "Technologies used" section to each project
 * Add personal photo
-* Should all css files be local?
 * Add more Spanish
 * Add more Arabic
 * Not that important things:
