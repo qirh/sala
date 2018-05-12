@@ -17,8 +17,8 @@ Repo for an http site [saladesaleh.com](http://saladesaleh.com)
 #### Still hasn't been implemented
 #### To add
 * Detect navigator language and switch automatically
-* Add carousels & proper alt to all pictures
 * Word of the DAY!!!! (theysaidso.com/api)
+* HTML 5 Video
 #### To improve
 * Only two html versions (RTL & LTR)  --> Flask read JSON
 * Host the Jekyll blog on this server!
