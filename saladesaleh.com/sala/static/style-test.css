@@ -16,15 +16,15 @@ a {
     border-bottom: none !important;
 }
 
-.availableLink {
+.available-link {
     color: rgb(60, 200, 80) !important;
 }
 
-.currLink {
+.curr-link {
     color: rgb(0, 20, 255) !important;
 }
 
-.unAvailableLink {
+.un-available-link {
     pointer-events: none;
     cursor: default;
     color: rgb(119, 119, 119) !important;
