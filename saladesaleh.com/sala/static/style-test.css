@@ -38,12 +38,25 @@ p, ul {
     font-family: Raleway, serif, Times;
     margin-bottom: 1rem;
 }
-.box {
-    display: none;
-    width: 100%;
+.tiptext {
+    color:#069;
+    cursor:pointer;
 }
-p:hover + .box, .box:hover {
-    display: block;
-    position: relative;
-    z-index: 100;
+.description {
+    display:none;
+    position:absolute;
+    border:1px solid #000;
+    width:1000px;
+    height:1000px;
+    -ms-transform: scale(0.25);
+    -moz-transform: scale(0.25);
+    -o-transform: scale(0.25);
+    -webkit-transform: scale(0.25);
+    transform: scale(0.25);
+
+    -ms-transform-origin: 0 0;
+    -moz-transform-origin: 0 0;
+    -o-transform-origin: 0 0;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
 }
