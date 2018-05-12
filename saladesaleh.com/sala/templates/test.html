@@ -6,11 +6,19 @@
 
         <h1>Saleh Alghusson</h1>
         <h2>About me</h2>
-        <p style="display: inline">I studied Computer Science at the University of Texas. I'm passionate about <a href="/static/photos/tech.jpg">technology</a><div class="box"><iframe src="/static/photos/tech.jpg" width="100px" height="100px"></iframe></div>, <a href="/static/photos/travel.jpg">travel</a> and <a href="/static/photos/bike.jpg">two wheeled vehicles</a> ;)</p>
+        <p style="display: inline">I studied Computer Science at the University of Texas. I'm passionate about <a class="curr-link tiptext">technology<iframe class="description" src="/static/photos/tech.jpg"></iframe></a>, <a href="/static/photos/travel.jpg">travel</a> and <a href="/static/photos/bike.jpg">two wheeled vehicles</a> ;)</p>
         <p>Currently, I'm based out of NYC with <a href="https://Kiva.org/">Kiva.</a></p>
 
 
 
     </div>
+
+    <script>
+  $(".tiptext").mouseover(function() {
+    $(this).children(".description").show();
+}).mouseout(function() {
+    $(this).children(".description").hide();
+});
+</script>
 
 {% endblock %}
