@@ -19,18 +19,17 @@ Repo for an http site [saladesaleh.com](http://saladesaleh.com)
 * Detect navigator language and switch automatically
 * Word of the DAY!!!! (theysaidso.com/api)
 * HTML 5 Video
+* Pictures fade into one another --> http://css3.bradshawenterprises.com/cfimg/
 #### To improve
 * Only two html versions (RTL & LTR)  --> Flask read JSON
 * Host the Jekyll blog on this server!
-* Remove navbar and condense everything in one page, look here for inspiration:
-    * http://aaron.kumavis.me/
-    * https://github.com/aliceriot/site
-    * https://thomasbroadley.com/
-    * http://adrienneyao.com
-* Add "Technologies used" section to each project
+* Add "Technologies used" section to each project (on Git)
+* Add visualization options to the graph
 * Add personal photo
 * Add more Spanish
 * Add more Arabic
+* Add French
+    si ma candidature vous intéresse
 * Not that important things:
     * Adhere to the google audit (see screenshot)
     * Set up PWA: http://blog.ionic.io/what-is-a-progressive-web-app/
