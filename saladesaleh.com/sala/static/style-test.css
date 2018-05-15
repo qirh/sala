@@ -1,10 +1,10 @@
 body {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    margin: 1rem 1rem 0rem 0rem;
+    margin: 1rem 1rem 1rem 1rem;
 }
 .cuerpo {
-    margin: 0rem 0rem 1rem 1rem;
+    margin: 0rem 0rem 3rem 0rem;
 }
 footer {
     position: relative;
@@ -15,15 +15,12 @@ a {
     font-family: 'Roboto Slab', sans-serif !important;
     border-bottom: none !important;
 }
-
 .available-link {
-    color: rgb(60, 200, 80) !important;
+    color: rgb(79, 175, 78) !important; /* 4FAF4E   */
 }
-
 .curr-link {
-    color: rgb(0, 20, 255) !important;
+    color: rgb(0, 110, 211) !important; /* 006ED3   */
 }
-
 .un-available-link {
     pointer-events: none;
     cursor: default;
@@ -34,29 +31,48 @@ h1, h2, th {
     font-family: "Muli", serif, Times;
     margin-bottom: 1.75rem;
 }
+th {
+    font-weight:bold;
+}
+h1 {
+    font-size: 2rem;
+}
+h2 {
+    font-size: 1.5rem;
+}
 p, ul {
     font-family: Raleway, serif, Times;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+.links {
+    display: inline;
 }
 .tiptext {
-    color:#069;
+
     cursor:pointer;
 }
 .description {
     display:none;
     position:absolute;
     border:1px solid #000;
-    width:1000px;
-    height:1000px;
-    -ms-transform: scale(0.25);
-    -moz-transform: scale(0.25);
-    -o-transform: scale(0.25);
-    -webkit-transform: scale(0.25);
-    transform: scale(0.25);
-
+    width:500px;
+    height:800px;
+    -ms-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    -o-transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    transform: scale(0.4);
     -ms-transform-origin: 0 0;
     -moz-transform-origin: 0 0;
     -o-transform-origin: 0 0;
     -webkit-transform-origin: 0 0;
     transform-origin: 0 0;
+}
+.travel {
+    width:1000px;
+    height:750px;
+}
+.bike {
+    width:600px;
+    height:850px;
 }
