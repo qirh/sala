@@ -40,7 +40,7 @@ h1 {
 h2 {
     font-size: 1.5rem;
 }
-p, ul {
+p, ul, td {
     font-family: Raleway, serif, Times;
     margin-bottom: 1.5rem;
 }
@@ -75,4 +75,7 @@ p, ul {
 .bike {
     width:600px;
     height:850px;
+}
+.icon-link {
+    text-align: center;
 }
