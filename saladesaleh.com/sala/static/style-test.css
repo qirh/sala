@@ -79,3 +79,38 @@ p, ul, td {
 .icon-link {
     text-align: center;
 }
+
+/* Mobile */
+.col-name {
+    width: 10%;
+}
+.col-desc {
+    width: 85%;
+}
+.col-link {
+    width: 2.5%;
+}
+/* Tablets */
+@media only screen and (min-width: 600px) {
+    .col-name {
+        width: 15%;
+    }
+    .col-desc {
+        width: 80%;
+    }
+    .col-link {
+        width: 2.5%;
+    }
+}
+/* Desktop */
+@media only screen and (min-width: 768px) {
+    .col-name {
+        width: 20%;
+    }
+    .col-desc {
+        width: 70%;
+    }
+    .col-link {
+        width: 5%;
+    }
+}
