@@ -5,6 +5,8 @@ Repo for an http site [saladesaleh.com](http://saladesaleh.com)
 * Icon made here: https://favicon.io/
 * Icon resized here: http://picresize.com/
 * 404 page from OS templates: http://www.os-templates.com/template-terms
+* Website icon: Icon made by madebyoliver from [flaticon](www.flaticon.com)
+* Github icon Font Awesome Free download, the CC BY 4.0 license applies to all icons packaged as .svg and .js files types.
 * Libraries used include:
     * [Bootstrap](https://getbootstrap.com/)
     * [Font Awesome](http://fontawesome.io/)
