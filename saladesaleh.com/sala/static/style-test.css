@@ -76,7 +76,7 @@ p, ul, td {
     width:600px;
     height:850px;
 }
-.icon-link {
+.icon-col {
     text-align: center;
 }
 
@@ -90,6 +90,10 @@ p, ul, td {
 .col-link {
     width: 2.5%;
 }
+.icon-col-img {
+    width: 10px;
+    height: 10px;
+}
 /* Tablets */
 @media only screen and (min-width: 600px) {
     .col-name {
@@ -100,6 +104,10 @@ p, ul, td {
     }
     .col-link {
         width: 2.5%;
+    }
+    .icon-col-img {
+        width: 15px;
+        height: 15px;
     }
 }
 /* Desktop */
@@ -112,5 +120,9 @@ p, ul, td {
     }
     .col-link {
         width: 5%;
+    }
+    .icon-col-img {
+        width: 25px;
+        height: 25px;
     }
 }
