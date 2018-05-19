@@ -48,38 +48,16 @@ def own_404_page(num1=None, num2=None, num3=None, error1=None, error2=None, erro
 @app.route ("/index")
 def index():
     return render_template('index.html', title = 'Saleh')
-@app.route("/en/graph")
+@app.route ("/en/graph")
 @app.route ("/graph")
 def graph():
     return render_template('graph.html', title = 'Saleh')
-@app.route("/en/projects")
-@app.route ("/projects")
-def projects():
-    return render_template('projects.html', title = 'Saleh')
-@app.route("/en/test")
-@app.route ("/test")
-def test():
-    return render_template('test.html', title = 'Saleh')
-@app.route("/en/cambridgeart")
-@app.route ("/cambridgeart")
-def cambridgeart():
-    return render_template('proj-cambridgeart.html', title = 'Saleh')
-@app.route("/en/myqueue")
-@app.route ("/myqueue")
-def myqueue():
-    return render_template('proj-myqueue.html', title = 'Saleh')
-@app.route("/en/gameoflife")
-@app.route ("/gameoflife")
-def gameoflife():
-    return render_template('proj-gameoflife.html', title = 'Saleh')
-@app.route("/en/downing")
-@app.route ("/downing")
-def downing():
-    return render_template('proj-downing.html', title = 'Saleh')
-@app.route("/en/texas")
-@app.route ("/texas")
-def texas():
-    return render_template('proj-texas.html', title = 'Saleh')
+@app.route ("/en/voicegarden")
+@app.route ("/voicegarden")
+def voicegarden():
+    return render_template('voicegarden.html', title = 'Saleh')
+
+
 
 @app.route('/en/docs/cv')
 @app.route('/docs/cv')
@@ -123,24 +101,7 @@ def es_index():
 @app.route ("/es/graph")
 def es_graph():
     return render_template('/es/graph.html', title = u'Sáleh')
-@app.route ("/es/projects")
-def es_projects():
-    return render_template('/es/projects.html', title = u'Sáleh')
-@app.route ("/es/cambridgeart")
-def es_cambridgeart():
-    return render_template('/es/proj-cambridgeart.html', title = u'Sáleh')
-@app.route ("/es/myqueue")
-def es_myqueue():
-    return render_template('/es/proj-myqueue.html', title = u'Sáleh')
-@app.route ("/es/gameoflife")
-def es_gameoflife():
-    return render_template('/es/proj-gameoflife.html', title = u'Sáleh')
-@app.route ("/es/downing")
-def es_downing():
-    return render_template('/es/proj-downing.html', title = u'Sáleh')
-@app.route ("/es/texas")
-def es_texas():
-    return render_template('/es/proj-texas.html', title = u'Sáleh')
+
 @app.route('/es/docs/<path:filename>')
 def es_get_pdf(filename=None):
     if filename is not None:
