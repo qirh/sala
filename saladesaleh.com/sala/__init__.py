@@ -8,7 +8,6 @@ app = Flask(__name__)
 def own_404_page(num1=None, num2=None, num3=None, error1=None, error2=None, error3=None, back = None, home = None):
 
     begin = 'en'
-
     if (num1 is None or num2 is None or num3 is None) and request.path.startswith("/ar"):
         begin = 'ar'
         num1 = u'٤'
@@ -61,15 +60,16 @@ def graph():
 def voicegarden():
     return render_template('/en/voicegarden.html', title = 'Saleh')
 
-
-
-@app.route('/en/docs/cv')
-@app.route('/docs/cv')
-@app.route('/en/cv')
 @app.route('/cv')
+@app.route('/en/cv')
+@app.route('/es/cv')
+@app.route('/ar/cv')
+@app.route('/docs/cv')
+@app.route('/en/docs/cv')
+@app.route('/es/docs/cv')
+@app.route('/ar/docs/cv')
 def get_cv():
     filename = 'CV_Saleh_Alghusson.pdf'
-    print("app.static_folder :" + os.path.join(app.static_folder, 'docs') + ":")
     return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
 
 
@@ -82,13 +82,13 @@ def get_pdf(filename=None):
             return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
     return own_404_page(error2 = 'FILE NOT FOUND', error3 = 'The requested file could not be found')
 
-@app.route ("/blog")
+@app.route("/blog")
 @app.route("/en/blog")
 @app.route("/es/blog")
 @app.route("/ar/blog")
 def blog():
     return redirect("https://qirh.github.io")
-@app.route ("/jones")
+@app.route("/jones")
 @app.route("/en/jones")
 @app.route("/es/jones")
 @app.route("/ar/jones")
