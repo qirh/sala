@@ -47,15 +47,15 @@ def own_404_page(num1=None, num2=None, num3=None, error1=None, error2=None, erro
 @app.route("/en/index")
 @app.route ("/index")
 def index():
-    return render_template('index.html', title = 'Saleh')
+    return render_template('/en/index.html', title = 'Saleh')
 @app.route ("/en/graph")
 @app.route ("/graph")
 def graph():
-    return render_template('graph.html', title = 'Saleh')
+    return render_template('/en/graph.html', title = 'Saleh')
 @app.route ("/en/voicegarden")
 @app.route ("/voicegarden")
 def voicegarden():
-    return render_template('voicegarden.html', title = 'Saleh')
+    return render_template('/en/voicegarden.html', title = 'Saleh')
 
 
 
@@ -101,6 +101,9 @@ def es_index():
 @app.route ("/es/graph")
 def es_graph():
     return render_template('/es/graph.html', title = u'Sáleh')
+@app.route ("/es/voicegarden")
+def es_voicegarden():
+    return render_template('/es/voicegarden.html', title = u'Sáleh')
 
 @app.route('/es/docs/<path:filename>')
 def es_get_pdf(filename=None):
@@ -119,24 +122,10 @@ def ar_index():
 @app.route ("/ar/graph")
 def ar_graph():
     return render_template('/ar/graph.html', title = u'صالح')
-@app.route ("/ar/projects")
-def ar_projects():
-    return render_template('/ar/projects.html', title = u'صالح')
-@app.route ("/ar/cambridgeart")
-def ar_cambridgeart():
-    return render_template('/ar/proj-cambridgeart.html', title = u'صالح')
-@app.route ("/ar/myqueue")
-def ar_myqueue():
-    return render_template('/ar/proj-myqueue.html', title = u'صالح')
-@app.route ("/ar/gameoflife")
-def ar_gameoflife():
-    return render_template('/ar/proj-gameoflife.html', title = u'صالح')
-@app.route ("/ar/downing")
-def ar_downing():
-    return render_template('/ar/proj-downing.html', title = u'صالح')
-@app.route ("/ar/texas")
-def ar_texas():
-    return render_template('/ar/proj-texas.html', title = u'صالح')
+@app.route ("/ar/voicegarden")
+def ar_voicegarden():
+    return render_template('/ar/voicegarden.html', title = u'صالح')
+
 @app.route('/ar/docs/<path:filename>')
 def ar_get_pdf(filename=None):
     if filename is not None:
