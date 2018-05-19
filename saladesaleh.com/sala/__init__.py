@@ -7,7 +7,10 @@ app = Flask(__name__)
 @app.errorhandler(404)
 def own_404_page(num1=None, num2=None, num3=None, error1=None, error2=None, error3=None, back = None, home = None):
 
+    begin = 'en'
+
     if (num1 is None or num2 is None or num3 is None) and request.path.startswith("/ar"):
+        begin = 'ar'
         num1 = u'٤'
         num2 = u'٠'
         num3 = u'٤'
@@ -21,6 +24,7 @@ def own_404_page(num1=None, num2=None, num3=None, error1=None, error2=None, erro
         back = u'إلى الخلف'
         home = u'إلى الرئيسية'
     elif (error1 is None or back is None or home is None) and request.path.startswith("/es"):
+        begin = 'es'
         error1 = u'¡Error!'
         back = u'Retroceda'
         home = u'Al Inicio'
@@ -39,7 +43,7 @@ def own_404_page(num1=None, num2=None, num3=None, error1=None, error2=None, erro
         error2 = 'PAGE NOT FOUND'
         error3 = 'The requested page could not be found'
 
-    return render_template('/404.html', title = 'Saleh', num1 = num1, num2 = num2, num3 = num3, error1 = error1, error2 = error2, error3 = error3, back = back, home = home)
+    return render_template('/%s/404.html' %begin, title = 'Saleh', num1 = num1, num2 = num2, num3 = num3, error1 = error1, error2 = error2, error3 = error3, back = back, home = home)
 
 @app.route("/")
 @app.route("/en")
@@ -64,17 +68,18 @@ def voicegarden():
 @app.route('/en/cv')
 @app.route('/cv')
 def get_cv():
-    return send_from_directory(os.path.join(app.static_folder), 'CV_Saleh_Alghusson.pdf', )
+    filename = 'CV_Saleh_Alghusson.pdf'
+    print("app.static_folder :" + os.path.join(app.static_folder, 'docs') + ":")
+    return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
+
 
 @app.route('/en/docs/<path:filename>')
 @app.route('/docs/<path:filename>')
 def get_pdf(filename=None):
     if filename is not None:
-        print("static_folder = " + app.static_folder)
         arr = os.listdir(os.path.join(app.static_folder, 'docs'))
         if filename in arr:
             return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
-        print("filename")
     return own_404_page(error2 = 'FILE NOT FOUND', error3 = 'The requested file could not be found')
 
 @app.route ("/blog")
