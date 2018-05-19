@@ -16,14 +16,12 @@ Repo for an http site [saladesaleh.com](http://saladesaleh.com)
 
 ## Author's notes
 #### Known issues
-#### Still hasn't been implemented
 #### To add
 * Detect navigator language and switch automatically
 * Word of the DAY!!!! (theysaidso.com/api)
 * HTML 5 Video
 * Pictures fade into one another --> http://css3.bradshawenterprises.com/cfimg/
 #### To improve
-* Only two html versions (RTL & LTR)  --> Flask read JSON
 * Host the Jekyll blog on this server!
 * Add "Technologies used" section to each project (on Git)
 * Add visualization options to the graph
