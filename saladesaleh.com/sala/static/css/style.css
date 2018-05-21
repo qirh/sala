@@ -79,6 +79,12 @@ p, ul, td {
 .icon-col {
     text-align: center;
 }
+.table thead th {
+    border-top: 0px;
+}
+.last-row {
+    border-bottom: 1px solid #eceeef;
+}
 
 /* Mobile */
 .col-name {
@@ -91,8 +97,8 @@ p, ul, td {
     width: 2.5%;
 }
 .icon-col-img {
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
 }
 /* Tablets */
 @media only screen and (min-width: 600px) {
@@ -106,8 +112,8 @@ p, ul, td {
         width: 2.5%;
     }
     .icon-col-img {
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
     }
 }
 /* Desktop */
@@ -116,13 +122,13 @@ p, ul, td {
         width: 20%;
     }
     .col-desc {
-        width: 70%;
+        width: 75%;
     }
     .col-link {
-        width: 5%;
+        width: 2.5%;
     }
     .icon-col-img {
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
     }
 }
