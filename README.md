@@ -2,7 +2,6 @@
 Repo for an http site [saladesaleh.com](http://saladesaleh.com)
 
 
-
 ## Author's notes
 #### Known issues
 #### To add
@@ -16,19 +15,21 @@ Repo for an http site [saladesaleh.com](http://saladesaleh.com)
 * Add personal photo
 * Add more Spanish
 * Add more Arabic
+* Add Hebrew
+  http://culmus.sourceforge.net/ --> Stam Sefarad CLM
 * Add French
-    si ma candidature vous intéresse
+    (si ma candidature vous intéresse)
 * Not that important things:
-    * Adhere to the google audit (see screenshot)
-    * Set up PWA: http://blog.ionic.io/what-is-a-progressive-web-app/
-    * Comply with this: https://github.com/qirh/Front-End-Checklist
+  * Adhere to the google audit (see screenshot)
+  * Set up PWA: http://blog.ionic.io/what-is-a-progressive-web-app/
+  * Comply with this: https://github.com/qirh/Front-End-Checklist
 
 ## Copyright Information
-    * Icon made here: https://favicon.io/
-    * 404 page from OS templates: http://www.os-templates.com/template-terms
-    * Website icon: Icon made by madebyoliver from [flaticon](www.flaticon.com)
-    * Github icon: Font Awesome Free download, the CC BY 4.0 license applies to all icons packaged as .svg and .js files types.
-    * Libraries used include:
-        * [Bootstrap](https://getbootstrap.com/)
-        * [JS Cookie](https://github.com/js-cookie/js-cookie)
-        * [jQuery](https://jquery.com/)
+* Icon made here: https://favicon.io/
+* 404 page from OS templates: http://www.os-templates.com/template-terms
+* Website icon: Icon made by madebyoliver from [flaticon](www.flaticon.com)
+* Github icon: Font Awesome Free download, the CC BY 4.0 license applies to all icons packaged as .svg and .js files types.
+* Libraries used include:
+  * [Bootstrap](https://getbootstrap.com/)
+  * [JS Cookie](https://github.com/js-cookie/js-cookie)
+  * [jQuery](https://jquery.com/)
