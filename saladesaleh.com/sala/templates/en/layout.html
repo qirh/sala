@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <meta name="description" content="Saleh Alghusson's website, gamer, pro grammar, programmer">
+    <meta name="description" content="Saleh Alghusson's website. Disrupt, is my favorite word">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--meta name="description" content="almrausch"-->
@@ -14,10 +14,20 @@
     <link rel="icon" href="/static/icons/salaicon.png">
     <link rel="apple-touch-icon" href="/icons/salaicon-200x200.png">
     <link rel="manifest" href="/static/js/manifest.json">
-    <link rel="alternate" href="http://saladesaleh.com/es" hreflang="es">
-    <link rel="alternate" href="http://saladesaleh.com/ar" hreflang="ar">
+    <link rel="alternate" href="https://saleh.alghusson.com/es" hreflang="es">
+    <link rel="alternate" href="https://saleh.alghusson.com/ar" hreflang="ar">
+    <link rel="canonical" href="https://saleh.alghusson.com">
 
     <script>
+        if('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/static/js/sw.js')
+              .then(function(registration) {
+                    console.log('Service Worker Registered');});
+            navigator.serviceWorker.ready.then(function(registration) {
+               console.log('Service Worker Ready');
+            });
+        }
+
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -27,10 +37,9 @@
     </script>
 
     <link rel="stylesheet" href="/static/css/reset.css">
-    <link href="https://fonts.googleapis.com/css?family=Muli|Raleway|Roboto|Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli|Raleway|Roboto+Slab" rel="stylesheet">
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-    <link href="/static/css/sticky-footer-navbar.css" rel="stylesheet">
     {% block css %}{% endblock %}
     <link href="/static/css/style.css" type="text/css" rel="stylesheet">
 
