@@ -12,7 +12,6 @@ footer {
     background-color: #F4F3F3 !important;
 }
 a {
-    font-family: 'Roboto Slab', sans-serif !important;
     border-bottom: none !important;
 }
 .available-link {
@@ -28,8 +27,8 @@ a {
 }
 
 h1, h2, th {
-    font-family: "Muli", serif, Times;
-    margin-bottom: 1.75rem;
+    font-family: "Merriweather Sans", Times;
+    margin-bottom: 1.25rem;
 }
 th {
     font-weight:bold;
@@ -41,8 +40,9 @@ h2 {
     font-size: 1.5rem;
 }
 p, ul, td {
-    font-family: Raleway, serif, Times;
-    margin-bottom: 1.5rem;
+    font-family: Muli, Times;
+    margin-bottom: 1rem;
+    font-size: 1rem;
 }
 .links {
     display: inline;
@@ -87,21 +87,33 @@ p, ul, td {
 }
 
 /* Mobile */
-.col-name {
-    width: 10%;
-}
-.col-desc {
-    width: 85%;
-}
-.col-link {
-    width: 2.5%;
-}
-.icon-col-img {
-    width: 15px;
-    height: 15px;
+@media only screen and (max-width: 599px) {
+    thead {
+        display: none;
+    }
+    .col-name {
+        width: 10%;
+    }
+    .col-desc {
+        width: 85%;
+    }
+    .col-link {
+        width: 2.5%;
+    }
+    .icon-col-img {
+        width: 25px;
+        height: 25px;
+    }
+    /*  Collapse table  */
+    .table td, .table th {
+        border: none;
+    }
 }
 /* Tablets */
 @media only screen and (min-width: 600px) {
+    thead {
+        display: table-header-group;
+    }
     .col-name {
         width: 15%;
     }
@@ -115,9 +127,15 @@ p, ul, td {
         width: 20px;
         height: 20px;
     }
+    h1, h2, th {
+        margin-bottom: 1.75rem;
+    }
 }
 /* Desktop */
 @media only screen and (min-width: 768px) {
+    thead {
+        display: table-header-group;
+    }
     .col-name {
         width: 20%;
     }
@@ -130,5 +148,8 @@ p, ul, td {
     .icon-col-img {
         width: 30px;
         height: 30px;
+    }
+    p, ul, td {
+        margin-bottom: 1.5rem;
     }
 }
