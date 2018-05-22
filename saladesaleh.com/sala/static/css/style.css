@@ -114,7 +114,7 @@ p, ul, td {
     .table tr {
         display: table;  width:100%;
     }
-    .table td {
+    .table .row-name, .table .row-desc {
         display: table-row;
     }
     .p-name {
@@ -130,9 +130,17 @@ p, ul, td {
         display: none;
     }
     tr {
-        margin-bottom: 1.75rem;
+        margin-bottom: 2rem;
     }
-
+    .cell {
+        margin-bottom: 1rem;
+    }
+    .row-git {
+        float: left;
+    }
+    .row-website {
+        float: right;
+    }
 
 }
 /* Tablets */
