@@ -1,15 +1,75 @@
 {% extends "ar/layout.html" %}
 
 {% block body %}
-    <div class="container">
-      <div class="main">
-        <h1>مرحباً!</h1>
-        <p style="display:inline; margin: 0;" class="lead">أنا صالح، وهذا موقعي<br></p>
-        <p style="display:inline; margin: 0;" class="lead">إذا كان فيه أي ملاحظات أو أسئلة، أتشرف بالتواصل معكم عن طريق الايميل: </p>
-        <p style="display:inline; margin: 0;" class="lead"><a href="mailto:salehg@live.com">salehg@live.com</a><br></p>
-        <p style="display:inline; margin: 0;" class="lead">كما إن كود الموقع مستضاف في موقع على قيت هب هنا </p>
-        <p style="display:inline; margin: 0;" class="lead"><a href="https://github.com/qirh"><i class="fa fa-github fa-2x" style="color:black;" aria-hidden="true"></i></a><br></p>
-        <p style="display:inline; margin: 0;" class="lead">ملاحظة: لأن الموقع للتو تحت الإنشاء فدعم اللغة العربية لم يكتمل بعد، وأيضاً لأن قواعد الموقع للآن لم ترسى، من المحتمل أن تكون بعض خصائص الموقع ناقصة أو أن لا تعمل بالشكل المطلوب &#x1f605</p>
-      </div>
+    <div class="cuerpo">
+
+        <h1>صالح الغصون</h1>
+
+        <section id="about">
+            <h2>من أنا</h2>
+            <p class="links">مرحباً، مثل ما قرأتم في الأعلى، أسمي صالح، أنا خريج علوم كمبيوتر من جامعة تكسس في أوستن. أحب  <a href="/static/photos/read.jpg" class="curr-link tiptext">القراءة<iframe class="popup read" src="/static/photos/read.jpg"></iframe></a> و <a href="/static/photos/tech.jpg" class="curr-link tiptext">التقنية<iframe class="popup tech" src="/static/photos/tech.jpg"></iframe></a> و <a href="/static/photos/bike.jpg" class="curr-link tiptext">الدراجات<iframe class="popup bike" src="/static/photos/bike.jpg"></iframe></a> ;)</p>
+            <p/>
+            <p>حالياً، أقيم في مدينة نيويورك لأداء التدريب العملي مع منظمة <a style="font-family: 'Muli', Times; font-size: 1rem;"href="https://Kiva.org/">Kiva.</a> سمعت عن كيڤا عن طريق  <a href="https://www.youtube.com/watch?v=2964FGslkr8">برنامج خواطر.</a> </p>
+        </section>
+
+        <section id="projects">
+            <h2>المشاريع</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th class="col-name" scope="col">Name</th>
+                  <th class="col-desc" scope="col">Description</th>
+                  <th class="col-link" scope="col">Github</th>
+                  <th class="col-link" scope="col">Website</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="cell row-name"><p class="p-name">Cambridge Art</p></td>
+                  <td class="cell row-desc"><p class="p-desc">iOS app that shows public art for the city of Cambridge, Massachusetts</p></td>
+                  <td class="cell row-icon row-git"><a class="anchor-git" href="https://github.com/qirh/CambridgeArt"><img class="row-icon-img" src="/static/icons/github.svg" title="Git link" alt="Git link"></a></td>
+                  <td class="cell row-icon row-website dead">-</td>
+                </tr>
+                <tr>
+                  <td class="cell row-name"><p class="p-name">MyQueue</p></td>
+                  <td class="cell row-desc"><p class="p-desc">Android app that displays media information (Movies/TV shows) for multiple streaming services in one place</p></td>
+                  <td class="row-icon row-git"><a class="anchor-git" href="https://github.com/qirh/MyQueue"><img class="row-icon-img" src="/static/icons/github.svg" title="Git link" alt="Git link"></a></td>
+                  <td class="row-icon row-website dead">-</td>
+                </tr>
+                <tr>
+                  <td class="cell row-name"><p class="p-name">Downing Jones</p></th>
+                  <td class="cell row-desc"><p class="p-desc">Full stack web application that displays and compares stock market information from different markets simultaneously</p></td>
+                  <td class="cell row-icon row-git"><a class="anchor-git" href="https://github.com/qirh/jones"><img class="row-icon-img" src="/static/icons/github.svg" title="Git link" alt="Git link"></a></td>
+                  <td class="cell row-icon row-website live"><a class="anchor-website" href="http://salehjones.com/"><img class="row-icon-img" src="/static/icons/website.svg" title="Website link" alt="Website link"></a></td>
+                </tr>
+                <tr >
+                  <td class="cell row-name"><p class="p-name">Texas First</p></th>
+                  <td class="cell row-desc"><p class="p-desc">Extension to Google Chrome. When activated, it will loop over lists of US states and put "TX"/"Texas" at the top</p></td>
+                  <td class="cell row-icon row-git"><a class="anchor-git" href="https://github.com/qirh/TexasFirst"><img class="row-icon-img" src="/static/icons/github.svg" title="Git link" alt="Git link"></a></td>
+                  <td class="cell row-icon row-website live"><a class="anchor-website" href="https://chrome.google.com/webstore/detail/texas-first/cflpfjhdephkbknjgidjkcfhohbddlnh"><img class="row-icon-img" src="/static/icons/website.svg" title="Website link" alt="Website link"></a></td>
+                </tr>
+                <tr class="last-row">
+                  <td class="cell row-name"><p class="p-name">Voice Garden</p></th>
+                  <td class="cell row-desc"><p class="p-desc">Google Voice Application, enables the user to verbally issue commands and request information from an Arduino (EcoDuino)</p></td>
+                  <td class="cell row-icon row-git"><a class="anchor-git" href="https://github.com/qirh/VoiceGarden"><img class="row-icon-img" src="/static/icons/github.svg" title="Git link" alt="Git link"></a></td>
+                  <td class="cell row-icon row-website live"><a class="anchor-website" href="voicegarden"><img class="row-icon-img" src="/static/icons/website.svg" title="Website link" alt="Website link"></a></td>
+                </tr>
+              </tbody>
+            </table>
+        </section>
+
+        <section id="contact">
+            <h2>Contact me</h2>
+            <p>If you're interested in hiring a very <a href="/static/photos/moi-sans-moustache.jpg">handsome</a> software engineer, or for anything else, my email is <a href="mailto:salehg@live.com">salehg@live.com</a></p>
+        </section>
+
     </div>
+
+    <script>
+        $(".tiptext").mouseover(function() {
+            $(this).children(".popup").show();
+        }).mouseout(function() {
+            $(this).children(".popup").hide();
+        });
+    </script>
 {% endblock %}
