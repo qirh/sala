@@ -76,7 +76,7 @@ p, ul, td {
     width:600px;
     height:850px;
 }
-.icon-col {
+.row-icon {
     text-align: center;
 }
 .table thead th {
@@ -100,7 +100,7 @@ p, ul, td {
     .col-link {
         width: 2.5%;
     }
-    .icon-col-img {
+    .row-icon-img {
         width: 25px;
         height: 25px;
     }
@@ -108,6 +108,32 @@ p, ul, td {
     .table td, .table th {
         border: none;
     }
+    .last-row {
+        border-bottom: none;
+    }
+    .table tr {
+        display: table;  width:100%;
+    }
+    .table td {
+        display: table-row;
+    }
+    .p-name {
+        font-weight: bold;
+    }
+    .anchor-git:after {
+        content: ' GitHub';
+    }
+    .anchor-website:after {
+        content: ' Website';
+    }
+    .row-website.dead {
+        display: none;
+    }
+    tr {
+        margin-bottom: 1.75rem;
+    }
+
+
 }
 /* Tablets */
 @media only screen and (min-width: 600px) {
@@ -123,7 +149,7 @@ p, ul, td {
     .col-link {
         width: 2.5%;
     }
-    .icon-col-img {
+    .row-icon-img {
         width: 20px;
         height: 20px;
     }
@@ -145,7 +171,7 @@ p, ul, td {
     .col-link {
         width: 2.5%;
     }
-    .icon-col-img {
+    .row-icon-img {
         width: 30px;
         height: 30px;
     }
