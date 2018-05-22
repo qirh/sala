@@ -10,7 +10,7 @@ Repo for an http site [saladesaleh.com](http://saladesaleh.com)
 * HTML 5 Video
 #### To improve
 * Host the Jekyll blog on this server!
-* Add "Technologies used" section to each project (on Git)
+* Add "Technologies used" section to each project (on Git) + Screenshots
 * Add visualization options to the graph
 * Add personal photo
 * Add more Spanish
@@ -19,10 +19,7 @@ Repo for an http site [saladesaleh.com](http://saladesaleh.com)
   http://culmus.sourceforge.net/ --> Stam Sefarad CLM
 * Add French
     (si ma candidature vous intéresse)
-* Not that important things:
-  * Adhere to the google audit (see screenshot)
-  * Set up PWA: http://blog.ionic.io/what-is-a-progressive-web-app/
-  * Comply with this: https://github.com/qirh/Front-End-Checklist
+* Comply with this: https://github.com/qirh/Front-End-Checklist
 
 ## Copyright Information
 * Icon made here: https://favicon.io/
