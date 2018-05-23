@@ -70,7 +70,8 @@ def voicegarden():
 @app.route('/ar/docs/cv')
 def get_cv():
     filename = 'CV_Saleh_Alghusson.pdf'
-    return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
+    print(app.static_folder)
+    return send_from_directory(os.path.join(app.static_folder, 'docs'), filename, mimetype='application/pdf')
 
 
 @app.route('/en/docs/<path:filename>')
