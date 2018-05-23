@@ -73,13 +73,6 @@ def get_cv():
     print("os.path.join(app.static_folder, 'docs'), filename" + os.path.join(app.static_folder, 'docs') + filename)
     return send_from_directory(os.path.join(app.static_folder, 'docs'), filename, mimetype='application/pdf')
 
-@app.route('/cp')
-@app.route('/en/cp')
-def get_cp():
-    filename = 'Rec_Emily.pdf'
-    print("os.path.join(app.static_folder, 'docs'), filename" + os.path.join(app.static_folder, 'docs') + filename)
-    return send_from_directory(os.path.join(app.static_folder, 'docs'), filename, mimetype='application/pdf')
-
 @app.route('/en/docs/<path:filename>')
 @app.route('/docs/<path:filename>')
 def get_pdf(filename=None):
