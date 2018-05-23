@@ -12,6 +12,7 @@ Repo for an http site [saladesaleh.com](http://saladesaleh.com)
 * Host the Jekyll blog on this server!
 * Add "Technologies used" section to each project (on Git) + Screenshots
 * Add visualization options to the graph
+* Add Ruby server for API + Sinatra + OAuth2
 * Add personal photo
 * Add more Spanish
 * Add more Arabic
