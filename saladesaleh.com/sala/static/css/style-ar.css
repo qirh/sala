@@ -27,11 +27,12 @@ a {
 }
 
 h1, h2, th {
-    font-family: "Amiri", Times;
+    font-family: Amiri, monospace;
     margin-bottom: 2rem;
 }
 th {
     font-weight:bold;
+    text-align: right;
 }
 h1 {
     font-size: 2rem;
@@ -40,14 +41,14 @@ h2 {
     font-size: 1.5rem;
 }
 p, ul, td, a {
-    font-family: "Scheherazade", "Muli", Times;
+    font-family: Scheherazade, monospace;
     font-size: 1.5rem;
 }
 p, ul, td {
     margin-bottom: 1rem;
 }
 .english-font {
-    font-family: "Muli", Times;
+    font-family: Muli, monospace;
     font-size: 1rem;
 }
 .links {
@@ -56,6 +57,9 @@ p, ul, td {
 .tiptext {
 
     cursor:pointer;
+}
+section {
+    margin-bottom: 2rem;
 }
 .popup {
     display:none;
@@ -135,10 +139,10 @@ p, ul, td {
         font-weight: bold;
     }
     .anchor-git:after {
-        content: ' GitHub';
+        content: ' قيت هب';
     }
     .anchor-website:after {
-        content: ' Website';
+        content: ' الموقع ';
     }
     .row-website.dead {
         display: none;
@@ -150,10 +154,12 @@ p, ul, td {
         margin-bottom: 1rem;
     }
     .row-git {
-        float: left;
+        float: right;
+        margin-right: 2rem;
     }
     .row-website {
-        float: right;
+        float: left;
+        margin-left: 2rem;
     }
 
 }
@@ -185,13 +191,17 @@ p, ul, td {
         display: table-header-group;
     }
     .col-name {
-        width: 20%;
+        width: 15%;
     }
     .col-desc {
-        width: 75%;
+        width: 70%;
     }
     .col-link {
+        text-align: center;
         width: 2.5%;
+    }
+    .col-git {
+        width: 12.5%;
     }
     .row-icon-img {
         width: 30px;

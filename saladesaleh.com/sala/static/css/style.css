@@ -27,7 +27,7 @@ a {
 }
 
 h1, h2, th {
-    font-family: "Merriweather Sans", Times;
+    font-family: 'Merriweather Sans', monospace;
     margin-bottom: 1.25rem;
 }
 th {
@@ -40,7 +40,7 @@ h2 {
     font-size: 1.5rem;
 }
 p, ul, td, a {
-    font-family: "Muli", Times;
+    font-family: Muli, monospace;
     font-size: 1rem;
 }
 p, ul, td{
@@ -52,6 +52,9 @@ p, ul, td{
 .tiptext {
 
     cursor:pointer;
+}
+section {
+    margin-bottom: 2rem;
 }
 .popup {
     display:none;
@@ -141,9 +144,12 @@ p, ul, td{
     }
     .row-git {
         float: left;
+        margin-left: 2rem;
+
     }
     .row-website {
         float: right;
+        margin-right: 2rem;
     }
 
 }
