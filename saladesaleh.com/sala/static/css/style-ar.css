@@ -41,7 +41,7 @@ h2 {
     font-size: 1.5rem;
 }
 p, ul, td, a {
-    font-family: Scheherazade, Muli, monospace;
+    font-family: Scheherazade, monospace;
     font-size: 1.5rem;
 }
 p, ul, td {
@@ -57,6 +57,9 @@ p, ul, td {
 .tiptext {
 
     cursor:pointer;
+}
+section {
+    margin-bottom: 2rem;
 }
 .popup {
     display:none;
@@ -136,10 +139,10 @@ p, ul, td {
         font-weight: bold;
     }
     .anchor-git:after {
-        content: ' GitHub';
+        content: ' قيت هب';
     }
     .anchor-website:after {
-        content: ' Website';
+        content: ' الموقع ';
     }
     .row-website.dead {
         display: none;
@@ -151,10 +154,12 @@ p, ul, td {
         margin-bottom: 1rem;
     }
     .row-git {
-        float: left;
+        float: right;
+        margin-right: 2rem;
     }
     .row-website {
-        float: right;
+        float: left;
+        margin-left: 2rem;
     }
 
 }
