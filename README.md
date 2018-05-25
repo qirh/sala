@@ -1,5 +1,5 @@
 # Sala [![MIT license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/qirh/sala/master/LICENSE)
-Repo for an http site [saladesaleh.com](http://saladesaleh.com)
+Repo for an http site [saladesaleh.com](https://saleh.alghusson.com)
 
 
 ## Author's notes
@@ -8,19 +8,26 @@ Repo for an http site [saladesaleh.com](http://saladesaleh.com)
 * Detect navigator language and switch automatically
 * Word of the DAY!!!! (theysaidso.com/api)
 * HTML 5 Video
-#### To improve
-* Host the Jekyll blog on this server!
 * Add "Technologies used" section to each project (on Git) + Screenshots
-* Add visualization options to the graph
-* Add Ruby server for API + Sinatra + OAuth2
+* Host the Jekyll blog on this server!
+* Add NodeJs server for API
+
+#### To improve (general)
+* Fix 404 page
 * Add personal photo
-* Add more Spanish
-* Add more Arabic
-* Add Hebrew
-  http://culmus.sourceforge.net/ --> Stam Sefarad CLM
-* Add French
-    (si ma candidature vous intéresse)
 * Comply with this: https://github.com/qirh/Front-End-Checklist
+#### To improve (Graph)
+* Add visualization options to the graph (world + report)
+#### To improve (Arabic)
+* Get Arabic reviewed
+#### To improve (Spanish)
+* Add Spanish
+#### To improve (Hebrew)
+* Add Hebrew
+    * http://culmus.sourceforge.net/ --> Stam Sefarad CLM
+#### To improve (French)
+* Add French
+    * (si ma candidature vous intéresse)
 
 ## Copyright Information
 * Icon made here: https://favicon.io/
