@@ -11,17 +11,23 @@
         function movecols() {
             var isMobile = window.matchMedia("only screen and (max-width: 599px)");
             if(isMobile.matches) {
-                jQuery.moveColumn = function (table, from, to) {
+                console.log("if");
+                jQuery.moveColumn = function (table) {
                     var cols;
                     cols = jQuery(jQuery('tr', table)).children('th, td');
-                    cols.eq(from).detach().insertBefore(cols.eq(to));
+                    cols.detach('#2').insertBefore('#1');
                 }
-                var tbl = jQuery('table');
-                jQuery.moveColumn(tbl, 2, 1);
             }
             else {
-
+                console.log("else");
+                jQuery.moveColumn = function (table) {
+                    var cols;
+                    cols = jQuery(jQuery('tr', table)).children('th, td');
+                    cols.detach('#1').insertBefore('#2');
+                }
             }
+            jQuery.moveColumn(jQuery('table'));
+
         }
     </script>
 {% endblock %}
