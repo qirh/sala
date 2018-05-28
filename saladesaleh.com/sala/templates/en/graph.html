@@ -1,4 +1,327 @@
 {% extends "/en/layout.html" %}
+
+{% block meta %}
+    <meta charset="utf-8">
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+{% endblock %}
+
+{% block css %}
+    <link href="/static/css/style-graph.css" type="text/css" rel="stylesheet">
+{% endblock %}
+
 {% block body %}
-    
+    <form id="frm">
+        <label><b>Orientation:</b></label>
+        <label><a href="#" class="toggle" orientation="vertical">Vertical</a></label>
+        <label><a href="#" class="toggle" orientation="horizontal">Horizontal</a></label>
+    </form>
+
+    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript">
+        var svg,
+            canvasHeight = 400,
+            canvasWidth = 800,
+            chartData = [],
+            gPrimary,
+            gXAxis,
+            gYAxis;
+
+        var config = {
+            axes: {
+                x: null,
+                y: null
+            },
+            chartOrientation: 'vertical',
+            colorScale: d3.scale.category20(),
+            margins: {
+                top: 30,
+                right: 30,
+                bottom: 30,
+                left: 75
+            },
+            maxBarWidth: 40,
+            metrics: {
+                x: 'cartridge',
+                y: 'muzzleVelocity'
+            },
+            scales: {
+                x: null,
+                y: null
+            },
+            transitionDurations: {
+                bars: 750,
+                axes: 500
+            }
+        };
+
+        initChart();
+
+        d3.selectAll('a.toggle').on('click', function () {
+            var o = this.getAttribute('orientation');
+            config.chartOrientation = o;
+
+            if (o == 'horizontal') {
+                config.margins.left = 125;
+                config.metrics.x = 'muzzleVelocity';
+                config.metrics.y = 'cartridge';
+            } else {
+                config.margins.left = 75;
+                config.metrics.y = 'muzzleVelocity';
+                config.metrics.x = 'cartridge';
+            }
+
+            setScales();
+            handleBars();
+            callAxes();
+        });
+
+        d3.json('/static/json/ballistics.json', function (error, data) {
+            chartData = data;
+            setScales();
+            callAxes();
+            handleBars();
+
+            gPrimary.append('text')
+                .attr('x', function () {
+                    return (canvasWidth - config.margins.left - config.margins.right) / 2;
+                })
+                .attr('y', function () {
+                    return config.margins.top * .5;
+                })
+                .style('font-size', '12px')
+                .style('font-weight', 'bold')
+                .style('text-anchor', 'middle')
+                .text('Muzzle Velocity (fps) for Popular Handgun Rounds');
+        });
+
+        /**
+         * @function
+         * @description Initialize chart components
+         */
+        function initChart() {
+            svg = d3.select('body')
+                .append('svg')
+                .attr('width', canvasWidth)
+                .attr('height', canvasHeight);
+
+            gPrimary = svg.append('svg:g');
+
+            gXAxis = svg.append('svg:g')
+                .attr('class', 'axis')
+                .attr('transform', function () {
+                    var x = config.margins.left, y = canvasHeight - config.margins.bottom;
+                    return 'translate(' + x + ',' + y + ')';
+                });
+
+            gYAxis = svg.append('svg:g')
+                .attr('class', 'axis')
+                .attr('transform', function () {
+                    var x = config.margins.left, y = 0;
+                    return 'translate(' + x + ',' + y + ')';
+                });
+        }
+
+        /**
+         * @function
+         * @description Draw/transition rectangles
+         */
+        function handleBars() {
+
+            gPrimary.attr('transform', function () {
+                var x = config.margins.left, y = 0;
+                return 'translate(' + x + ',' + y + ')';
+            });
+
+            //////////////////////////////
+            // rectangles - JRAT
+            // (join, remove, append, transition)
+            //////////////////////////////
+            var rectSelection = gPrimary.selectAll('rect')
+                .data(chartData);
+
+            rectSelection.exit().remove();
+
+            rectSelection.enter()
+                .append('rect')
+                .style('opacity', .8)
+                .style('stroke', 'black')
+                .style('stroke-width', 1)
+                .attr('rx', 3)
+                .attr('ry', 3)
+                .on('mouseover', function (d, i) {
+                    d3.select(this).style('opacity', 1);
+                    gPrimary.selectAll('rect').filter(function (e, j) {
+                        return i != j;
+                    }).style('opacity', .2);
+                })
+                .on('mouseout', function (d, i) {
+                    gPrimary.selectAll('rect').style('opacity', .8);
+                });
+
+            if (config.chartOrientation == 'horizontal') {
+                rectSelection.transition()
+                    .duration(config.transitionDurations.bars)
+                    .attr('x', function (d) {
+                        return 0;
+                    })
+                    .attr('y', function (d) {
+                        return config.scales.y(d[config.metrics.y]);
+                    })
+                    .attr('width', function (d) {
+                        return config.scales.x(d[config.metrics.x]);
+                    })
+                    .attr('height', function (d) {
+                        return Math.min(config.scales.y.rangeBand(), config.maxBarWidth);
+                    })
+                    .attr('transform', function (d, i) {
+                        var x = 0, y = 0;
+                        if (config.maxBarWidth < config.scales.y.rangeBand()) {
+                            y = (config.scales.y.rangeBand() - config.maxBarWidth) / 2;
+                        }
+                        return 'translate(' + x + ',' + y + ')';
+                    })
+                    .style('fill', function (d, i) {
+                        return config.colorScale(i);
+                    });
+            } else {
+                rectSelection.transition()
+                    .duration(config.transitionDurations.bars)
+                    .attr('x', function (d) {
+                        return config.scales.x(d[config.metrics.x]);
+                    })
+                    .attr('y', function (d) {
+                        return config.margins.top + config.scales.y(d[config.metrics.y]);
+                    })
+                    .attr('width', function (d) {
+                        return Math.min(config.maxBarWidth, config.scales.x.rangeBand());
+                    })
+                    .attr('height', function (d) {
+                        return canvasHeight - config.margins.bottom - (config.margins.top + config.scales.y(d[config.metrics.y]));
+                    })
+                    .attr('transform', function () {
+                        if (config.maxBarWidth < config.scales.x.rangeBand()) {
+                            var t = (config.scales.x.rangeBand() - config.maxBarWidth) / 2;
+                            return 'translate(' + t + ',0)';
+                        }
+                    })
+                    .style('fill', function (d, i) {
+                        return config.colorScale(i);
+                    });
+            }
+        }
+
+        /**
+         * @function
+         * @description Wrapper function for setting V/H scales
+         */
+        function setScales() {
+            if (config.chartOrientation == 'horizontal') {
+                setHorizontalScales();
+            } else {
+                setVerticalScales();
+            }
+        }
+
+        /**
+         * @function
+         * @description Set horizontal scales...x=linear, y=ordinal
+         */
+        function setHorizontalScales() {
+
+            // x scale (linear)
+            config.scales.x = d3.scale.linear()
+                .domain([0, d3.max(chartData, function (d) {
+                    return d[config.metrics.x];
+                })])
+                .range([0, canvasWidth - config.margins.left - config.margins.right])
+                .nice();
+
+            // x axis
+            config.axes.x = d3.svg.axis()
+                .scale(config.scales.x)
+                .tickSize(3)
+                .tickPadding(3)
+                .orient('bottom');
+
+            // y scale (ordinal)
+            config.scales.y = d3.scale.ordinal()
+                .domain(chartData.map(function (m) {
+                    return m[config.metrics.y];
+                }))
+                .rangeRoundBands([config.margins.top, canvasHeight - config.margins.bottom], .08, .1);
+
+            // y axis
+            config.axes.y = d3.svg.axis()
+                .scale(config.scales.y)
+                .tickSize(3)
+                .tickPadding(3)
+                .orient('left');
+        }
+
+        /**
+         * @function
+         * @description Set vertical scales...x=ordinal, y = linear
+         */
+        function setVerticalScales() {
+
+            // x scale (ordinal)
+            config.scales.x = d3.scale.ordinal()
+                .domain(chartData.map(function (m) {
+                    return m[config.metrics.x];
+                }))
+                .rangeRoundBands([0, canvasWidth - config.margins.left - config.margins.right], 0.08, 0.1);
+
+            // x axis
+            config.axes.x = d3.svg.axis()
+                .scale(config.scales.x)
+                .tickSize(3)
+                .tickPadding(3)
+                .orient('bottom');
+
+            // y scale (linear)
+            config.scales.y = d3.scale.linear()
+                .domain([
+                    d3.max(chartData, function (d) {
+                        return d[config.metrics.y];
+                    }),
+                    0
+                ])
+                .range([
+                    config.margins.top, canvasHeight - config.margins.bottom
+                ])
+                .nice();
+
+            // y axis
+            config.axes.y = d3.svg.axis()
+                .scale(config.scales.y)
+                .tickSize(3)
+                .tickPadding(3)
+                .orient('left');
+        }
+
+        /**
+         * @function
+         * @description Call axis handlers
+         */
+        function callAxes() {
+            gXAxis.transition()
+                .duration(config.transitionDurations.axes)
+                .attr('transform', function () {
+                    var x = config.margins.left, y = canvasHeight - config.margins.bottom;
+                    return 'translate(' + x + ',' + y + ')';
+                })
+                .call(config.axes.x);
+
+            gYAxis.transition()
+                .duration(config.transitionDurations.axes)
+                .attr('transform', function () {
+                    var x = config.margins.left, y = 0;
+                    return 'translate(' + x + ',' + y + ')';
+                })
+                .call(config.axes.y);
+        }
+    </script>
 {% endblock %}
