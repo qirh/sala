@@ -13,7 +13,7 @@
 
     <link rel="icon" href="/static/icons/salehicon.png">
     <link rel="apple-touch-icon" href="/icons/salehicon-200x200.png">
-    <link rel="manifest" href="/static/js/manifest.json">
+    <link rel="manifest" href="/static/json/manifest.json">
     <link rel="alternate" href="https://saleh.alghusson.com/es" hreflang="es">
     <link rel="alternate" href="https://saleh.alghusson.com/en" hreflang="en">
     <link rel="canonical" href="https://saleh.alghusson.com/ar">
@@ -50,6 +50,7 @@
     <script src="/static/js/js.cookie.js"></script>
     <!-- Language Switcher -->
     <script src="/static/js/language.js"></script>
+    {% block js %}{% endblock %}
 </head>
 
 <body onload="loadPage()">

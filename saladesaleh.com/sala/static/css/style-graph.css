@@ -27,12 +27,11 @@ a {
 }
 
 h1, h2, th {
-    font-family: Amiri, monospace;
-    margin-bottom: 2rem;
+    font-family: 'Merriweather Sans', monospace;
+    margin-bottom: 1.25rem;
 }
 th {
     font-weight:bold;
-    text-align: right;
 }
 h1 {
     font-size: 2rem;
@@ -41,15 +40,11 @@ h2 {
     font-size: 1.5rem;
 }
 p, ul, td, a {
-    font-family: Scheherazade, monospace;
-    font-size: 1.5rem;
-}
-p, ul, td {
-    margin-bottom: 1rem;
-}
-.english-font {
     font-family: Muli, monospace;
     font-size: 1rem;
+}
+p, ul, td{
+    margin-bottom: 1rem;
 }
 .links {
     display: inline;
@@ -65,8 +60,6 @@ section {
     display:none;
     position:absolute;
     border:1px solid #000;
-    width:500px;
-    height:800px;
     -ms-transform: scale(0.4);
     -moz-transform: scale(0.4);
     -o-transform: scale(0.4);
@@ -81,10 +74,6 @@ section {
 .tech {
     width:500px;
     height:800px;
-}
-.read {
-    width:1000px;
-    height:1300px;
 }
 .travel {
     width:1000px;
@@ -102,12 +91,6 @@ section {
 }
 .last-row {
     border-bottom: 1px solid #eceeef;
-}
-.row-voice {
-    font-weight: bold;
-}
-.table-voice {
-    width: 100%;
 }
 
 /* Mobile */
@@ -128,9 +111,6 @@ section {
         width: 25px;
         height: 25px;
     }
-    .table-voice {
-        width: 100%;
-    }
     /*  Collapse table  */
     .table td, .table th {
         border: none;
@@ -141,17 +121,17 @@ section {
     .table tr {
         display: table;  width:100%;
     }
-    .table .row-name, .table .row-desc, .table .row-voice {
+    .table .row-name, .table .row-desc {
         display: table-row;
     }
     .p-name {
         font-weight: bold;
     }
     .anchor-git:after {
-        content: ' قيت هب';
+        content: ' GitHub';
     }
     .anchor-website:after {
-        content: ' الموقع ';
+        content: ' Website';
     }
     .row-website.dead {
         display: none;
@@ -163,16 +143,15 @@ section {
         margin-bottom: 1rem;
     }
     .row-git {
+        float: left;
+        margin-left: 2rem;
+
+    }
+    .row-website {
         float: right;
         margin-right: 2rem;
     }
-    .row-website {
-        float: left;
-        margin-left: 2rem;
-    }
-    .row-voice {
-        text-align: center;
-    }
+
 }
 /* Tablets */
 @media only screen and (min-width: 600px) {
@@ -202,17 +181,13 @@ section {
         display: table-header-group;
     }
     .col-name {
-        width: 15%;
+        width: 20%;
     }
     .col-desc {
-        width: 70%;
+        width: 75%;
     }
     .col-link {
-        text-align: center;
         width: 2.5%;
-    }
-    .col-git {
-        width: 12.5%;
     }
     .row-icon-img {
         width: 30px;
