@@ -1,0 +1,25 @@
+[{
+    "cartridge": "9mm FMJ/115",
+    "muzzleVelocity": 1300,
+    "energy": 570
+}, {
+    "cartridge": "9mm JHP +P/115",
+    "muzzleVelocity": 1350,
+    "energy": 632
+}, {
+    "cartridge": ".45 ACP JHP/185",
+    "muzzleVelocity": 1050,
+    "energy": 453
+}, {
+    "cartridge": ".45 ACP JHP +P/200",
+    "muzzleVelocity": 1080,
+    "energy": 518
+}, {
+    "cartridge": ".40 S&W JHP/155",
+    "muzzleVelocity": 1205,
+    "energy": 500
+}, {
+    "cartridge": ".40 S&W FMJ/180",
+    "muzzleVelocity": 1050,
+    "energy": 441
+}]
