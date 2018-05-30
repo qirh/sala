@@ -87,6 +87,7 @@
             callAxes();
             handleBars();
 
+            //LABEL HERERE
             gPrimary.append('text')
                 .attr('x', function () {
                     return (canvasWidth - config.margins.left - config.margins.right) / 2;
@@ -111,8 +112,6 @@
                 .attr('height', canvasHeight);
 
             gPrimary = svg.append('svg:g');
-
-
 
             gXAxis = svg.append('svg:g')
                 .attr('class', 'axis')

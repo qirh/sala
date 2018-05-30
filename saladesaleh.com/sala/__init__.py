@@ -48,19 +48,25 @@ def own_404_page(num1=None, num2=None, num3=None, error1=None, error2=None, erro
 @app.route("/en")
 @app.route("/en/")
 @app.route("/en/index")
+@app.route("/en/index/")
 @app.route ("/index")
 def index():
     return render_template('/en/index.html', title = 'Saleh')
 @app.route ("/en/graph")
+@app.route ("/en/graph/")
 @app.route ("/graph")
+@app.route ("/graph/")
 def graph():
     return render_template('/en/graph.html', title = 'Saleh')
 @app.route ("/en/voicegarden")
+@app.route ("/en/voicegarden/")
 @app.route ("/voicegarden")
+@app.route ("/voicegarden/")
 def voicegarden():
     return render_template('/en/voicegarden.html', title = 'Saleh')
 
 @app.route('/cv')
+@app.route('/cv/')
 @app.route('/en/cv')
 @app.route('/es/cv')
 @app.route('/ar/cv')
@@ -96,21 +102,8 @@ def jones():
     return redirect("http://salehjones.com")
 
 
-
-###	Espangol
-@app.route("/es")
-@app.route("/es/")
-@app.route ("/es/index")
-def es_index():
-    return render_template('/es/index.html', title = u'Sáleh')
-@app.route ("/es/graph")
-def es_graph():
-    return render_template('/es/graph.html', title = u'Sáleh')
-@app.route ("/es/voicegarden")
-def es_voicegarden():
-    return render_template('/es/voicegarden.html', title = u'Sáleh')
-
 @app.route('/es/docs/<path:filename>')
+@app.route('/es/docs/<path:filename>/')
 def es_get_pdf(filename=None):
     if filename is not None:
         arr = os.listdir(os.path.join(app.static_folder, 'docs'))
@@ -122,16 +115,20 @@ def es_get_pdf(filename=None):
 @app.route("/ar")
 @app.route("/ar/")
 @app.route ("/ar/index")
+@app.route ("/ar/index/")
 def ar_index():
     return render_template('/ar/index.html', title = u'صالح')
 @app.route ("/ar/graph")
+@app.route ("/ar/graph/")
 def ar_graph():
     return render_template('/ar/graph.html', title = u'صالح')
 @app.route ("/ar/voicegarden")
+@app.route ("/ar/voicegarden/")
 def ar_voicegarden():
     return render_template('/ar/voicegarden.html', title = u'صالح')
 
 @app.route('/ar/docs/<path:filename>')
+@app.route('/ar/docs/<path:filename>/')
 def ar_get_pdf(filename=None):
     if filename is not None:
         arr = os.listdir(os.path.join(app.static_folder, 'docs'))
