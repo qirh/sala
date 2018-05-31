@@ -1,5 +1,5 @@
 # Sala [![MIT license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/qirh/sala/master/LICENSE)
-Repo for an http site [saladesaleh.com](https://saleh.alghusson.com)
+Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 
 
 ## Author's notes
