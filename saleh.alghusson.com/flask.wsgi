@@ -3,7 +3,7 @@ import sys
 import logging
 
 logging.basicConfig(stream=sys.stderr)
-sys.path.insert(0 , "/var/www/sala/saladesaleh.com")
+sys.path.insert(0 , "/var/www/sala/saleh.alghusson.com")
 
 from sala import app as application
-application.secret_key = "lkfhlzxhl'kdsbnrfal'hs;ofjei'l5793p27856ryfhln/dsjhfba/"
+application.secret_key = "6qiT8lqCDLUiLygFFfU0EgME8o43bhgaIaJ7JgjG"
