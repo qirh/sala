@@ -30,7 +30,6 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
     * (si ma candidature vous intéresse)
 
 ## Copyright Information
-* Icon made here: https://favicon.io/
 * 404 page from OS templates: http://www.os-templates.com/template-terms
 * Website icon: Icon made by madebyoliver from [flaticon](www.flaticon.com)
 * Github icon: Font Awesome Free download, the CC BY 4.0 license applies to all icons packaged as .svg and .js files types.

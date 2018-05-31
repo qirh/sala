@@ -3,22 +3,22 @@
     "short_name": "Saleh Omar",
     "icons": [
         {
-            "src": "/static/icons/salehicon-192x192.png",
+            "src": "/static/icons/alien-black-192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "/static/icons/salehicon-256x256.png",
+            "src": "/static/icons/alien-black-256.png",
             "sizes": "256x256",
             "type": "image/png"
         },
         {
-            "src": "/static/icons/salehicon-512x512.png",
+            "src": "/static/icons/alien-black-512.png",
             "sizes": "512x512",
             "type": "image/png"
         },
         {
-            "src": "/static/icons/salehicon.png",
+            "src": "/static/icons/alien-black-1024.png",
             "sizes": "1024x1024",
             "type": "image/png"
         }
