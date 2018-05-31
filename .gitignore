@@ -202,14 +202,6 @@ celerybeat-schedule
 # SageMath parsed files
 *.sage.py
 
-# Environments
-.env
-.venv
-env/
-venv/
-ENV/
-env.bak/
-venv.bak/
 
 # Spyder project settings
 .spyderproject
@@ -355,6 +347,3 @@ freeline_project_description.json
 
 pkg/
 src/
-
-
-flask.wsgi
