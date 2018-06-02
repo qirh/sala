@@ -77,15 +77,15 @@ def voicegarden():
 def get_cv():
     filename = 'CV_Saleh_Alghusson.pdf'
     print("LOGGING: os.path.join(app.static_folder, 'docs'), filename: " + os.path.join(app.static_folder, 'docs/') + filename)
-    return send_from_directory(os.path.join(app.static_folder, 'docs'), filename, mimetype='application/pdf')
+    return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename, mimetype='application/pdf')
 
 @app.route('/en/docs/<path:filename>')
 @app.route('/docs/<path:filename>')
 def get_pdf(filename=None):
     if filename is not None:
-        arr = os.listdir(os.path.join(app.static_folder, 'docs'))
+        arr = os.listdir(os.path.join(app.static_folder, 'docs/'))
         if filename in arr:
-            return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
+            return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename)
     return own_404_page(error2 = 'FILE NOT FOUND', error3 = 'The requested file could not be found')
 
 @app.route("/blog")
@@ -106,9 +106,9 @@ def jones():
 @app.route('/es/docs/<path:filename>/')
 def es_get_pdf(filename=None):
     if filename is not None:
-        arr = os.listdir(os.path.join(app.static_folder, 'docs'))
+        arr = os.listdir(os.path.join(app.static_folder, 'docs/'))
         if filename in arr:
-            return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
+            return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename)
     return own_404_page(error2 = u'NO SE ENCONTRÓ EL ARCHVO', error3 = u'')
 
 ###	Arabic
@@ -131,7 +131,7 @@ def ar_voicegarden():
 @app.route('/ar/docs/<path:filename>/')
 def ar_get_pdf(filename=None):
     if filename is not None:
-        arr = os.listdir(os.path.join(app.static_folder, 'docs'))
+        arr = os.listdir(os.path.join(app.static_folder, 'docs/'))
         if filename in arr:
-            return send_from_directory(os.path.join(app.static_folder, 'docs'), filename)
+            return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename)
     return own_404_page(error2 = u'الملف غير موجود', error3 = '')
