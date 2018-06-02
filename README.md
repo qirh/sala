@@ -9,15 +9,16 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 * Word of the DAY!!!! (theysaidso.com/api)
 * HTML 5 Video
 * Add "Technologies used" section to each project (on Git) + Screenshots
-* Host the Jekyll blog on this server!
+* Host blog on website https://stackoverflow.com/questions/33250486/embed-markdown-md-into-html
 * Add NodeJs server for API
+* Add personal photo
 
 #### To improve (general)
 * Fix 404 page
-* Add personal photo
+* Consider Junge as font https://fonts.google.com/specimen/Junge
 * Comply with this: https://github.com/qirh/Front-End-Checklist
 #### To improve (Graph)
-* Add visualization options to the graph (world + report)
+* Add visualization options to the graph (world + report + cities)
 #### To improve (Arabic)
 * Get Arabic reviewed
 #### To improve (Spanish)
