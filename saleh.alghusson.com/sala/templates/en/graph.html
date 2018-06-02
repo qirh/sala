@@ -14,10 +14,10 @@
 
 {% block body %}
 
-    <!-- src: http://bl.ocks.org/kendopunk/16c1aec3c86847e6028b -->>
+    <!-- src: http://bl.ocks.org/kendopunk/16c1aec3c86847e6028b -->
 
     <form id="frm">
-        <label><b>Orientation:</b></label>
+        <label>><b>Orientation:</b></label>
         <label><a href="#" class="toggle" orientation="vertical">Vertical</a></label>
         <label><a href="#" class="toggle" orientation="horizontal">Horizontal</a></label>
     </form>
@@ -47,8 +47,8 @@
             },
             maxBarWidth: 40,
             metrics: {
-                x: 'cartridge',
-                y: 'muzzleVelocity'
+                x: 'semester',
+                y: 'gpa'
             },
             scales: {
                 x: null,
@@ -68,12 +68,12 @@
 
             if (o == 'horizontal') {
                 config.margins.left = 125;
-                config.metrics.x = 'muzzleVelocity';
-                config.metrics.y = 'cartridge';
+                config.metrics.x = 'gpa';
+                config.metrics.y = 'semester';
             } else {
                 config.margins.left = 75;
-                config.metrics.y = 'muzzleVelocity';
-                config.metrics.x = 'cartridge';
+                config.metrics.y = 'gpa';
+                config.metrics.x = 'semester';
             }
 
             setScales();
@@ -81,13 +81,12 @@
             callAxes();
         });
 
-        d3.json('/static/json/ballistics.json', function (error, data) {
+        d3.json('/static/json/graph-data.json', function (error, data) {
             chartData = data;
             setScales();
             callAxes();
             handleBars();
 
-            //LABEL HERERE
             gPrimary.append('text')
                 .attr('x', function () {
                     return (canvasWidth - config.margins.left - config.margins.right) / 2;
@@ -95,11 +94,13 @@
                 .attr('y', function () {
                     return config.margins.top * .5;
                 })
-                .style('font-size', '12px')
+                .style('font-size', '1rem')
                 .style('font-weight', 'bold')
                 .style('text-anchor', 'middle')
-                .text('Muzzle Velocity (fps) for Popular Handgun Rounds');
+                .text('GPA over semester');
+
         });
+
 
         /**
          * @function
@@ -119,14 +120,12 @@
                     var x = config.margins.left, y = canvasHeight - config.margins.bottom;
                     return 'translate(' + x + ',' + y + ')';
                 });
-
             gYAxis = svg.append('svg:g')
                 .attr('class', 'axis')
                 .attr('transform', function () {
                     var x = config.margins.left, y = 0;
                     return 'translate(' + x + ',' + y + ')';
                 });
-
         }
 
         /**
@@ -140,10 +139,6 @@
                 return 'translate(' + x + ',' + y + ')';
             });
 
-            //////////////////////////////
-            // rectangles - JRAT
-            // (join, remove, append, transition)
-            //////////////////////////////
             var rectSelection = gPrimary.selectAll('rect')
                 .data(chartData);
 
@@ -208,6 +203,7 @@
                     })
                     .attr('transform', function () {
                         if (config.maxBarWidth < config.scales.x.rangeBand()) {
+
                             var t = (config.scales.x.rangeBand() - config.maxBarWidth) / 2;
                             return 'translate(' + t + ',0)';
                         }
@@ -319,6 +315,7 @@
                     return 'translate(' + x + ',' + y + ')';
                 })
                 .call(config.axes.x);
+
 
             gYAxis.transition()
                 .duration(config.transitionDurations.axes)
