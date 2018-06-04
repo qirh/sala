@@ -117,13 +117,13 @@
             gXAxis = svg.append('svg:g')
                 .attr('class', 'axis')
                 .attr('transform', function () {
-                    var x = config.margins.left, y = canvasHeight - config.margins.bottom;
+                    var x = config.margins.left, y = canvasHeight - config.margins.bottom*10;
                     return 'translate(' + x + ',' + y + ')';
                 });
             gYAxis = svg.append('svg:g')
                 .attr('class', 'axis')
                 .attr('transform', function () {
-                    var x = config.margins.left, y = 0;
+                    var x = config.margins.left*10, y = 0;
                     return 'translate(' + x + ',' + y + ')';
                 });
         }
@@ -291,7 +291,7 @@
                     0
                 ])
                 .range([
-                    config.margins.top*1.5, canvasHeight - config.margins.bottom
+                    config.margins.top, canvasHeight - config.margins.bottom
                 ])
                 .nice();
 
