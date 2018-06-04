@@ -1,12 +1,11 @@
 body {
     padding: 5px;
 }
-#frm {
+#form {
     margin: 0;
     padding: 0;
-    padding-left: 10px;
+    padding-left: 1rem;
 }
-
 label {
     font-size: 0.8rem;
     font-family: Muli, monospace;

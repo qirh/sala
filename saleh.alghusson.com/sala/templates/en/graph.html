@@ -16,16 +16,16 @@
 
     <!-- src: http://bl.ocks.org/kendopunk/16c1aec3c86847e6028b -->
 
-    <form id="frm">
+    <form id="form">
         <label>><b>Orientation:</b></label>
         <label><a href="#" class="toggle" orientation="vertical">Vertical</a></label>
         <label><a href="#" class="toggle" orientation="horizontal">Horizontal</a></label>
     </form>
 
-    <script type="text/javascript" src="http://d3js.org/d3.v3.min.js"></script>
+    <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
     <script type="text/javascript">
         var svg,
-            canvasHeight = 400,
+            canvasHeight = 500,
             canvasWidth = 800,
             chartData = [],
             gPrimary,
@@ -40,7 +40,7 @@
             chartOrientation: 'vertical',
             colorScale: d3.scale.category20(),
             margins: {
-                top: 30,
+                top: 10,
                 right: 30,
                 bottom: 30,
                 left: 75
@@ -92,12 +92,12 @@
                     return (canvasWidth - config.margins.left - config.margins.right) / 2;
                 })
                 .attr('y', function () {
-                    return config.margins.top * .5;
+                    return canvasHeight +  config.margins.bottom*.2;
                 })
                 .style('font-size', '1rem')
                 .style('font-weight', 'bold')
                 .style('text-anchor', 'middle')
-                .text('GPA over semester');
+                .text('GPA Journey Over University Semesters');
 
         });
 
@@ -110,7 +110,7 @@
             svg = d3.select('body')
                 .append('svg')
                 .attr('width', canvasWidth)
-                .attr('height', canvasHeight);
+                .attr('height', canvasHeight + config.margins.bottom);
 
             gPrimary = svg.append('svg:g');
 
@@ -193,7 +193,7 @@
                         return config.scales.x(d[config.metrics.x]);
                     })
                     .attr('y', function (d) {
-                        return config.margins.top + config.scales.y(d[config.metrics.y]);
+                        return config.margins.top  + config.scales.y(d[config.metrics.y]);
                     })
                     .attr('width', function (d) {
                         return Math.min(config.maxBarWidth, config.scales.x.rangeBand());
@@ -291,15 +291,15 @@
                     0
                 ])
                 .range([
-                    config.margins.top, canvasHeight - config.margins.bottom
+                    config.margins.top*1.5, canvasHeight - config.margins.bottom
                 ])
                 .nice();
 
             // y axis
             config.axes.y = d3.svg.axis()
                 .scale(config.scales.y)
-                .tickSize(3)
-                .tickPadding(3)
+                .tickSize(5)
+                .tickPadding(4)
                 .orient('left');
         }
 
