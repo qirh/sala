@@ -70,22 +70,25 @@ def voicegarden():
 @app.route('/en/cv')
 @app.route('/es/cv')
 @app.route('/ar/cv')
-@app.route('/docs/cv')
-@app.route('/en/docs/cv')
-@app.route('/es/docs/cv')
-@app.route('/ar/docs/cv')
 def get_cv():
-    filename = 'CV_Saleh_Alghusson.pdf'
-    print("LOGGING: os.path.join(app.static_folder, 'docs'), filename: " + os.path.join(app.static_folder, 'docs/') + filename)
-    return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename, mimetype='application/pdf')
+    return render_template('/en/cv.html', title = 'Saleh')
+
+
+@app.route('/en/docs/cv')
+@app.route('/en/docs/cv/')
+def get_pdf_file():
+    print("1")
+    filename = "CV_Saleh_Alghusson.pdf"
+    return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename, as_attachment=True)
 
 @app.route('/en/docs/<path:filename>')
 @app.route('/docs/<path:filename>')
-def get_pdf(filename=None):
+def get_doc(filename=None):
+    print("2")
     if filename is not None:
         arr = os.listdir(os.path.join(app.static_folder, 'docs/'))
         if filename in arr:
-            return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename)
+            return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename, as_attachment=True)
     return own_404_page(error2 = 'FILE NOT FOUND', error3 = 'The requested file could not be found')
 
 @app.route("/blog")
