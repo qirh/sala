@@ -1,0 +1,31 @@
+{% extends "/en/layout.html" %}
+
+{% block css %}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        p {
+            margin-bottom: 0rem;
+        }
+        div {
+            display: grid;
+            height: 100%;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100vh;
+            margin: auto;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+    <p>> <a href="https://saleh.alghusson.com">home</a></p>
+
+    <div>
+        <img src="/static/photos/{{filename}}.jpg"></img>
+    </div>
+
+{% endblock %}

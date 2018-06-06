@@ -22,7 +22,7 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 * Comply with this: https://github.com/qirh/Front-End-Checklist
 #### To improve (Graph - GPA)
 * Fix gpa graph scale
-* Add back button
+* Add chart fallback
 #### To add (Graph - Cities)
 * Add
 #### To improve (Arabic)

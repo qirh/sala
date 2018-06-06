@@ -79,13 +79,22 @@ def voicegarden():
 def cv():
     return render_template('/en/cv.html', title = 'Saleh')
 
+@app.route('/photos/<path:filename>')
+@app.route('/photos/<path:filename>/')
+@app.route('/en/photos/<path:filename>')
+@app.route('/en/photos/<path:filename>/')
+@app.route('/es/photos/<path:filename>')
+@app.route('/es/photos/<path:filename>/')
+@app.route('/ar/photos/<path:filename>')
+@app.route('/ar/photos/<path:filename>/')
+def get_photo(filename=None):
+    return render_template('/en/photo.html', filename=filename)
 
 @app.route('/docs/cv')
 @app.route('/docs/cv/')
 @app.route('/en/docs/cv')
 @app.route('/en/docs/cv/')
 def get_cv_file():
-    print("1")
     filename = "CV_Saleh_Alghusson.pdf"
     return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename, as_attachment=True)
 
@@ -94,12 +103,13 @@ def get_cv_file():
 @app.route('/en/docs/<path:filename>')
 @app.route('/en/docs/<path:filename>/')
 def get_document(filename=None):
-    print("2")
     if filename is not None:
         arr = os.listdir(os.path.join(app.static_folder, 'docs/'))
         if filename in arr:
             return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename, as_attachment=True)
     return own_404_page(error2 = 'FILE NOT FOUND', error3 = 'The requested file could not be found')
+    # return own_404_page(error2 = u'الملف غير موجود', error3 = u'')
+    # return own_404_page(error2 = u'NO SE ENCONTRÓ EL ARCHVO', error3 = u'')
 
 @app.route("/blog")
 @app.route("/blog/")
@@ -141,14 +151,3 @@ def ar_graph():
 @app.route ("/ar/voicegarden/")
 def ar_voicegarden():
     return render_template('/ar/voicegarden.html', title = u'صالح')
-
-@app.route('/ar/docs/<path:filename>')
-@app.route('/ar/docs/<path:filename>/')
-def ar_get_pdf(filename=None):
-    if filename is not None:
-        arr = os.listdir(os.path.join(app.static_folder, 'docs/'))
-        if filename in arr:
-            return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename)
-    return own_404_page(error2 = u'الملف غير موجود', error3 = '')
-
-##     return own_404_page(error2 = u'NO SE ENCONTRÓ EL ARCHVO', error3 = u'')
