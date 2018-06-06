@@ -8,15 +8,23 @@
     <!--meta name="description" content="almrausch"-->
     <meta name="author" content="saleh">
     <meta name="theme-color" content="#ffffff">
+    {% block meta %}{% endblock %}
 
     <title>{{ title }}</title>
 
-    <link rel="icon" href="/static/icons/salehicon.png">
-    <link rel="apple-touch-icon" href="/icons/salehicon-200x200.png">
-    <link rel="manifest" href="/static/json/manifest.json">
-    <link rel="alternate" href="https://saleh.alghusson.com/es" hreflang="es">
-    <link rel="alternate" href="https://saleh.alghusson.com/en" hreflang="en">
-    <link rel="canonical" href="https://saleh.alghusson.com/ar">
+    <link rel="icon" href="/static/icons/alien-black-1024.png">
+        <!-- Android -->
+        <link rel="shortcut icon" sizes="196x196" href="/static/icons/alien-black-196.png">
+        <!-- iOS -->
+        <link rel="apple-touch-icon" href="alien-black-120.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/static/icons/alien-black-152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/static/icons/alien-black-180.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="/static/icons/alien-black-167.png">
+
+        <link rel="manifest" href="/static/json/manifest.json">
+        <link rel="alternate" href="https://saleh.alghusson.com/es" hreflang="es">
+        <link rel="alternate" href="https://saleh.alghusson.com/en" hreflang="en">
+        <link rel="canonical" href="https://saleh.alghusson.com/ar">
 
     <script>
       if('serviceWorker' in navigator) {
@@ -42,6 +50,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link href="/static/css/sticky-footer-navbar.css" rel="stylesheet">
     {% block css %}{% endblock %}
+    <link href="/static/css/style.css" type="text/css" rel="stylesheet">
     <link href="/static/css/style-ar.css" type="text/css" rel="stylesheet">
 
     <!-- jQuery -->
