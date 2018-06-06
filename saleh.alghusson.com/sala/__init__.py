@@ -45,45 +45,55 @@ def own_404_page(num1=None, num2=None, num3=None, error1=None, error2=None, erro
     return render_template('/%s/404.html' %begin, title = 'Saleh', num1 = num1, num2 = num2, num3 = num3, error1 = error1, error2 = error2, error3 = error3, back = back, home = home)
 
 @app.route("/")
+@app.route ("/index")
+@app.route ("/index/")
 @app.route("/en")
 @app.route("/en/")
 @app.route("/en/index")
 @app.route("/en/index/")
-@app.route ("/index")
 def index():
     return render_template('/en/index.html', title = 'Saleh')
-@app.route ("/en/graph")
-@app.route ("/en/graph/")
+
 @app.route ("/graph")
 @app.route ("/graph/")
+@app.route ("/en/graph")
+@app.route ("/en/graph/")
 def graph():
     return render_template('/en/graph.html', title = 'Saleh')
-@app.route ("/en/voicegarden")
-@app.route ("/en/voicegarden/")
+
 @app.route ("/voicegarden")
 @app.route ("/voicegarden/")
+@app.route ("/en/voicegarden")
+@app.route ("/en/voicegarden/")
 def voicegarden():
     return render_template('/en/voicegarden.html', title = 'Saleh')
 
 @app.route('/cv')
 @app.route('/cv/')
 @app.route('/en/cv')
+@app.route('/en/cv/')
 @app.route('/es/cv')
+@app.route('/es/cv/')
 @app.route('/ar/cv')
-def get_cv():
+@app.route('/ar/cv/')
+def cv():
     return render_template('/en/cv.html', title = 'Saleh')
 
 
+@app.route('/docs/cv')
+@app.route('/docs/cv/')
 @app.route('/en/docs/cv')
 @app.route('/en/docs/cv/')
-def get_pdf_file():
+def get_cv_file():
     print("1")
     filename = "CV_Saleh_Alghusson.pdf"
     return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename, as_attachment=True)
 
-@app.route('/en/docs/<path:filename>')
 @app.route('/docs/<path:filename>')
-def get_doc(filename=None):
+@app.route('/docs/<path:filename>/')
+@app.route('/en/docs/<path:filename>')
+@app.route('/en/docs/<path:filename>/')
+def get_document(filename=None):
     print("2")
     if filename is not None:
         arr = os.listdir(os.path.join(app.static_folder, 'docs/'))
@@ -92,27 +102,27 @@ def get_doc(filename=None):
     return own_404_page(error2 = 'FILE NOT FOUND', error3 = 'The requested file could not be found')
 
 @app.route("/blog")
+@app.route("/blog/")
 @app.route("/en/blog")
+@app.route("/en/blog/")
 @app.route("/es/blog")
+@app.route("/es/blog/")
 @app.route("/ar/blog")
+@app.route("/ar/blog/")
 def blog():
     return redirect("https://qirh.github.io")
+
 @app.route("/jones")
+@app.route("/jones/")
 @app.route("/en/jones")
+@app.route("/en/jones/")
 @app.route("/es/jones")
+@app.route("/es/jones/")
 @app.route("/ar/jones")
+@app.route("/ar/jones/")
 def jones():
     return redirect("http://salehjones.com")
 
-
-@app.route('/es/docs/<path:filename>')
-@app.route('/es/docs/<path:filename>/')
-def es_get_pdf(filename=None):
-    if filename is not None:
-        arr = os.listdir(os.path.join(app.static_folder, 'docs/'))
-        if filename in arr:
-            return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename)
-    return own_404_page(error2 = u'NO SE ENCONTRÓ EL ARCHVO', error3 = u'')
 
 ###	Arabic
 @app.route("/ar")
@@ -121,10 +131,12 @@ def es_get_pdf(filename=None):
 @app.route ("/ar/index/")
 def ar_index():
     return render_template('/ar/index.html', title = u'صالح')
+
 @app.route ("/ar/graph")
 @app.route ("/ar/graph/")
 def ar_graph():
     return render_template('/ar/graph.html', title = u'صالح')
+
 @app.route ("/ar/voicegarden")
 @app.route ("/ar/voicegarden/")
 def ar_voicegarden():
@@ -138,3 +150,5 @@ def ar_get_pdf(filename=None):
         if filename in arr:
             return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename)
     return own_404_page(error2 = u'الملف غير موجود', error3 = '')
+
+##     return own_404_page(error2 = u'NO SE ENCONTRÓ EL ARCHVO', error3 = u'')
