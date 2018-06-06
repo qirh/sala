@@ -50,7 +50,6 @@ p, ul, td{
     display: inline;
 }
 .tiptext {
-
     cursor:pointer;
 }
 section {
@@ -145,7 +144,6 @@ section {
     .row-git {
         float: left;
         margin-left: 2rem;
-
     }
     .row-website {
         float: right;
