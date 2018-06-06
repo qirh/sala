@@ -27,7 +27,6 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 * Add
 #### To improve (Arabic)
 * Get Arabic reviewed
-* Condense Arabic css (only different from english)!!
 #### To improve (Spanish)
 * Add Spanish
 #### To improve (Hebrew)
