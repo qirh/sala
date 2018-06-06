@@ -1,23 +1,12 @@
-body {
-    padding: 5px;
-}
-#form {
+form {
     margin: 0;
-    padding: 0;
+    padding-bottom: 1.5rem;
+}
+p {
+    display:inline;
+}
+.toggle {
     padding-left: 1rem;
-}
-label {
-    font-size: 0.8rem;
-    font-family: Muli, monospace;
-}
-label a {
-    margin-right: 10px;
-    margin-left: 5px;
-    font-family: inherit;
-    color: #009;
-}
-label a:hover {
-    color: #906;
 }
 .axis path, .axis line {
     fill: none;
