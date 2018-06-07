@@ -20,6 +20,11 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 * Change 404 page
 * Consider Junge as font https://fonts.google.com/specimen/Junge
 * Comply with this: https://github.com/qirh/Front-End-Checklist
+* Generate random pic
+  * Data structure for links?
+  * Change read to book
+  * Also change class to make sure iframe shows clearly
+  * Add css classes to new photos
 #### To improve (Graph - GPA)
 * Fix gpa graph scale
 * Add chart fallback
