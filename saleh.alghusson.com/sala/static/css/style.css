@@ -74,13 +74,25 @@ section {
     width:500px;
     height:800px;
 }
+.tech2 {
+    width:800px;
+    height:800px;
+}
 .travel {
     width:1000px;
     height:750px;
 }
+.books {
+    width:800px;
+    height:900px;
+}
 .bike {
     width:700px;
     height:850px;
+}
+.bike2 {
+    width:900px;
+    height:700px;
 }
 .row-icon {
     text-align: center;
