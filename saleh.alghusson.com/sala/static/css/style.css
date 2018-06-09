@@ -76,7 +76,7 @@ section {
 }
 .tech2 {
     width:800px;
-    height:800px;
+    height:600px;
 }
 .travel {
     width:1000px;
@@ -91,8 +91,8 @@ section {
     height:850px;
 }
 .bike2 {
-    width:900px;
-    height:700px;
+    width:850px;
+    height:800px;
 }
 .row-icon {
     text-align: center;
