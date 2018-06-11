@@ -88,7 +88,7 @@ def cv():
 @app.route('/ar/photos/<path:filename>')
 @app.route('/ar/photos/<path:filename>/')
 def get_photo(filename=None):
-    return render_template('/en/photo.html', filename=filename)
+    return render_template('/en/photo.html', filename=filename, title = filename)
 
 @app.route('/docs/cv')
 @app.route('/docs/cv/')
