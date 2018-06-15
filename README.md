@@ -20,6 +20,7 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 * Change 404 page
 * Consider Junge as font https://fonts.google.com/specimen/Junge
 * Comply with this: https://github.com/qirh/Front-End-Checklist
+* Change language links (en.sala...)
 * Generate random pic
   * Data structure for links?
   * Change read to book
