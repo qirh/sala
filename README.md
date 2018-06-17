@@ -13,6 +13,7 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
   * https://stackoverflow.com/questions/33250486/embed-markdown-md-into-html
 * Add NodeJs server for API
 * Guarantee personal photo
+* Fix texas first screenshot
 * Add Cities Graph
   * https://bl.ocks.org/mbostock/3884955
 
@@ -20,12 +21,6 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 * Change 404 page -- (Go home)
 * Consider Junge as font https://fonts.google.com/specimen/Junge
 * Comply with this: https://github.com/qirh/Front-End-Checklist
-* Change language links (en.sala...)
-* Generate random pic
-  * Data structure for links?
-  * Change read to book
-  * Also change class to make sure iframe shows clearly
-  * Add css classes to new photos
 #### To improve (Graph - GPA)
 * Fix gpa graph scale
 * Add chart fallback
@@ -43,7 +38,6 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
     * (si ma candidature vous intéresse)
 
 ## Copyright Information
-* 404 page from OS templates: http://www.os-templates.com/template-terms
 * Website icon: Icon made by madebyoliver from [flaticon](www.flaticon.com)
 * Github icon: Font Awesome Free download, the CC BY 4.0 license applies to all icons packaged as .svg and .js files types.
 * Libraries used include:
