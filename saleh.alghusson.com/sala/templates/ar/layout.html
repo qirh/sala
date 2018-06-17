@@ -62,7 +62,7 @@
     {% block js %}{% endblock %}
 </head>
 
-<body onload="loadPage()">
+<body>
 
 {% block body %}{% endblock %}
 
@@ -71,7 +71,7 @@
     <div class="container text-center">
         <p style="margin-bottom: 0rem;">
             <span>
-                <a href="" onclick="checkLanguage('ar', 'en');return false;" class="curr-link english-font">English</a>
+                <a href="" onclick="checkLanguage('ar', 'en');return false;" class="available-link english-font">English</a>
             </span>
             | <span title='muy pronto'>
                 <a href="" onclick="checkLanguage('ar', 'es');return false;" class="un-available-link english-font">Español</a>
@@ -86,7 +86,7 @@
                 <a onclick="checkLanguage('ar', 'de');return false;" class="un-available-link english-font">Deutsch</a>
               </span>
             | <span>
-                <a href="" onclick="checkLanguage('ar', 'ar');return false;" class="available-link">العربية</a>
+                <a href="" onclick="checkLanguage('ar', 'ar');return false;" class="curr-link">العربية</a>
               </span>
             | <span title='יגיע בקרוב'>
                 <a title="יגיע בקרוב" onclick="checkLanguage('ar', 'he');return false;" class="un-available-link english-font">עברית</a>

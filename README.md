@@ -5,19 +5,19 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 ## Author's notes
 #### Known issues
 #### To add
-* Detect navigator language and switch automatically
+* Detect navigator language
 * Word of the DAY!!!! (theysaidso.com/api)
 * HTML 5 Video
 * Add "Technologies used" section to each project (on Git) + Screenshots
 * Host blog on website
   * https://stackoverflow.com/questions/33250486/embed-markdown-md-into-html
 * Add NodeJs server for API
-* Add personal photo
+* Guarantee personal photo
 * Add Cities Graph
   * https://bl.ocks.org/mbostock/3884955
 
 #### To improve (general)
-* Change 404 page
+* Change 404 page -- (Go home)
 * Consider Junge as font https://fonts.google.com/specimen/Junge
 * Comply with this: https://github.com/qirh/Front-End-Checklist
 * Change language links (en.sala...)
