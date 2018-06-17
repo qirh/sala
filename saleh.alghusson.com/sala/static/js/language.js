@@ -6,8 +6,6 @@ function checkLanguage(currentLanguage, newLanguage) {
     setLanguage(newLanguage);
 }
 function setLanguage(language) {
-    //Cookies.set('lang', language);
-    $.cookie('lang', language, { expires: 7 });
+    $.cookie('lang', language, { expires: 7, path:'/' });
     location.reload();
-
 }
