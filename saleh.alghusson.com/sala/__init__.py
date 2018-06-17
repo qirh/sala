@@ -7,11 +7,7 @@ app = Flask(__name__)
 @app.errorhandler(404)
 def error_page(error1=None, error2=None, error3=None):
     lang = request.cookies.get('lang')
-    print("lang = " + lang)
-
-    print(error1)
     if lang == "ar":
-        print('/%s/404.html' %lang)
         num1 = u'٤'
         num2 = u'٠'
         num3 = u'٤'
@@ -128,14 +124,14 @@ def get_document(filename=None):
 @app.route("/blog/")
 @app.route("/<path:filename>/blog")
 @app.route("/<path:filename>/blog/")
-def blog():
+def blog(filename=None):
     return redirect("https://qirh.github.io")
 
 @app.route("/jones")
 @app.route("/jones/")
 @app.route("/<path:filename>/jones")
 @app.route("/<path:filename>/jones/")
-def jones():
+def jones(filename=None):
     return redirect("http://salehjones.com")
 
 @app.route("/en")
