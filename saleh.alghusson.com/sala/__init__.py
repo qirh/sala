@@ -7,8 +7,10 @@ app.url_map.strict_slashes = False
 
 langauges = {'en':'', 'pt':'language coming soon', 'es':'language coming soon', 'fr':'language coming soon', 'de':'language coming soon', 'ar':'', 'he':'language coming soon'}
 lang_default = 'en' #TODO: set default langugae based on broweser prefrence
-routes = ['', 'blog', 'cv', 'graph', 'index', 'jones', 'voicegarden']
-routes_follow = ['docs', 'photos']
+
+#routes = ['', 'blog', 'cv', 'graph', 'index', 'jones', 'voicegarden']
+#routes_follow = ['docs', 'photos']
+
 
 @app.errorhandler(404)
 def error_page(error1=None, error2=None, error3=None):
@@ -35,23 +37,8 @@ def error_page(error1=None, error2=None, error3=None):
 
     return render_template('/%s/404.html' %lang, title = 'Saleh', num1 = num1, num2 = num2, num3 = num3, error1 = error1, error2 = error2, error3 = error3, home = home)
 
-@app.route('/')
-@app.route ('/index')
-def index():
-    lang = request.cookies.get('lang')
-    if lang == 'ar':
-        res = make_response(render_template('/ar/index.html', title=u'صالح'))
-        res.set_cookie('lang', 'ar')
-    else:
-        res = make_response(render_template('/en/index.html', title = 'Saleh'))
-        res.set_cookie('lang', 'en')
-    return res
 
-# takes an optional language
-@app.route('/<path:lang>')
-@app.route ('/<path:lang>/index')
-def lang_index(lang=None):
-
+def get_lang(lang=None):
     # if no language specified in url check cookies
     if not lang:
         lang = request.cookies.get('lang')
@@ -60,12 +47,26 @@ def lang_index(lang=None):
             # change to default
             lang = lang_default
 
-    # if language specified is not in the dict of supported laguages
+    # if language specified is not in the dict of supported languages
     if not lang in langauges:
         lang = lang_default
+    return lang
 
+
+@app.route('/')
+@app.route ('/index')
+def index():
+    lang = request.cookies.get('lang')
+    if lang == 'ar':
+        return render_template('/ar/index.html', title=u'صالح')
+    else:
+        return render_template('/en/index.html', title = 'Saleh')
+# takes an optional language
+@app.route('/<path:lang>')
+@app.route ('/<path:lang>/index')
+def lang_index(lang=None):
     res = make_response(redirect('/'))
-    res.set_cookie('lang', lang)
+    res.set_cookie('lang', get_lang(lang))
     return res
 
 
@@ -73,56 +74,60 @@ def lang_index(lang=None):
 def graph():
     lang = request.cookies.get('lang')
     if lang == 'ar':
-        res = make_response(render_template('/en/graph.html', title=u'صالح'))
-        res.set_cookie('lang', 'ar')
+        return render_template('/en/graph.html', title=u'صالح')
     else:
-        res = make_response(render_template('/en/graph.html', title='Saleh'))
-        res.set_cookie('lang', 'en')
+        return render_template('/en/graph.html', title='Saleh')
+# takes an optional language
+@app.route ('/<path:lang>/graph')
+def lang_graph(lang=None):
+    res = make_response(redirect('/graph'))
+    res.set_cookie('lang', get_lang(lang))
     return res
 
 @app.route ('/voicegarden')
 def voicegarden():
     lang = request.cookies.get('lang')
     if lang == 'ar':
-        res = make_response(render_template('/ar/voicegarden.html', title=u'صالح'))
-        res.set_cookie('lang', 'ar')
+        return render_template('/ar/voicegarden.html', title=u'صالح')
     else:
-        res = make_response(render_template('/en/voicegarden.html', title='Saleh'))
-        res.set_cookie('lang', 'en')
+        return render_template('/en/voicegarden.html', title='Saleh')
+# takes an optional language
+@app.route ('/<path:lang>/voicegarden')
+def lang_voicegarden(lang=None):
+    res = make_response(redirect('/voicegarden'))
+    res.set_cookie('lang', get_lang(lang))
     return res
+
 
 @app.route('/cv')
 def cv():
     lang = request.cookies.get('lang')
     if lang == 'ar':
-        res = make_response(render_template('/en/cv.html', title=u'صالح'))
-        res.set_cookie('lang', 'ar')
+        return render_template('/en/cv.html', title=u'صالح')
     else:
-        res = make_response(render_template('/en/cv.html', title='Saleh'))
-        res.set_cookie('lang', 'en')
+        return render_template('/en/cv.html', title='Saleh')
+# takes an optional language
+@app.route ('/<path:lang>/cv')
+def lang_cv(lang=None):
+    res = make_response(redirect('/cv'))
+    res.set_cookie('lang', get_lang(lang))
     return res
+
 
 @app.route('/photos/<path:filename>')
 def get_photo(filename=None):
     lang = request.cookies.get('lang')
     if lang == 'ar':
-        res = make_response(render_template('/en/photo.html', filename=filename, title = filename))
-        res.set_cookie('lang', 'ar')
+        return render_template('/en/photo.html', filename=filename, title = filename)
     else:
-        res = make_response(render_template('/en/photo.html', filename=filename, title = filename))
-        res.set_cookie('lang', 'en')
+        return render_template('/en/photo.html', filename=filename, title = filename)
+# takes an optional language
+@app.route ('/<path:lang>/photos/<path:filename>')
+def lang_get_photo(lang=None, filename=None):
+    res = make_response(redirect('/photos/'+ filename))
+    res.set_cookie('lang', get_lang(lang))
     return res
 
-@app.route('/docs/cv')
-def get_cv_file():
-    filename = 'CV_Saleh_Alghusson.pdf'
-    lang = request.cookies.get('lang')
-    res = make_response(send_from_directory(os.path.join(app.static_folder, 'docs/'), filename, as_attachment=True))
-    if lang == 'ar':
-        res.set_cookie('lang', 'ar')
-    else:
-        res.set_cookie('lang', 'en')
-    return res
 
 @app.route('/docs/<path:filename>')
 def get_document(filename=None):
@@ -130,21 +135,40 @@ def get_document(filename=None):
     if filename is not None:
         arr = os.listdir(os.path.join(app.static_folder, 'docs/'))
         if filename in arr:
-            res = make_response(send_from_directory(os.path.join(app.static_folder, 'docs/'), filename, as_attachment=True))
-            if lang == 'ar':
-                res.set_cookie('lang', 'ar')
-            else:
-                res.set_cookie('lang', 'en')
-            return res
+            return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename, as_attachment=True)
     if lang == 'ar':
         return error_page(error2 = u'الملف غير موجود', error3 = u'')
     else:
         return error_page(error2 = 'FILE NOT FOUND', error3 = 'The requested file could not be found')
+# takes an optional language
+@app.route ('/<path:lang>/docs/<path:filename>')
+def lang_get_document(lang=None, filename=None):
+    res = make_response(redirect('/docs/'+ filename))
+    res.set_cookie('lang', get_lang(lang))
+    return res
+
+
+@app.route('/docs/cv')
+def get_document_cv():
+    filename = 'CV_Saleh_Alghusson.pdf'
+    lang = request.cookies.get('lang')
+    if lang == 'ar':
+        return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename, as_attachment=True)
+    else:
+        return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename, as_attachment=True)
+# takes an optional language
+@app.route ('/<path:lang>/cv')
+def lang_get_document_cv(lang=None):
+    res = make_response(redirect('/docs/cv'))
+    res.set_cookie('lang', get_lang(lang))
+    return res
+
 
 @app.route('/blog')
 @app.route('/<path:lang>/blog')
 def blog(lang=None):
     return redirect('https://qirh.github.io')
+
 
 @app.route('/jones')
 @app.route('/<path:lang>/jones')
