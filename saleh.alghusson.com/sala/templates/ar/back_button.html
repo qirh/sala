@@ -1,0 +1,17 @@
+{% include "/ar/skeleton.html" %}
+
+{% block css %}
+
+{% endblock %}
+
+{% block body %}
+
+    <section id="back">
+        <p>> <a href="https://saleh.alghusson.com">{{home|safe}}</a></p>
+    </section>
+
+    {% if task == '404' %}
+        {% include '/ar/404.html' %}
+    {% endif %}
+
+{% endblock %}
