@@ -1,4 +1,5 @@
 var languages = ["en", "es", "pt", "fr", "de", "ar", "he"];
+var ready_languages = ["en", "ar"];
 var lang_default = 'en' //TODO: set default langugae based on broweser prefrence
 
 function check_language(current_lang, new_lang) {
@@ -11,8 +12,18 @@ function check_language(current_lang, new_lang) {
         set_language_cookie(lang_default);
 }
 function set_language_cookie(lang) {
-    $.cookie('lang', lang, { expires: 7, path:'/' });
+    var ret;
+    if ($.inArray(lang, ready_languages) > -1) {
+        $.cookie('lang', lang, {expires: 7, path: '/'});
+        ret = lang;
+    }
+    else {
+        $.cookie('lang', lang_default, {expires: 7, path: '/'});
+        ret = lang_default;
+    }
+
     location.reload();
+    return ret;
 }
 function get_language_cookie() {
     var lang = $.cookie('lang');
