@@ -90,9 +90,9 @@ def lang_graph(lang=None):
 def voicegarden():
     lang = get_lang()
     if lang == 'ar':
-        return render_template('/ar/voicegarden.html', title=u'صالح')
+        return render_template('/ar/back_button.html', task='voicegarden', title=u'صالح')
     else:
-        return render_template('/en/voicegarden.html', title='Saleh')
+        return render_template('/en/back_button.html', task='voicegarden', title='Saleh')
 # takes an optional language
 @app.route ('/<path:lang>/voicegarden')
 def lang_voicegarden(lang=None):
@@ -105,9 +105,9 @@ def lang_voicegarden(lang=None):
 def cv():
     lang = get_lang()
     if lang == 'ar':
-        return render_template('/ar/back_button.html', task='cv', home=u'الرئيسية', title=u'صالح')
+        return render_template('/ar/back_button.html', task='cv', title=u'صالح')
     else:
-        return render_template('/en/back_button.html', task='cv', home ='home', title='Saleh')
+        return render_template('/en/back_button.html', task='cv', title='Saleh')
 # takes an optional language
 @app.route ('/<path:lang>/cv')
 def lang_cv(lang=None):
@@ -120,9 +120,9 @@ def lang_cv(lang=None):
 def get_photo(filename=None):
     lang = get_lang()
     if lang == 'ar':
-        return render_template('/en/photo.html', filename=filename, title = filename)
+        return render_template('/en/back_button.html', task='photo', home=u'الرئيسية', filename=filename, title = filename)
     else:
-        return render_template('/en/photo.html', filename=filename, title = filename)
+        return render_template('/en/back_button.html', task='photo', home ='home', filename=filename, title = filename)
 # takes an optional language
 @app.route ('/<path:lang>/photos/<path:filename>')
 def lang_get_photo(lang=None, filename=None):

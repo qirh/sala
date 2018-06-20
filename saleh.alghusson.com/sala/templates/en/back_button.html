@@ -1,13 +1,10 @@
 {% include "/en/skeleton.html" %}
 
-{% block css %}
-
-{% endblock %}
 
 {% block body %}
 
     <section id="back">
-        <p>> <a href="https://saleh.alghusson.com">{{home|safe}}</a></p>
+        <p>> <a href="https://saleh.alghusson.com">home</a></p>
     </section>
 
     {% if task == '404' %}
@@ -16,5 +13,12 @@
     {% if task == 'cv' %}
         {% include '/en/cv.html' %}
     {% endif %}
+    {% if task == 'photo' %}
+        {% include '/en/photo.html' %}
+    {% endif %}
+    {% if task == 'voicegarden' %}
+        {% include '/en/voicegarden.html' %}
+    {% endif %}
+
 
 {% endblock %}
