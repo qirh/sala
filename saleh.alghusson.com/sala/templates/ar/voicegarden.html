@@ -1,6 +1,5 @@
-{% extends "ar/skeleton.html" %}
+<section id="voicegarden">
 
-{%  block js %}
     <script>
         $(document).ready(function() {
             movecols();
@@ -28,17 +27,12 @@
 
         }
     </script>
-{% endblock %}
 
-{% block body %}
-    <div class="cuerpo">
-
-        <table class="table table-voice">
-            <tr>
-                <th id="0" class="row-voice">رمز الدخول للعملاء (منصة قوقل السحابية) </th>
-                <th id="1" class="row-voice" style="font-weight: normal;">f5b426a13e274fb3882d90f2a29e69df</th>
-                <th id="2" class="row-voice" style="direction: ltr;">Client Access Token (Google Cloud Platform)</th>
-            </tr>
-        </table>
-    </div>
-{% endblock %}
+    <table class="table table-voice">
+        <tr>
+            <th id="0" class="row-voice">رمز الدخول للعملاء (منصة قوقل السحابية) </th>
+            <th id="1" class="row-voice" style="font-weight: normal;">f5b426a13e274fb3882d90f2a29e69df</th>
+            <th id="2" class="row-voice" style="direction: ltr;">Client Access Token (Google Cloud Platform)</th>
+        </tr>
+    </table>
+</section>

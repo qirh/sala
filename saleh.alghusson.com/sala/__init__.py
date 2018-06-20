@@ -19,14 +19,12 @@ def error_page(error1=None, error2=None, error3=None):
         num1 = u'٤'
         num2 = u'٠'
         num3 = u'٤'
-        home = u'الصفحة الرئيسية'
     else:
         if lang != 'en':
             lang = 'en'
         num1 = '4'
         num2 = '0'
         num3 = '4'
-        home = 'home'
 
     if (error2 is None or error3 is None) and lang == 'ar':
         error2 = u'الصفحة غير موجودة'
@@ -35,7 +33,7 @@ def error_page(error1=None, error2=None, error3=None):
         error2 = 'PAGE NOT FOUND'
         error3 = 'The requested page could not be found'
 
-    return render_template('/%s/back_button.html' %lang, task='404', title = 'Saleh', num1 = num1, num2 = num2, num3 = num3, error1 = error1, error2 = error2, error3 = error3, home = home)
+    return render_template('/%s/back_button.html' %lang, task='404', title = 'Saleh', num1 = num1, num2 = num2, num3 = num3, error1 = error1, error2 = error2, error3 = error3)
 
 
 def get_lang(lang=None):

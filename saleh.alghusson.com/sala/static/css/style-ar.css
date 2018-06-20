@@ -45,6 +45,9 @@ p, ul, td, a {
   .row-voice {
     text-align: center;
   }
+  .table .row-voice {
+    display: table-row;
+  }
 }
 /* Desktop */
 @media only screen and (min-width: 768px) {
