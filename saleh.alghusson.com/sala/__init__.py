@@ -5,7 +5,7 @@ from flask import Flask, render_template, make_response, send_from_directory, re
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
-langauges = {'en':'', 'pt':'language coming soon', 'es':'language coming soon', 'fr':'language coming soon', 'de':'language coming soon', 'ar':'', 'he':'language coming soon'}
+languages = {'en':'', 'pt':'language coming soon', 'es':'language coming soon', 'fr':'language coming soon', 'de':'language coming soon', 'ar':'', 'he':'language coming soon'}
 lang_default = 'en' #TODO: set default langugae based on broweser prefrence
 
 #routes = ['', 'blog', 'cv', 'graph', 'index', 'jones', 'voicegarden']
@@ -48,7 +48,7 @@ def get_lang(lang=None):
             lang = lang_default
 
     # if language specified is not in the dict of supported languages
-    if not lang in langauges:
+    if not lang in languages:
         lang = lang_default
     return lang
 
@@ -65,9 +65,11 @@ def index():
 @app.route('/<path:lang>')
 @app.route ('/<path:lang>/index')
 def lang_index(lang=None):
-    res = make_response(redirect('/'))
-    res.set_cookie('lang', get_lang(lang))
-    return res
+    if lang in languages:
+        res = make_response(redirect('/'))
+        res.set_cookie('lang', get_lang(lang))
+        return res
+    return error_page()
 
 
 @app.route ('/graph')
