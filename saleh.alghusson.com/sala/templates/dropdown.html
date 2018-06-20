@@ -19,8 +19,8 @@
         var lang = get_language_cookie();
         document.getElementById('dropdown').value = lang;
     }
-    function dropdown_on_change(control) {
-        set_language_cookie(control.value);
+    function dropdown_on_change(item) {
+        set_language_cookie(item.value);
     }
     document.addEventListener('DOMContentLoaded', function() {dropdown_init();}, false);
 </script>

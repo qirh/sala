@@ -12,13 +12,11 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 * Host blog on website
   * https://stackoverflow.com/questions/33250486/embed-markdown-md-into-html
 * Add NodeJs server for API
-* Guarantee personal photo
 * Fix texas first screenshot
 * Add Cities Graph
   * https://bl.ocks.org/mbostock/3884955
 
 #### To improve (general)
-* Change 404 page -- (Go home)
 * Consider Junge as font https://fonts.google.com/specimen/Junge
 * Comply with this: https://github.com/qirh/Front-End-Checklist
 #### To improve (Graph - GPA)
