@@ -105,9 +105,9 @@ def lang_voicegarden(lang=None):
 def cv():
     lang = get_lang()
     if lang == 'ar':
-        return render_template('/en/cv.html', home=u'الرئيسية', title=u'صالح')
+        return render_template('/ar/back_button.html', task='cv', home=u'الرئيسية', title=u'صالح')
     else:
-        return render_template('/en/cv.html', home ='home', title='Saleh')
+        return render_template('/en/back_button.html', task='cv', home ='home', title='Saleh')
 # takes an optional language
 @app.route ('/<path:lang>/cv')
 def lang_cv(lang=None):
