@@ -39,7 +39,7 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 
 ## Copyright Information
 * Website icon: Icon made by madebyoliver from [flaticon](www.flaticon.com)
-* Github icon: Font Awesome Free download, the CC BY 4.0 license applies to all icons packaged as .svg and .js files types.
+* Chrome icon: Icon made by Freepik from [flaticon](www.flaticon.com)
 * Libraries used include:
   * [Bootstrap](https://getbootstrap.com/)
   * [JS Cookie](https://github.com/js-cookie/js-cookie)
