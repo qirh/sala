@@ -74,9 +74,9 @@ def lang_index(lang=None):
 def graph():
     lang = get_lang()
     if lang == 'ar':
-        return render_template('/en/graph.html', title=u'صالح')
+        return render_template('/ar/back_button.html', task='graph', title=u'صالح')
     else:
-        return render_template('/en/graph.html', title='Saleh')
+        return render_template('/en/back_button.html', task='graph', title='Saleh')
 # takes an optional language
 @app.route ('/<path:lang>/graph')
 def lang_graph(lang=None):
