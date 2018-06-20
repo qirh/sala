@@ -12,7 +12,6 @@ function create_random_pair() {
         var document_selection = document.getElementById(selection[0]);
         if (selection[1] != '') {
 
-
             document_selection.innerHTML = selection[2] + '<embed id="' + selection[1] + '" class="popup ' + selection[4] + '" src="/static/' + selection[3] + '.jpg" type="image/jpeg"></embed>';
             document_selection.href = selection[3];
         }

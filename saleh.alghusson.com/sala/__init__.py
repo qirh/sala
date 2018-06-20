@@ -118,9 +118,9 @@ def lang_cv(lang=None):
 def get_photo(filename=None):
     lang = get_lang()
     if lang == 'ar':
-        return render_template('/en/back_button.html', task='photo', home=u'الرئيسية', filename=filename, title = filename)
+        return render_template('/ar/back_button.html', task='photo', filename=filename, title = filename)
     else:
-        return render_template('/en/back_button.html', task='photo', home ='home', filename=filename, title = filename)
+        return render_template('/en/back_button.html', task='photo', filename=filename, title = filename)
 # takes an optional language
 @app.route ('/<path:lang>/photos/<path:filename>')
 def lang_get_photo(lang=None, filename=None):
