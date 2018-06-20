@@ -14,7 +14,7 @@ lang_default = 'en' #TODO: set default langugae based on broweser prefrence
 
 @app.errorhandler(404)
 def error_page(error1=None, error2=None, error3=None):
-    lang = request.cookies.get('lang')
+    lang = get_lang()
     if lang == 'ar':
         num1 = u'٤'
         num2 = u'٠'
@@ -35,7 +35,7 @@ def error_page(error1=None, error2=None, error3=None):
         error2 = 'PAGE NOT FOUND'
         error3 = 'The requested page could not be found'
 
-    return render_template('/%s/404.html' %lang, title = 'Saleh', num1 = num1, num2 = num2, num3 = num3, error1 = error1, error2 = error2, error3 = error3, home = home)
+    return render_template('/%s/back_button.html' %lang, task='404', title = 'Saleh', num1 = num1, num2 = num2, num3 = num3, error1 = error1, error2 = error2, error3 = error3, home = home)
 
 
 def get_lang(lang=None):
@@ -56,7 +56,7 @@ def get_lang(lang=None):
 @app.route('/')
 @app.route ('/index')
 def index():
-    lang = request.cookies.get('lang')
+    lang = get_lang()
     if lang == 'ar':
         return render_template('/ar/index.html', title=u'صالح')
     else:
@@ -74,7 +74,7 @@ def lang_index(lang=None):
 
 @app.route ('/graph')
 def graph():
-    lang = request.cookies.get('lang')
+    lang = get_lang()
     if lang == 'ar':
         return render_template('/en/graph.html', title=u'صالح')
     else:
@@ -88,7 +88,7 @@ def lang_graph(lang=None):
 
 @app.route ('/voicegarden')
 def voicegarden():
-    lang = request.cookies.get('lang')
+    lang = get_lang()
     if lang == 'ar':
         return render_template('/ar/voicegarden.html', title=u'صالح')
     else:
@@ -103,11 +103,11 @@ def lang_voicegarden(lang=None):
 
 @app.route('/cv')
 def cv():
-    lang = request.cookies.get('lang')
+    lang = get_lang()
     if lang == 'ar':
-        return render_template('/en/cv.html', title=u'صالح')
+        return render_template('/en/cv.html', home=u'الرئيسية', title=u'صالح')
     else:
-        return render_template('/en/cv.html', title='Saleh')
+        return render_template('/en/cv.html', home ='home', title='Saleh')
 # takes an optional language
 @app.route ('/<path:lang>/cv')
 def lang_cv(lang=None):
@@ -118,7 +118,7 @@ def lang_cv(lang=None):
 
 @app.route('/photos/<path:filename>')
 def get_photo(filename=None):
-    lang = request.cookies.get('lang')
+    lang = get_lang()
     if lang == 'ar':
         return render_template('/en/photo.html', filename=filename, title = filename)
     else:
@@ -133,7 +133,7 @@ def lang_get_photo(lang=None, filename=None):
 
 @app.route('/docs/<path:filename>')
 def get_document(filename=None):
-    lang = request.cookies.get('lang')
+    lang = get_lang()
     if filename is not None:
         arr = os.listdir(os.path.join(app.static_folder, 'docs/'))
         if filename in arr:
@@ -153,7 +153,7 @@ def lang_get_document(lang=None, filename=None):
 @app.route('/docs/cv')
 def get_document_cv():
     filename = 'CV_Saleh_Alghusson.pdf'
-    lang = request.cookies.get('lang')
+    lang = get_lang()
     if lang == 'ar':
         return send_from_directory(os.path.join(app.static_folder, 'docs/'), filename, as_attachment=True)
     else:

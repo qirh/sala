@@ -46,10 +46,11 @@
         <link rel="stylesheet" href="/static/css/reset.css">
         <link href="https://fonts.googleapis.com/css?family=Muli|Merriweather+Sans" rel="stylesheet">
         <!-- Bootstrap CDN -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
         <link href="/static/css/sticky-footer-navbar.css" rel="stylesheet">
+        <link href="/static/css/dropdown.css" type="text/css" rel="stylesheet">
         <link href="/static/css/style.css" type="text/css" rel="stylesheet">
-        {% block css %}{% endblock %}
+        {% block css %} {% endblock %}
 
         <!-- jQuery -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -57,41 +58,15 @@
         <script src="/static/js/js.cookie.js"></script>
         <!-- Language Switcher -->
         <script src="/static/js/language.js"></script>
-        {% block js %}{% endblock %}
+        <script src="/static/js/dropdown.js"></script>
+
+        {% block js %} {% endblock %}
 
     </head>
 
     <body>
-
-    {% block body %}{% endblock %}
-
-    <!-- FOOTER-->
-    <footer class="footer fixed-bottom navbar-fixed-bottom">
-        <div class="container text-center">
-            <p style="margin-bottom: 0rem;">
-                <span>
-                    <a href="" onclick="checkLanguage('en', 'en');return false;" class="curr-link">English</a>
-                </span>
-                | <span title='muy pronto'>
-                    <a href="" onclick="checkLanguage('en', 'es');return false;" class="un-available-link">Español</a>
-                  </span>
-                | <span title='em breve'>
-                    <a onclick="checkLanguage('en', 'pt');return false;" class="un-available-link">Português</a>
-                  </span>
-                | <span title='à venir'>
-                    <a onclick="checkLanguage('en', 'fr');return false;" class="un-available-link">Français</a>
-                  </span>
-                | <span title='Demnächst'>
-                    <a onclick="checkLanguage('en', 'de');return false;" class="un-available-link">Deutsch</a>
-                  </span>
-                | <span>
-                    <a href="" onclick="checkLanguage('en', 'ar');return false;" class="available-link">العربية</a>
-                  </span>
-                | <span title='יגיע בקרוב'>
-                    <a title="יגיע בקרוב" onclick="checkLanguage('en', 'he');return false;" class="un-available-link">עברית</a>
-                  </span>
-            </p>
-        </div>
-    </footer>
+        {% include '/en/dropdown.html' %}
+        {% block body %} {% endblock %}
+        {% include '/en/footer.html' %}
     </body>
 </html>
