@@ -1,6 +1,6 @@
 <!-- DROPDOWN-->
 <section id="languages">
-    <select id="dropdown" onchange="dropdown_on_change();">
+    <select id="dropdown" onchange="dropdown_on_change(this)">
         <option value="ar">العربية</option>
         <option value="en">English</option>
         <option value="es">Español</option>
@@ -15,9 +15,12 @@
 </section>
 
 <script>
-    function dropdown_on_change() {
+    function dropdown_init() {
         var lang = get_language_cookie();
-        console.log(lang);
+        document.getElementById('dropdown').value = lang;
     }
-    document.addEventListener('DOMContentLoaded', function() {dropdown_on_change();}, false);
+    function dropdown_on_change(control) {
+        set_language_cookie(control.value);
+    }
+    document.addEventListener('DOMContentLoaded', function() {dropdown_init();}, false);
 </script>

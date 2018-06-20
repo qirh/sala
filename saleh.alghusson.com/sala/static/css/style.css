@@ -18,6 +18,10 @@ body {
 #dropdown {
   display: none;
 }
+#cv, #cv_frame {
+  height: 100%;
+  width: 100%;
+}
 a {
   border-bottom: none !important;
 }
