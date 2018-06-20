@@ -1,6 +1,20 @@
 {% include "/ar/skeleton.html" %}
 
 
+{% block css %}
+    {% if task == '404' %}
+    {% endif %}
+    {% if task == 'cv' %}
+    {% endif %}
+    {% if task == 'photo' %}
+    {% endif %}
+    {% if task == 'voicegarden' %}
+    {% endif %}
+    {% if task == 'graph' %}
+        <link href="/static/css/style-graph.css" type="text/css" rel="stylesheet">
+    {% endif %}
+{% endblock %}
+
 {% block body %}
 
     <section id="back">
@@ -18,6 +32,9 @@
     {% endif %}
     {% if task == 'voicegarden' %}
         {% include '/ar/voicegarden.html' %}
+    {% endif %}
+    {% if task == 'graph' %}
+        {% include '/ar/graph.html' %}
     {% endif %}
 
 {% endblock %}
