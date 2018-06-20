@@ -8,6 +8,9 @@ p {
 .toggle {
     padding-left: 1rem;
 }
+.toggle-arab {
+    padding-left: 0.5rem;
+}
 .axis path, .axis line {
     fill: none;
     stroke: black;

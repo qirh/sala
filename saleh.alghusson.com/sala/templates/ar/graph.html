@@ -3,10 +3,10 @@
     <!-- src: http://bl.ocks.org/kendopunk/16c1aec3c86847e6028b -->
 
     <form id="form">
-        <p>> <b>Orientation:</b></p>
-        <p><a href="#" class="toggle" orientation="vertical">Vertical</a></p>
-        <p style="padding-left:1rem;">|</p>
-        <p><a href="#" class="toggle" orientation="horizontal">Horizontal</a></p>
+        <p class="english-font">> <b>الإتجاه:</b></p>
+        <p><a href="#" class="toggle-arab english-font" style="padding-right:0.5rem;" orientation="vertical">عمودي</a></p>
+        <p style="padding-left:0.5rem;">|</p>
+        <p><a href="#" class="toggle-arab english-font" orientation="horizontal">أفقي</a></p>
     </form>
 
     <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
@@ -49,7 +49,7 @@
 
         initChart();
 
-        d3.selectAll('a.toggle').on('click', function () {
+        d3.selectAll('a.toggle-arab').on('click', function () {
             var o = this.getAttribute('orientation');
             config.chartOrientation = o;
 

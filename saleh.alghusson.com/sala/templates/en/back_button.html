@@ -1,12 +1,23 @@
 {% include "/en/skeleton.html" %}
 
+{% block css %}
+    {% if task == '404' %}
+    {% endif %}
+    {% if task == 'cv' %}
+    {% endif %}
+    {% if task == 'photo' %}
+    {% endif %}
+    {% if task == 'voicegarden' %}
+    {% endif %}
+    {% if task == 'graph' %}
+        <link href="/static/css/style-graph.css" type="text/css" rel="stylesheet">
+    {% endif %}
+{% endblock %}
 
 {% block body %}
-
     <section id="back">
         <p>> <a href="https://saleh.alghusson.com">home</a></p>
     </section>
-
     {% if task == '404' %}
         {% include '/en/404.html' %}
     {% endif %}
@@ -19,6 +30,7 @@
     {% if task == 'voicegarden' %}
         {% include '/en/voicegarden.html' %}
     {% endif %}
-
-
+    {% if task == 'graph' %}
+        {% include '/en/graph.html' %}
+    {% endif %}
 {% endblock %}
