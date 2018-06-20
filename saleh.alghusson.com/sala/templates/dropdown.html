@@ -1,0 +1,23 @@
+<!-- DROPDOWN-->
+<section id="languages">
+    <select id="dropdown" onchange="dropdown_on_change();">
+        <option value="ar">العربية</option>
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="pt">Português</option>
+        <option value="de">Deutsch</option>
+        <option value="fr">Français</option>
+        <option value="he">עברית</option>
+    </select>
+</section>
+
+<section id="buffer">
+</section>
+
+<script>
+    function dropdown_on_change() {
+        var lang = get_language_cookie();
+        console.log(lang);
+    }
+    document.addEventListener('DOMContentLoaded', function() {dropdown_on_change();}, false);
+</script>
