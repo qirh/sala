@@ -38,7 +38,7 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 ## Copyright Information
 * Website icon: Icon made by madebyoliver from [flaticon](www.flaticon.com)
 * Chrome icon: Icon made by Freepik from [flaticon](www.flaticon.com)
-* Wmoji icons: Made by [Font Awesome](https://fontawesome.com/license)
+* Emoji icons: Made by [Font Awesome](https://fontawesome.com/license)
 * Libraries used include:
   * [Bootstrap](https://getbootstrap.com/)
   * [JS Cookie](https://github.com/js-cookie/js-cookie)
