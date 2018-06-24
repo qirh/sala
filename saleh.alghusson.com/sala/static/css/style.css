@@ -135,8 +135,12 @@ section {
         width: 2.5%;
     }
     .row-icon-img {
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
+    }
+    .icons {
+        width: 15px;
+        height: 15px;
     }
     /*  Collapse table  */
     .table td, .table th {
@@ -199,6 +203,10 @@ section {
         width: 2.5%;
     }
     .row-icon-img {
+        width: 25px;
+        height: 25px;
+    }
+    .icons {
         width: 20px;
         height: 20px;
     }
@@ -223,6 +231,10 @@ section {
     .row-icon-img {
         width: 30px;
         height: 30px;
+    }
+    .icons {
+        width: 20px;
+        height: 20px;
     }
     p, ul, td {
         margin-bottom: 1.5rem;
