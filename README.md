@@ -13,8 +13,7 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
   * https://stackoverflow.com/questions/33250486/embed-markdown-md-into-html
 * Add NodeJs server for API
 * Fix texas first screenshot
-* Add Cities Graph
-  * https://bl.ocks.org/mbostock/3884955
+
 
 #### To improve (general)
 * Consider Junge as font https://fonts.google.com/specimen/Junge
@@ -22,18 +21,21 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 #### To improve (Graph - GPA)
 * Fix gpa graph scale
 * Add chart fallback
-#### To add (Graph - Cities)
-* Add
+#### To improve (CV)
+* Add fallback to Google Drive
 #### To improve (Arabic)
 * Get Arabic reviewed
 #### To improve (Spanish)
 * Add Spanish
 #### To improve (Hebrew)
 * Add Hebrew
-    * http://culmus.sourceforge.net/ --> Stam Sefarad CLM
+  * http://culmus.sourceforge.net/ --> Stam Sefarad CLM
 #### To improve (French)
 * Add French
-    * (si ma candidature vous intéresse)
+  * (si ma candidature vous intéresse)
+#### To add (Graph - Cities)
+* Add graph of tallest skyscrpers in city's history
+  * https://bl.ocks.org/mbostock/3884955
 
 ## Copyright Information
 * Website icon: Icon made by madebyoliver from [flaticon](www.flaticon.com)
