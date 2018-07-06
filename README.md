@@ -18,6 +18,7 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 #### To improve (general)
 * Consider Junge as font https://fonts.google.com/specimen/Junge
 * Comply with this: https://github.com/qirh/Front-End-Checklist
+* Print SW registered
 #### To improve (Graph - GPA)
 * Fix gpa graph scale
 * Add chart fallback
