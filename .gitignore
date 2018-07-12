@@ -16,6 +16,8 @@ build
 .cache/
 .idea/
 
+venv/
+
 # Coverage reports
 htmlcov
 .coverage
