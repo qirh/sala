@@ -173,4 +173,4 @@ def blog(lang=None):
 @app.route('/jones')
 @app.route('/<path:lang>/jones')
 def jones(lang=None):
-    return redirect('http://salehjones.com')
+    return redirect('https://salehjones.com')
