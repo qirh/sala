@@ -1,17 +1,16 @@
 # Sala [![MIT license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/qirh/sala/master/LICENSE)
 Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 
+### Plan
+1. React/Vue
+2. Host [blog](https://qirh.github.io). [info](https://stackoverflow.com/questions/33250486/embed-markdown-md-into-html)
 
-## Author's notes
-#### Known issues
+### Known issues
 #### To add
 * Detect navigator language
 * Word of the DAY!!!! (theysaidso.com/api)
 * HTML 5 Video
 * Add "Technologies used" section to each project (on Git) + Screenshots
-* Host blog on website
-  * https://stackoverflow.com/questions/33250486/embed-markdown-md-into-html
-* Add NodeJs server for API
 * Fix texas first screenshot
 
 
