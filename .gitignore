@@ -1,5 +1,9 @@
 sala.wsgi
 *.wsgi
+private.key
+ca-bundle-client.crt
+saleh_alghusson_com.crt
+
 
 .DS_Store
 xcuserdata/
