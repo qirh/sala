@@ -1,3 +1,6 @@
+sala.wsgi
+*.wsgi
+
 .DS_Store
 xcuserdata/
 *~

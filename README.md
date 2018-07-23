@@ -2,8 +2,10 @@
 Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 
 ### Plan
-1. React/Vue
-2. Host [blog](https://qirh.github.io). [info](https://stackoverflow.com/questions/33250486/embed-markdown-md-into-html)
+1. Remove wsgi/conf
+2. make public
+3. React/Vue
+4. Host [blog](https://qirh.github.io). [info](https://stackoverflow.com/questions/33250486/embed-markdown-md-into-html)
 
 ### Known issues
 #### To add
