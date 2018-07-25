@@ -1,11 +1,9 @@
 # Sala [![MIT license](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://raw.githubusercontent.com/qirh/sala/master/LICENSE)
-Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
+Repo for my personal website [saleh.alghusson.com](https://saleh.alghusson.com).
 
 ### Plan
-1. Remove wsgi/conf
-2. make public
-3. React/Vue
-4. Host [blog](https://qirh.github.io). [info](https://stackoverflow.com/questions/33250486/embed-markdown-md-into-html)
+1. React/Vue
+2. Host the [blog](https://qirh.github.io). [info](https://stackoverflow.com/questions/33250486/embed-markdown-md-into-html)
 
 ### Known issues
 #### To add
@@ -17,7 +15,6 @@ Repo for an http site [saleh.alghusson.com](https://saleh.alghusson.com)
 
 
 #### To improve (general)
-* Consider Junge as font https://fonts.google.com/specimen/Junge
 * Comply with this: https://github.com/qirh/Front-End-Checklist
 * Print SW registered
 * Split apache conf files
