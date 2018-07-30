@@ -113,6 +113,12 @@ section {
 .last-row {
     border-bottom: 1px solid #eceeef;
 }
+.gray {
+    filter: url(filter.svg#grayscale); /* Firefox 3.5+ */
+    filter: gray; /* IE6-9 */
+    -webkit-filter: grayscale(1); /* Google Chrome & Safari 6+ */
+    -webkit-transition: all 2s;
+}
 
 /* Mobile */
 @media only screen and (max-width: 599px) {
@@ -163,6 +169,15 @@ section {
     }
     .anchor-website:after {
         content: ' Website';
+    }
+    .anchor-gcp:after {
+        content: ' GCP Key';
+    }
+    .anchor-chrome:after {
+        content: ' Chrome Store';
+    }
+    .anchor-app:after {
+        content: ' App Store';
     }
     .row-website.dead {
         display: none;

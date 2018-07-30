@@ -2,7 +2,7 @@
 Repo for my personal website [saleh.alghusson.com](https://saleh.alghusson.com).
 
 ### Plan
-1. React/Vue
+1. Add front end (React or Vue).
 2. Host the [blog](https://qirh.github.io). [info](https://stackoverflow.com/questions/33250486/embed-markdown-md-into-html)
 
 ### Known issues
