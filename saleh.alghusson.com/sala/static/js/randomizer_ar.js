@@ -3,8 +3,7 @@
 const top_links = [
     [['anchor_pic_1', 'iframe_pic_1', 'التقنية', 'photos/tech', 'tech'], ['anchor_pic_1', 'iframe_pic_1', 'التقنية','photos/tech2', 'tech2']],
     [['anchor_pic_2', 'iframe_pic_2', 'السفر', 'photos/travel',  'travel'], ['anchor_pic_2', 'iframe_pic_2', 'القراءة', 'photos/books',  'books']],
-    [['anchor_pic_3', 'iframe_pic_3', 'الدراجات','photos/bike',  'bike'], ['anchor_pic_3', 'iframe_pic_3', 'الدراجات','photos/bike2', 'bike2']],
-    [['anchor_pic_4', '', 'أنا', 'photos/moi-moustache', ''], ['anchor_pic_4', '', 'أنا', 'photos/moi-sans-moustache', '']]
+    [['anchor_pic_3', 'iframe_pic_3', 'الدراجات','photos/bike',  'bike'], ['anchor_pic_3', 'iframe_pic_3', 'الدراجات','photos/bike2', 'bike2']]
 ];
 function create_random_pair() {
     top_links.forEach(function (element) {
