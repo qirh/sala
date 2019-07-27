@@ -167,7 +167,7 @@ def lang_get_document_cv(lang=None):
 @app.route('/blog')
 @app.route('/<path:lang>/blog')
 def blog(lang=None):
-    return redirect('https://qirh.github.io')
+    return redirect('https://saleh.soy')
 
 
 @app.route('/jones')
